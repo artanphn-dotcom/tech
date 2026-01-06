@@ -30,95 +30,75 @@
 
             <section class="command-category" data-category="core">
                 <h2>Core Commands</h2>
-                <div class="command">
-                    <h3>terraform init</h3>
-                    <div class="command-container">
-                        <pre><code>terraform init</code></pre>
-                    </div>
-                    <p><strong>What it does:</strong> Initializes a new or existing Terraform configuration, downloading provider plugins and modules.</p>
-                    <p><strong>When to use it:</strong> The first command to run after writing a new Terraform configuration or cloning an existing one.</p>
-                </div>
-                <div class="command">
-                    <h3>terraform validate</h3>
-                    <div class="command-container">
-                        <pre><code>terraform validate</code></pre>
-                    </div>
-                    <p><strong>What it does:</strong> Checks whether a configuration is syntactically valid and internally consistent.</p>
-                    <p><strong>When to use it:</strong> As a quick check for errors before running a plan or apply.</p>
-                </div>
-                 <div class="command">
-                    <h3>terraform fmt</h3>
-                    <div class="command-container">
-                        <pre><code>terraform fmt -recursive</code></pre>
-                    </div>
-                    <p><strong>What it does:</strong> Rewrites Terraform configuration files to a canonical format and style.</p>
-                    <p><strong>When to use it:</strong> To ensure consistent formatting across all your configuration files.</p>
-                </div>
-                <div class="command">
-                    <h3>terraform plan</h3>
-                    <div class="command-container">
-                        <pre><code>terraform plan</code></pre>
-                    </div>
-                    <p><strong>What it does:</strong> Creates an execution plan, which lets you preview the changes that Terraform plans to make.</p>
-                    <p><strong>When to use it:</strong> Before applying changes, to ensure they are what you expect.</p>
-                </div>
-                <div class="command">
-                    <h3>terraform apply</h3>
-                    <div class="command-container">
-                        <pre><code>terraform apply</code></pre>
-                    </div>
-                    <p><strong>What it does:</strong> Applies the changes required to reach the desired state of the configuration.</p>
-                    <p><strong>When to use it:</strong> To create, update, or delete infrastructure resources.</p>
-                </div>
-                <div class="command">
-                    <h3>terraform destroy</h3>
-                    <div class="command-container">
-                        <pre><code>terraform destroy</code></pre>
-                    </div>
-                    <p><strong>What it does:</strong> Destroys all the resources managed by the current Terraform configuration.</p>
-                    <p><strong>When to use it:</strong> To tear down infrastructure created by Terraform. Use with caution.</p>
-                </div>
+                <div class="command"><h3>terraform init</h3><div class="command-container"><pre><code>terraform init</code></pre></div><p><strong>What it does:</strong> Initializes a new or existing Terraform configuration, downloading provider plugins and modules.</p></div>
+                <div class="command"><h3>terraform validate</h3><div class="command-container"><pre><code>terraform validate</code></pre></div><p><strong>What it does:</strong> Checks whether a configuration is syntactically valid and internally consistent.</p></div>
+                <div class="command"><h3>terraform fmt</h3><div class="command-container"><pre><code>terraform fmt -recursive</code></pre></div><p><strong>What it does:</strong> Rewrites Terraform configuration files to a canonical format and style.</p></div>
+                <div class="command"><h3>terraform plan</h3><div class="command-container"><pre><code>terraform plan -out=tfplan</code></pre></div><p><strong>What it does:</strong> Creates an execution plan, which lets you preview the changes Terraform plans to make, saving it to a file.</p></div>
+                <div class="command"><h3>terraform apply</h3><div class="command-container"><pre><code>terraform apply "tfplan"</code></pre></div><p><strong>What it does:</strong> Applies the changes required to reach the desired state of the configuration, using a saved plan.</p></div>
+                <div class="command"><h3>terraform destroy</h3><div class="command-container"><pre><code>terraform destroy</code></pre></div><p><strong>What it does:</strong> Destroys all the resources managed by the current Terraform configuration.</p></div>
+                <div class="command"><h3>terraform console</h3><div class="command-container"><pre><code>terraform console</code></pre></div><p><strong>What it does:</strong> Provides an interactive console for evaluating expressions and interacting with the Terraform state.</p></div>
+                <div class="command"><h3>terraform import</h3><div class="command-container"><pre><code>terraform import aws_instance.example i-1234567890abcdef0</code></pre></div><p><strong>What it does:</strong> Imports existing infrastructure into Terraform state.</p></div>
+                <div class="command"><h3>terraform output</h3><div class="command-container"><pre><code>terraform output instance_ip</code></pre></div><p><strong>What it does:</strong> Extracts the value of an output variable from the state file.</p></div>
+                <div class="command"><h3>terraform workspace new</h3><div class="command-container"><pre><code>terraform workspace new development</code></pre></div><p><strong>What it does:</strong> Creates a new workspace.</p></div>
+                <div class="command"><h3>terraform workspace select</h3><div class="command-container"><pre><code>terraform workspace select production</code></pre></div><p><strong>What it does:</strong> Selects an existing workspace.</p></div>
+                <div class="command"><h3>terraform graph</h3><div class="command-container"><pre><code>terraform graph | dot -Tpng > graph.png</code></pre></div><p><strong>What it does:</strong> Generates a visual graph of Terraform resources.</p></div>
+                <div class="command"><h3>terraform taint</h3><div class="command-container"><pre><code>terraform taint aws_instance.example</code></pre></div><p><strong>What it does:</strong> Explicitly marks a resource as tainted, forcing it to be replaced on the next apply.</p></div>
+                <div class="command"><h3>terraform untaint</h3><div class="command-container"><pre><code>terraform untaint aws_instance.example</code></pre></div><p><strong>What it does:</strong> Removes the tainted status from a resource.</p></div>
+                <div class="command"><h3>terraform show</h3><div class="command-container"><pre><code>terraform show</code></pre></div><p><strong>What it does:</strong> Shows the current state or a plan file in a human-readable format.</p></div>
+                <div class="command"><h3>terraform providers</h3><div class="command-container"><pre><code>terraform providers</code></pre></div><p><strong>What it does:</strong> Prints a tree of the providers used in the current configuration.</p></div>
+                <div class="command"><h3>terraform version</h3><div class="command-container"><pre><code>terraform version</code></pre></div><p><strong>What it does:</strong> Prints the Terraform version and provider versions.</p></div>
+                <div class="command"><h3>terraform get</h3><div class="command-container"><pre><code>terraform get -update</code></pre></div><p><strong>What it does:</strong> Downloads and updates modules used in the configuration.</p></div>
+                <div class="command"><h3>terraform login</h3><div class="command-container"><pre><code>terraform login</code></pre></div><p><strong>What it does:</strong> Authenticates the Terraform CLI with Terraform Cloud/Enterprise.</p></div>
+                <div class="command"><h3>terraform logout</h3><div class="command-container"><pre><code>terraform logout</code></pre></div><p><strong>What it does:</strong> Logs out of Terraform Cloud/Enterprise.</p></div>
             </section>
 
             <section class="command-category" data-category="state">
                 <h2>State Management</h2>
-                <div class="command">
-                    <h3>terraform state list</h3>
-                    <div class="command-container">
-                        <pre><code>terraform state list</code></pre>
-                    </div>
-                    <p><strong>What it does:</strong> Lists all the resources that are tracked in the current Terraform state file.</p>
-                    <p><strong>When to use it:</strong> To get a quick overview of what infrastructure Terraform is managing.</p>
-                </div>
-                <div class="command">
-                    <h3>terraform state show</h3>
-                    <div class="command-container">
-                        <pre><code>terraform state show 'module.vpc.aws_vpc.this'</code></pre>
-                    </div>
-                    <p><strong>What it does:</strong> Shows the attributes of a single resource in the state file.</p>
-                    <p><strong>When to use it:</strong> To inspect the details of a specific resource managed by Terraform.</p>
-                </div>
-                <div class="command">
-                    <h3>terraform state rm</h3>
-                    <div class="command-container">
-                        <pre><code>terraform state rm 'aws_instance.my_instance'</code></pre>
-                    </div>
-                    <p><strong>What it does:</strong> Removes a resource from the Terraform state, without destroying the actual infrastructure.</p>
-                    <p><strong>When to use it:</strong> To "unmanage" a resource that was previously managed by Terraform.</p>
-                </div>
+                <div class="command"><h3>terraform state list</h3><div class="command-container"><pre><code>terraform state list</code></pre></div><p><strong>What it does:</strong> Lists all the resources that are tracked in the current Terraform state file.</p></div>
+                <div class="command"><h3>terraform state show</h3><div class="command-container"><pre><code>terraform state show 'module.vpc.aws_vpc.this'</code></pre></div><p><strong>What it does:</strong> Shows the attributes of a single resource in the state file.</p></div>
+                <div class="command"><h3>terraform state rm</h3><div class="command-container"><pre><code>terraform state rm 'aws_instance.my_instance'</code></pre></div><p><strong>What it does:</strong> Removes a resource from the Terraform state, without destroying the actual infrastructure.</p></div>
+                <div class="command"><h3>terraform state mv</h3><div class="command-container"><pre><code>terraform state mv 'aws_instance.old_name' 'aws_instance.new_name'</code></pre></div><p><strong>What it does:</strong> Moves an item in the Terraform state, e.g., to rename a resource.</p></div>
+                <div class="command"><h3>terraform state pull</h3><div class="command-container"><pre><code>terraform state pull > current_state.tfstate</code></pre></div><p><strong>What it does:</strong> Downloads the current remote state to a local file.</p></div>
+                <div class="command"><h3>terraform state push</h3><div class="command-container"><pre><code>terraform state push updated_state.tfstate</code></pre></div><p><strong>What it does:</strong> Uploads a local state file to a remote backend (use with extreme caution).</p></div>
+                <div class="command"><h3>terraform state replace-provider</h3><div class="command-container"><pre><code>terraform state replace-provider "registry.terraform.io/-/aws" "registry.terraform.io/hashicorp/aws"</code></pre></div><p><strong>What it does:</strong> Replaces the provider address in the state file, useful after provider refactoring.</p></div>
+                <div class="command"><h3>terraform state untaint</h3><div class="command-container"><pre><code>terraform state untaint aws_instance.tainted_instance</code></pre></div><p><strong>What it does:</strong> Removes a tainted mark from a resource in the state.</p></div>
+                <div class="command"><h3>terraform state list -id=resource_id</h3><div class="command-container"><pre><code>terraform state list -id=i-12345abcdef</code></pre></div><p><strong>What it does:</strong> Lists resources by their cloud provider ID.</p></div>
+                <div class="command"><h3>terraform graph -draw-cycles</h3><div class="command-container"><pre><code>terraform graph -draw-cycles</code></pre></div><p><strong>What it does:</strong> Visualizes resource dependencies, highlighting any dependency cycles.</p></div>
+                <div class="command"><h3>terraform plan -detailed-exitcode</h3><div class="command-container"><pre><code>terraform plan -detailed-exitcode</code></pre></div><p><strong>What it does:</strong> Returns a specific exit code indicating whether changes are pending.</p></div>
+                <div class="command"><h3>terraform apply -auto-approve</h3><div class="command-container"><pre><code>terraform apply -auto-approve</code></pre></div><p><strong>What it does:</strong> Applies changes without requiring manual confirmation.</p></div>
+                <div class="command"><h3>terraform output -json</h3><div class="command-container"><pre><code>terraform output -json</code></pre></div><p><strong>What it does:</strong> Displays all output variables in JSON format.</p></div>
+                <div class="command"><h3>terraform show -json</h3><div class="command-container"><pre><code>terraform show -json</code></pre></div><p><strong>What it does:</strong> Displays the state or plan file in JSON format.</p></div>
+                <div class="command"><h3>terraform refresh</h3><div class="command-container"><pre><code>terraform refresh</code></pre></div><p><strong>What it does:</strong> Updates the state file by querying the real infrastructure for changes.</p></div>
+                <div class="command"><h3>terraform console 'aws_instance.example.public_ip'</h3><div class="command-container"><pre><code>terraform console 'aws_instance.example.public_ip'</code></pre></div><p><strong>What it does:</strong> Evaluates a single expression from the console.</p></div>
+                <div class="command"><h3>terraform providers schema -json</h3><div class="command-container"><pre><code>terraform providers schema -json</code></pre></div><p><strong>What it does:</strong> Displays the schema for all configured providers in JSON.</p></div>
+                <div class="command"><h3>terraform login app.terraform.io</h3><div class="command-container"><pre><code>terraform login app.terraform.io</code></pre></div><p><strong>What it does:</strong> Authenticates to a specific Terraform Cloud/Enterprise instance.</p></div>
+                <div class="command"><h3>terraform workspace list</h3><div class="command-container"><pre><code>terraform workspace list</code></pre></div><p><strong>What it does:</strong> Lists all available workspaces.</p></div>
+                <div class="command"><h3>terraform workspace show</h3><div class="command-container"><pre><code>terraform workspace show</code></pre></div><p><strong>What it does:</strong> Displays the name of the current workspace.</p></div>
             </section>
 
             <section class="command-category" data-category="troubleshooting">
                 <h2>Troubleshooting</h2>
-                <div class="command">
-                    <h3>TF_LOG=TRACE terraform plan</h3>
-                    <div class="command-container">
-                        <pre><code>export TF_LOG=TRACE
-terraform plan</code></pre>
-                    </div>
-                    <p><strong>What it does:</strong> Enables detailed logging for Terraform operations by setting the `TF_LOG` environment variable.</p>
-                    <p><strong>When to use it:</strong> When you need to debug issues with providers, state, or the Terraform core process. Other log levels include `DEBUG`, `INFO`, `WARN`, `ERROR`.</p>
-                </div>
+                <div class="command"><h3>TF_LOG=TRACE terraform plan</h3><div class="command-container"><pre><code>export TF_LOG=TRACE
+terraform plan</code></pre></div><p><strong>What it does:</strong> Enables detailed logging for Terraform operations by setting the `TF_LOG` environment variable. Other log levels include `DEBUG`, `INFO`, `WARN`, `ERROR`.</p></div>
+                <div class="command"><h3>terraform validate</h3><div class="command-container"><pre><code>terraform validate</code></pre></div><p><strong>What it does:</strong> Checks whether a configuration is syntactically valid and internally consistent, catching syntax errors and basic validation failures.</p></div>
+                <div class="command"><h3>terraform graph</h3><div class="command-container"><pre><code>terraform graph | dot -Tpng > dependency_graph.png</code></pre></div><p><strong>What it does:</strong> Generates a visual graph of Terraform resources and their dependencies, invaluable for understanding complex configurations and debugging dependency issues.</p></div>
+                <div class="command"><h3>terraform console</h3><div class="command-container"><pre><code>terraform console</code></pre></div><p><strong>What it does:</strong> Provides an interactive console for evaluating expressions and inspecting the state, allowing you to test configurations or check resource attributes directly.</p></div>
+                <div class="command"><h3>terraform refresh</h3><div class="command-container"><pre><code>terraform refresh</code></pre></div><p><strong>What it does:</strong> Updates the state file by reconciling it with the real-world infrastructure, useful for detecting manual changes or discrepancies.</p></div>
+                <div class="command"><h3>terraform plan -destroy</h3><div class="command-container"><pre><code>terraform plan -destroy</code></pre></div><p><strong>What it does:</strong> Generates a plan that shows all resources that would be destroyed, without actually destroying them. Useful for double-checking `terraform destroy` intentions.</p></div>
+                <div class="command"><h3>terraform state pull</h3><div class="command-container"><pre><code>terraform state pull > local.tfstate</code></pre></div><p><strong>What it does:</strong> Downloads the latest state file from the configured backend to examine it locally for errors or inconsistencies.</p></div>
+                <div class="command"><h3>terraform show -json</h3><div class="command-container"><pre><code>terraform show -json > state_details.json</code></pre></div><p><strong>What it does:</strong> Displays the state file in a machine-readable JSON format, useful for programmatic analysis or detailed inspection.</p></div>
+                <div class="command"><h3>terraform providers schema -json</h3><div class="command-container"><pre><code>terraform providers schema -json</code></pre></div><p><strong>What it does:</strong> Displays the schema for all configured providers and resources in JSON, helpful for understanding available arguments and debugging configuration errors.</p></div>
+                <div class="command"><h3>terraform taint</h3><div class="command-container"><pre><code>terraform taint aws_instance.problematic_server</code></pre></div><p><strong>What it does:</strong> Manually marks a resource as "tainted," forcing Terraform to replace it on the next `apply`. Useful for recovering from failed resource updates.</p></div>
+                <div class="command"><h3>terraform graph -type=plan -plan=tfplan</h3><div class="command-container"><pre><code>terraform graph -type=plan -plan=tfplan | dot -Tsvg > plan_graph.svg</code></pre></div><p><strong>What it does:</strong> Visualizes the changes proposed in a saved plan file, helping to understand the execution order and dependencies of pending operations.</p></div>
+                <div class="command"><h3>terraform apply -target=aws_instance.specific_instance</h3><div class="command-container"><pre><code>terraform apply -target=aws_instance.specific_instance</code></pre></div><p><strong>What it does:</strong> Applies changes only to a specific resource, useful for debugging issues with a single resource without affecting others.</p></div>
+                <div class="command"><h3>terraform state replace-provider</h3><div class="command-container"><pre><code>terraform state replace-provider "registry.terraform.io/hashicorp/aws" "registry.terraform.io/custom/aws"</code></pre></div><p><strong>What it does:</strong> Modifies the provider address recorded in the state file. Crucial when a provider has changed its upstream location or namespace.</p></div>
+                <div class="command"><h3>terraform output -raw instance_ip</h3><div class="command-container"><pre><code>terraform output -raw instance_ip</code></pre></div><p><strong>What it does:</strong> Retrieves the raw output value of a single output variable, useful for scripting.</p></div>
+                <div class="command"><h3>terraform debug</h3><div class="command-container"><pre><code>terraform debug</code></pre></div><p><strong>What it does:</strong> Opens a debug console to inspect execution during complex operations (e.g., provider interactions).</p></div>
+                <div class="command"><h3>TF_CLI_ARGS="-json" terraform plan</h3><div class="command-container"><pre><code>TF_CLI_ARGS="-json" terraform plan</code></pre></div><p><strong>What it does:</strong> Forces Terraform CLI output into JSON format, useful for programmatic parsing of plans or outputs.</p></div>
+                <div class="command"><h3>TF_INPUT=0 terraform apply</h3><div class="command-container"><pre><code>TF_INPUT=0 terraform apply</code></pre></div><p><strong>What it does:</strong> Disables interactive prompts during `terraform apply`, making it non-interactive for automation. (Not `auto-approve`)</p></div>
+                <div class="command"><h3>terraform graph -type=resource</h3><div class="command-container"><pre><code>terraform graph -type=resource</code></pre></div><p><strong>What it does:</strong> Generates a graph showing only resource dependencies, simplifying complex infrastructure views.</p></div>
+                <div class="command"><h3>terraform state get aws_instance.example</h3><div class="command-container"><pre><code>terraform state get aws_instance.example</code></pre></div><p><strong>What it does:</strong> Retrieves the full attribute values of a specific resource from the state file.</p></div>
+                <div class="command"><h3>terraform plan -var="region=us-east-1"</h3><div class="command-container"><pre><code>terraform plan -var="region=us-east-1"</code></pre></div><p><strong>What it does:</strong> Passes a variable value directly via the command line, useful for testing different configurations.</p></div>
             </section>
 
         </div>

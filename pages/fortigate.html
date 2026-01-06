@@ -34,162 +34,336 @@
 
             <section class="command-category" data-category="system">
                 <h2>System</h2>
-                <div class="command">
-                    <h3>get system status</h3>
-                    <div class="command-container">
-                        <pre><code>get system status</code></pre>
-                    </div>
-                    <p><strong>What it does:</strong> Displays firmware, uptime, and system health.</p>
-                    <p><strong>When to use it:</strong> A primary command for identifying the unit and its operational state.</p>
-                </div>
+                <div class="command"><h3>get system status</h3><div class="command-container"><pre><code>get system status</code></pre></div><p><strong>What it does:</strong> Displays firmware, uptime, and system health.</p></div>
+                <div class="command"><h3>get system ha status</h3><div class="command-container"><pre><code>get system ha status</code></pre></div><p><strong>What it does:</strong> Shows the High Availability (HA) cluster status.</p></div>
+                <div class="command"><h3>get system performance status</h3><div class="command-container"><pre><code>get system performance status</code></pre></div><p><strong>What it does:</strong> Displays CPU, memory, and session usage in real-time.</p></div>
+                <div class="command"><h3>diagnose sys top</h3><div class="command-container"><pre><code>diagnose sys top 5</code></pre></div><p><strong>What it does:</strong> Shows top processes consuming CPU/memory, similar to Linux `top`.</p></div>
+                <div class="command"><h3>get system global</h3><div class="command-container"><pre><code>get system global</code></pre></div><p><strong>What it does:</strong> Displays global system settings.</p></div>
+                <div class="command"><h3>get system session status</h3><div class="command-container"><pre><code>get system session status</code></pre></div><p><strong>What it does:</strong> Shows global session table statistics.</p></div>
+                <div class="command"><h3>get system admin status</h3><div class="command-container"><pre><code>get system admin status</code></pre></div><p><strong>What it does:</strong> Displays currently logged-in administrators.</p></div>
+                <div class="command"><h3>get system arp</h3><div class="command-container"><pre><code>get system arp</code></pre></div><p><strong>What it does:</strong> Shows the ARP table.</p></div>
+                <div class="command"><h3>get system dns</h3><div class="command-container"><pre><code>get system dns</code></pre></div><p><strong>What it does:</strong> Displays configured DNS servers.</p></div>
+                <div class="command"><h3>get system date</h3><div class="command-container"><pre><code>get system date</code></pre></div><p><strong>What it does:</strong> Shows the current system date and time.</p></div>
+                <div class="command"><h3>get system time</h3><div class="command-container"><pre><code>get system time</code></pre></div><p><strong>What it does:</strong> Shows the current system time.</p></div>
+                <div class="command"><h3>get system fortiguard status</h3><div class="command-container"><pre><code>get system fortiguard status</code></pre></div><p><strong>What it does:</strong> Displays the status of FortiGuard services.</p></div>
+                <div class="command"><h3>get log memory global</h3><div class="command-container"><pre><code>get log memory global</code></pre></div><p><strong>What it does:</strong> Shows global log memory usage.</p></div>
+                <div class="command"><h3>get log disk global</h3><div class="command-container"><pre><code>get log disk global</code></pre></div><p><strong>What it does:</strong> Shows global log disk usage.</p></div>
+                <div class="command"><h3>diagnose hardware deviceinfo disk</h3><div class="command-container"><pre><code>diagnose hardware deviceinfo disk</code></pre></div><p><strong>What it does:</strong> Displays detailed disk information.</p></div>
+                <div class="command"><h3>execute factoryreset</h3><div class="command-container"><pre><code>execute factoryreset</code></pre></div><p><strong>What it does:</strong> Resets the FortiGate to factory defaults (use with extreme caution).</p></div>
+                <div class="command"><h3>execute formatlogdisk</h3><div class="command-container"><pre><code>execute formatlogdisk</code></pre></div><p><strong>What it does:</strong> Formats the logging disk (use with caution).</p></div>
+                <div class="command"><h3>execute reboot</h3><div class="command-container"><pre><code>execute reboot</code></pre></div><p><strong>What it does:</strong> Reboots the FortiGate.</p></div>
+                <div class="command"><h3>execute shutdown</h3><div class="command-container"><pre><code>execute shutdown</code></pre></div><p><strong>What it does:</strong> Shuts down the FortiGate.</p></div>
+                <div class="command"><h3>get system license status</h3><div class="command-container"><pre><code>get system license status</code></pre></div><p><strong>What it does:</strong> Displays detailed license information.</p></div>
             </section>
 
-             <section class="command-category" data-category="interface">
+            <section class="command-category" data-category="interface">
                 <h2>Interface</h2>
-                <div class="command">
-                    <h3>get system interface</h3>
-                    <div class="command-container">
-                        <pre><code>get system interface physical</code></pre>
-                    </div>
-                    <p><strong>What it does:</strong> Displays the configuration and status of physical interfaces.</p>
-                    <p><strong>When to use it:</strong> To check interface settings, IP addresses, and link status.</p>
-                </div>
+                <div class="command"><h3>get system interface physical</h3><div class="command-container"><pre><code>get system interface physical</code></pre></div><p><strong>What it does:</strong> Displays the configuration and status of physical interfaces.</p></div>
+                <div class="command"><h3>show system interface</h3><div class="command-container"><pre><code>show system interface</code></pre></div><p><strong>What it does:</strong> Displays configuration of all interfaces (physical, VLAN, aggregate).</p></div>
+                <div class="command"><h3>execute interface status</h3><div class="command-container"><pre><code>execute interface status</code></pre></div><p><strong>What it does:</strong> Shows real-time status of interfaces, including link state and speed.</p></div>
+                <div class="command"><h3>diagnose netlink interface list</h3><div class="command-container"><pre><code>diagnose netlink interface list</code></pre></div><p><strong>What it does:</strong> Displays detailed kernel-level interface information.</p></div>
+                <div class="command"><h3>diagnose hardware deviceinfo nic <port_name></h3><div class="command-container"><pre><code>diagnose hardware deviceinfo nic port1</code></pre></div><p><strong>What it does:</strong> Shows detailed hardware information for a specific network interface card.</p></div>
+                <div class="command"><h3>get system interface | grep "port1" -A 10</h3><div class="command-container"><pre><code>get system interface | grep "port1" -A 10</code></pre></div><p><strong>What it does:</strong> Filters the interface output to show details for a specific port.</p></div>
+                <div class="command"><h3>config system interface</h3><div class="command-container"><pre><code>config system interface
+    edit "port1"
+        set mode static
+        set ip 10.0.1.1 255.255.255.0
+        set allowaccess ping https ssh http telnet fgfm
+    next
+end</code></pre></div><p><strong>What it does:</strong> Enters interface configuration mode to set IP, access, etc.</p></div>
+                <div class="command"><h3>execute ha manage <member_id></h3><div class="command-container"><pre><code>execute ha manage 1</code></pre></div><p><strong>What it does:</strong> Allows managing a specific HA member from the primary unit.</p></div>
+                <div class="command"><h3>get system virtual-wire-pair</h3><div class="command-container"><pre><code>get system virtual-wire-pair</code></pre></div><p><strong>What it does:</strong> Displays configured virtual wire pairs.</p></div>
+                <div class="command"><h3>get system zone</h3><div class="command-container"><pre><code>get system zone</code></pre></div><p><strong>What it does:</strong> Shows configured zones and their member interfaces.</p></div>
+                <div class="command"><h3>execute fprobe status</h3><div class="command-container"><pre><code>execute fprobe status</code></pre></div><p><strong>What it does:</strong> Displays flow probe status (NetFlow/IPFIX).</p></div>
+                <div class="command"><h3>diagnose hardware watchdog</h3><div class="command-container"><pre><code>diagnose hardware watchdog</code></pre></div><p><strong>What it does:</strong> Shows watchdog timer status.</p></div>
+                <div class="command"><h3>get system link-monitor</h3><div class="command-container"><pre><code>get system link-monitor</code></pre></div><p><strong>What it does:</strong> Displays configured link monitors and their status.</p></div>
+                <div class="command"><h3>diagnose system physical-resource monitor</h3><div class="command-container"><pre><code>diagnose system physical-resource monitor</code></pre></div><p><strong>What it does:</strong> Real-time monitoring of physical resource utilization.</p></div>
+                <div class="command"><h3>get system net-router</h3><div class="command-container"><pre><code>get system net-router</code></pre></div><p><strong>What it does:</strong> Displays configured routers and their settings.</p></div>
+                <div class="command"><h3>config system ntp</h3><div class="command-container"><pre><code>config system ntp
+    set ntpsync enable
+    set server-mode enable
+    set type custom
+    set ntpserver "0.pool.ntp.org"
+end</code></pre></div><p><strong>What it does:</strong> Configures Network Time Protocol (NTP) settings.</p></div>
+                <div class="command"><h3>diagnose ip arp list</h3><div class="command-container"><pre><code>diagnose ip arp list</code></pre></div><p><strong>What it does:</strong> Displays the kernel ARP table, showing resolved MAC addresses.</p></div>
+                <div class="command"><h3>diagnose ip address list</h3><div class="command-container"><pre><code>diagnose ip address list</code></pre></div><p><strong>What it does:</strong> Shows configured IP addresses and interface associations from kernel perspective.</p></div>
+                <div class="command"><h3>get system dns</h3><div class="command-container"><pre><code>get system dns</code></pre></div><p><strong>What it does:</strong> Displays the configured DNS servers for the FortiGate.</p></div>
+                <div class="command"><h3>get system fortilink status</h3><div class="command-container"><pre><code>get system fortilink status</code></pre></div><p><strong>What it does:</strong> Shows status of FortiLink (FortiSwitch/FortiAP management) connection.</p></div>
             </section>
 
             <section class="command-category" data-category="routing">
                 <h2>Routing</h2>
-                <div class="command">
-                    <h3>get router info routing-table all</h3>
-                    <div class="command-container">
-                        <pre><code>get router info routing-table all</code></pre>
-                    </div>
-                    <p><strong>What it does:</strong> Shows the complete routing table, including static, connected, and dynamic routes.</p>
-                    <p><strong>When to use it:</strong> To verify route paths and troubleshoot routing issues.</p>
-                </div>
+                <div class="command"><h3>get router info routing-table all</h3><div class="command-container"><pre><code>get router info routing-table all</code></pre></div><p><strong>What it does:</strong> Shows the complete routing table, including static, connected, and dynamic routes.</p></div>
+                <div class="command"><h3>get router info routing-table details <ip></h3><div class="command-container"><pre><code>get router info routing-table details 8.8.8.8</code></pre></div><p><strong>What it does:</strong> Displays detailed routing information for a specific destination IP.</p></div>
+                <div class="command"><h3>get router info bgp summary</h3><div class="command-container"><pre><code>get router info bgp summary</code></pre></div><p><strong>What it does:</strong> Shows a summary of all BGP peer connections.</p></div>
+                <div class="command"><h3>get router info bgp neighbors <ip></h3><div class="command-container"><pre><code>get router info bgp neighbors 10.0.0.2</code></pre></div><p><strong>What it does:</strong> Displays detailed information for a specific BGP neighbor.</p></div>
+                <div class="command"><h3>get router info ospf neighbor</h3><div class="command-container"><pre><code>get router info ospf neighbor</code></pre></div><p><strong>What it does:</strong> Shows OSPF neighbor relationships and their state.</p></div>
+                <div class="command"><h3>get router info ospf database</h3><div class="command-container"><pre><code>get router info ospf database</code></pre></div><p><strong>What it does:</strong> Displays the OSPF link-state database.</p></div>
+                <div class="command"><h3>diagnose ip route list</h3><div class="command-container"><pre><code>diagnose ip route list</code></pre></div><p><strong>What it does:</strong> Displays the kernel routing table.</p></div>
+                <div class="command"><h3>config router static</h3><div class="command-container"><pre><code>config router static
+    edit 1
+        set dst 0.0.0.0 0.0.0.0
+        set gateway 10.0.0.1
+        set device "port1"
+    next
+end</code></pre></div><p><strong>What it does:</strong> Configures a static route via CLI.</p></div>
+                <div class="command"><h3>diagnose debug enable</h3><div class="command-container"><pre><code>diagnose debug enable
+diagnose debug application routemd 255</code></pre></div><p><strong>What it does:</strong> Enables routing daemon debugging (remember to `diagnose debug disable`).</p></div>
+                <div class="command"><h3>execute router restart</h3><div class="command-container"><pre><code>execute router restart</code></pre></div><p><strong>What it does:</strong> Restarts all routing protocols (use with caution).</p></div>
+                <div class="command"><h3>get router prefix-list</h3><div class="command-container"><pre><code>get router prefix-list</code></pre></div><p><strong>What it does:</strong> Displays configured IP prefix lists used in routing policies.</p></div>
+                <div class="command"><h3>get router route-map</h3><div class="command-container"><pre><code>get router route-map</code></pre></div><p><strong>What it does:</strong> Shows configured route maps for manipulating routing updates.</p></div>
+                <div class="command"><h3>get router policy</h3><div class="command-container"><pre><code>get router policy</code></pre></div><p><strong>What it does:</strong> Displays configured routing policies.</p></div>
+                <div class="command"><h3>diagnose firewall proute list</h3><div class="command-container"><pre><code>diagnose firewall proute list</code></pre></div><p><strong>What it does:</strong> Shows policy routes configured on the FortiGate.</p></div>
+                <div class="command"><h3>get router info kernel</h3><div class="command-container"><pre><code>get router info kernel</code></pre></div><p><strong>What it does:</strong> Displays raw kernel routing information.</p></div>
+                <div class="command"><h3>diagnose ipsec tunnel list</h3><div class="command-container"><pre><code>diagnose ipsec tunnel list</code></pre></div><p><strong>What it does:</strong> Shows details about IPsec tunnels, useful for VPN routing.</p></div>
+                <div class="command"><h3>execute router clear bgp all</h3><div class="command-container"><pre><code>execute router clear bgp all</code></pre></div><p><strong>What it does:</strong> Clears all BGP peer sessions, forcing renegotiation.</p></div>
+                <div class="command"><h3>execute router clear ospf process</h3><div class="command-container"><pre><code>execute router clear ospf process</code></pre></div><p><strong>What it does:</strong> Clears the OSPF process, forcing a restart.</p></div>
+                <div class="command"><h3>diagnose firewall auth list</h3><div class="command-container"><pre><code>diagnose firewall auth list</code></pre></div><p><strong>What it does:</strong> Shows authenticated users, which can impact routing decisions for user-based policies.</p></div>
+                <div class="command"><h3>get router info prefix-list</h3><div class="command-container"><pre><code>get router info prefix-list</code></pre></div><p><strong>What it does:</strong> Displays the effective state of configured prefix lists.</p></div>
             </section>
 
             <section class="command-category" data-category="vpn">
                 <h2>VPN</h2>
-                <div class="command">
-                    <h3>diagnose vpn ike gateway list</h3>
-                    <div class="command-container">
-                        <pre><code>diagnose vpn ike gateway list</code></pre>
-                    </div>
-                    <p><strong>What it does:</strong> Checks IKE Phase 1 VPN status and details.</p>
-                    <p><strong>When to use it:</strong> To verify if the IKE security association (Phase 1) is established.</p>
-                </div>
-                 <div class="command">
-                    <h3>diagnose vpn tunnel list</h3>
-                    <div class="command-container">
-                        <pre><code>diagnose vpn tunnel list</code></pre>
-                    </div>
-                    <p><strong>What it does:</strong> Verifies IPsec tunnel Phase 2 state and traffic selectors.</p>
-                    <p><strong>When to use it:</strong> To check if the IPsec security association (Phase 2) is established and actively passing traffic.</p>
-                </div>
+                <div class="command"><h3>diagnose vpn ike gateway list</h3><div class="command-container"><pre><code>diagnose vpn ike gateway list</code></pre></div><p><strong>What it does:</strong> Checks IKE Phase 1 VPN status and details.</p></div>
+                <div class="command"><h3>diagnose vpn tunnel list</h3><div class="command-container"><pre><code>diagnose vpn tunnel list</code></pre></div><p><strong>What it does:</strong> Verifies IPsec tunnel Phase 2 state and traffic selectors.</p></div>
+                <div class="command"><h3>diagnose debug application ike -1</h3><div class="command-container"><pre><code>diagnose debug application ike -1</code></pre></div><p><strong>What it does:</strong> Enables IKE debug for VPN troubleshooting (use with caution).</p></div>
+                <div class="command"><h3>diagnose debug application ipsec -1</h3><div class="command-container"><pre><code>diagnose debug application ipsec -1</code></pre></div><p><strong>What it does:</strong> Enables IPsec debug for VPN troubleshooting (use with caution).</p></div>
+                <div class="command"><h3>get vpn ipsec tunnel summary</h3><div class="command-container"><pre><code>get vpn ipsec tunnel summary</code></pre></div><p><strong>What it does:</strong> Provides a summary of all IPsec VPN tunnels.</p></div>
+                <div class="command"><h3>get vpn ssl statistics</h3><div class="command-container"><pre><code>get vpn ssl statistics</code></pre></div><p><strong>What it does:</strong> Displays statistics for SSL VPN connections.</p></div>
+                <div class="command"><h3>get vpn ssl monitor</h3><div class="command-container"><pre><code>get vpn ssl monitor</code></pre></div><p><strong>What it does:</strong> Shows active SSL VPN user sessions.</p></div>
+                <div class="command"><h3>execute vpn ssl ssl-portal</h3><div class="command-container"><pre><code>execute vpn ssl ssl-portal</code></pre></div><p><strong>What it does:</strong> Displays SSL VPN portal status.</p></div>
+                <div class="command"><h3>execute vpn certificate list</h3><div class="command-container"><pre><code>execute vpn certificate list</code></pre></div><p><strong>What it does:</strong> Lists all installed certificates, useful for certificate-based VPNs.</p></div>
+                <div class="command"><h3>diagnose debug application fnbamd -1</h3><div class="command-container"><pre><code>diagnose debug application fnbamd -1</code></pre></div><p><strong>What it does:</strong> Enables debug for authentication daemon, useful for VPN user authentication issues.</p></div>
+                <div class="command"><h3>diagnose vpn certificate list</h3><div class="command-container"><pre><code>diagnose vpn certificate list</code></pre></div><p><strong>What it does:</strong> Shows detailed information about VPN certificates.</p></div>
+                <div class="command"><h3>execute vpn ipsec reconnect <tunnel_name></h3><div class="command-container"><pre><code>execute vpn ipsec reconnect my-ipsec-tunnel</code></pre></div><p><strong>What it does:</strong> Forces an IPsec VPN tunnel to re-establish.</p></div>
+                <div class="command"><h3>execute vpn ssl clear-session <user_name></h3><div class="command-container"><pre><code>execute vpn ssl clear-session jdoe</code></pre></div><p><strong>What it does:</strong> Clears a specific SSL VPN user session.</p></div>
+                <div class="command"><h3>get vpn certificate ca</h3><div class="command-container"><pre><code>get vpn certificate ca</code></pre></div><p><strong>What it does:</strong> Displays installed Certificate Authority (CA) certificates.</p></div>
+                <div class="command"><h3>get vpn certificate local</h3><div class="command-container"><pre><code>get vpn certificate local</code></pre></div><p><strong>What it does:</strong> Displays locally generated/imported certificates.</p></div>
+                <div class="command"><h3>config vpn ipsec phase1-interface</h3><div class="command-container"><pre><code>config vpn ipsec phase1-interface
+    edit "my-p1"
+        set interface "port1"
+        set ike-version 2
+        set remote-gw 1.1.1.1
+        ...
+    next
+end</code></pre></div><p><strong>What it does:</strong> Enters configuration mode for IPsec VPN Phase 1.</p></div>
+                <div class="command"><h3>config vpn ipsec phase2-interface</h3><div class="command-container"><pre><code>config vpn ipsec phase2-interface
+    edit "my-p2"
+        set phase1name "my-p1"
+        set pfs disable
+        set proposal aes256-sha256
+        ...
+    next
+end</code></pre></div><p><strong>What it does:</strong> Enters configuration mode for IPsec VPN Phase 2.</p></div>
+                <div class="command"><h3>config vpn ssl web-portal</h3><div class="command-container"><pre><code>config vpn ssl web-portal
+    edit "full-access"
+        set tunnel-mode enable
+        set ip-pools "SSLVPN_TUNNEL_ADDR1"
+        ...
+    next
+end</code></pre></div><p><strong>What it does:</strong> Configures SSL VPN web portals.</p></div>
+                <div class="command"><h3>config vpn ssl settings</h3><div class="command-container"><pre><code>config vpn ssl settings
+    set source-interface "port1"
+    set source-address "all"
+    set default-portal "full-access"
+    ...
+end</code></pre></div><p><strong>What it does:</strong> Configures global SSL VPN settings.</p></div>
+                <div class="command"><h3>diagnose vpn session list</h3><div class="command-container"><pre><code>diagnose vpn session list</code></pre></div><p><strong>What it does:</strong> Shows all active VPN sessions (IPsec and SSL).</p></div>
             </section>
 
             <section class="command-category" data-category="policy">
                 <h2>Policy</h2>
-                <div class="command">
-                    <h3>show firewall policy</h3>
-                    <div class="command-container">
-                        <pre><code>show firewall policy</code></pre>
-                    </div>
-                    <p><strong>What it does:</strong> Displays the configured firewall policies.</p>
-                    <p><strong>When to use it:</strong> To review the security rulebase.</p>
-                </div>
+                <div class="command"><h3>show firewall policy</h3><div class="command-container"><pre><code>show firewall policy</code></pre></div><p><strong>What it does:</strong> Displays the configured firewall policies.</p></div>
+                <div class="command"><h3>config firewall policy</h3><div class="command-container"><pre><code>config firewall policy
+    edit 0
+        set name "Allow_HTTP_from_LAN"
+        set srcintf "lan"
+        set dstintf "wan"
+        set srcaddr "all"
+        set dstaddr "all"
+        set service "HTTP"
+        set action accept
+    next
+end</code></pre></div><p><strong>What it does:</strong> Enters firewall policy configuration mode to add/modify rules.</p></div>
+                <div class="command"><h3>get firewall policy <policy_id></h3><div class="command-container"><pre><code>get firewall policy 1</code></pre></div><p><strong>What it does:</strong> Displays detailed information for a specific firewall policy by ID.</p></div>
+                <div class="command"><h3>diagnose firewall iprope list</h3><div class="command-container"><pre><code>diagnose firewall iprope list</code></pre></div><p><strong>What it does:</strong> Displays the internal firewall policy lookup table, showing rule order.</p></div>
+                <div class="command"><h3>show firewall address</h3><div class="command-container"><pre><code>show firewall address</code></pre></div><p><strong>What it does:</strong> Shows all configured firewall address objects.</p></div>
+                <div class="command"><h3>show firewall service custom</h3><div class="command-container"><pre><code>show firewall service custom</code></pre></div><p><strong>What it does:</strong> Displays custom defined firewall service objects.</p></div>
+                <div class="command"><h3>show firewall service group</h3><div class="command-container"><pre><code>show firewall service group</code></pre></div><p><strong>What it does:</strong> Displays firewall service groups.</p></div>
+                <div class="command"><h3>show firewall schedule</h3><div class="command-container"><pre><code>show firewall schedule</code></pre></div><p><strong>What it does:</strong> Shows configured firewall schedules.</p></div>
+                <div class="command"><h3>show firewall object address</h3><div class="command-container"><pre><code>show firewall object address</code></pre></div><p><strong>What it does:</strong> Displays a list of all address objects.</p></div>
+                <div class="command"><h3>show firewall object service</h3><div class="command-container"><pre><code>show firewall object service</code></pre></div><p><strong>What it does:</strong> Displays a list of all service objects.</p></div>
+                <div class="command"><h3>get firewall vip</h3><div class="command-container"><pre><code>get firewall vip</code></pre></div><p><strong>What it does:</strong> Shows configured Virtual IPs (VIPs) for NAT.</p></div>
+                <div class="command"><h3>get firewall nat-policy</h3><div class="command-container"><pre><code>get firewall nat-policy</code></pre></div><p><strong>What it does:</strong> Displays configured NAT policies.</p></div>
+                <div class="command"><h3>diagnose firewall snat-all list</h3><div class="command-container"><pre><code>diagnose firewall snat-all list</code></pre></div><p><strong>What it does:</strong> Shows all active Source NAT (SNAT) entries.</p></div>
+                <div class="command"><h3>diagnose firewall dnat-all list</h3><div class="command-container"><pre><code>diagnose firewall dnat-all list</code></pre></div><p><strong>What it does:</strong> Shows all active Destination NAT (DNAT) entries.</p></div>
+                <div class="command"><h3>config firewall object address</h3><div class="command-container"><pre><code>config firewall object address
+    edit "my_server_ip"
+        set subnet 192.168.1.100 255.255.255.255
+    next
+end</code></pre></div><p><strong>What it does:</strong> Creates a new firewall address object.</p></div>
+                <div class="command"><h3>config firewall object service custom</h3><div class="command-container"><pre><code>config firewall object service custom
+    edit "TCP_8080"
+        set tcp-portrange 8080
+    next
+end</code></pre></div><p><strong>What it does:</strong> Creates a new custom firewall service object.</p></div>
+                <div class="command"><h3>config firewall vip</h3><div class="command-container"><pre><code>config firewall vip
+    edit "Web_Server_VIP"
+        set extip 203.0.113.1
+        set mappedip "192.168.1.100"
+        set extintf "wan"
+        set portforward enable
+        set protocol tcp
+        set extport 80
+        set mappedport 80
+    next
+end</code></pre></div><p><strong>What it does:</strong> Configures a Virtual IP (VIP) for Destination NAT (DNAT).</p></div>
+                <div class="command"><h3>config firewall policy <policy_id> set logtraffic all</h3><div class="command-container"><pre><code>config firewall policy
+    edit 1
+        set logtraffic all
+    end</code></pre></div><p><strong>What it does:</strong> Configures a firewall policy to log all traffic.</p></div>
+                <div class="command"><h3>get firewall policy stats <policy_id></h3><div class="command-container"><pre><code>get firewall policy stats 1</code></pre></div><p><strong>What it does:</strong> Displays detailed statistics for a specific firewall policy.</p></div>
+                <div class="command"><h3>execute policy lookup</h3><div class="command-container"><pre><code>execute policy lookup [src_ip] [dst_ip] [src_port] [dst_port] [protocol]</code></pre></div><p><strong>What it does:</strong> Simulates a policy lookup for a given traffic flow.</p></div>
             </section>
 
             <section class="command-category" data-category="config">
                 <h2>Configuration Mode</h2>
-                <div class="command">
-                    <h3>config system interface</h3>
-                    <div class="command-container">
-                        <pre><code>config system interface
+                <div class="command"><h3>config system global</h3><div class="command-container"><pre><code>config system global
+    set hostname "my-fortigate"
+    set timezone "86" # For example, (GMT-5:00) Eastern Time (US & Canada)
+    set admin-sport 444
+end</code></pre></div><p><strong>What it does:</strong> Enters global system configuration to set hostname, timezone, admin port, etc.</p></div>
+                <div class="command"><h3>config system interface</h3><div class="command-container"><pre><code>config system interface
     edit "port1"
+        set mode static
         set ip 192.168.1.99 255.255.255.0
+        set allowaccess ping https ssh
     next
-end</code></pre>
-                    </div>
-                    <p><strong>What it does:</strong> Enters the configuration context for a specific interface to set its IP address.</p>
-                    <p><strong>When to use it:</strong> For basic network interface configuration.</p>
-                </div>
-                 <div class="command">
-                    <h3>config router static</h3>
-                    <div class="command-container">
-                        <pre><code>config router static
+end</code></pre></div><p><strong>What it does:</strong> Configures a network interface with IP address and allowed access.</p></div>
+                <div class="command"><h3>config router static</h3><div class="command-container"><pre><code>config router static
     edit 1
+        set dst 0.0.0.0 0.0.0.0
         set gateway 192.168.1.1
         set device "port1"
     next
-end</code></pre>
-                    </div>
-                    <p><strong>What it does:</strong> Configures a static route.</p>
-                    <p><strong>When to use it:</strong> To direct traffic for a specific destination to a next-hop gateway.</p>
-                </div>
+end</code></pre></div><p><strong>What it does:</strong> Configures a static route.</p></div>
+                <div class="command"><h3>config firewall policy</h3><div class="command-container"><pre><code>config firewall policy
+    edit 0
+        set srcintf "port1"
+        set dstintf "port2"
+        set srcaddr "all"
+        set dstaddr "all"
+        set service "ALL"
+        set action accept
+    next
+end</code></pre></div><p><strong>What it does:</strong> Creates a basic firewall policy.</p></div>
+                <div class="command"><h3>config vpn ipsec phase1-interface</h3><div class="command-container"><pre><code>config vpn ipsec phase1-interface
+    edit "VPN-to-Branch"
+        set interface "wan1"
+        set ike-version 2
+        set remote-gw 203.0.113.2
+        set psksecret ENC XXXXXX
+    next
+end</code></pre></div><p><strong>What it does:</strong> Configures IPsec VPN Phase 1 parameters.</p></div>
+                <div class="command"><h3>config vpn ipsec phase2-interface</h3><div class="command-container"><pre><code>config vpn ipsec phase2-interface
+    edit "VPN-to-Branch-P2"
+        set phase1name "VPN-to-Branch"
+        set proposal aes256-sha256
+        set pfs disable
+        set src-subnet 10.0.1.0/24
+        set dst-subnet 10.0.2.0/24
+    next
+end</code></pre></div><p><strong>What it does:</strong> Configures IPsec VPN Phase 2 parameters.</p></div>
+                <div class="command"><h3>config user local</h3><div class="command-container"><pre><code>config user local
+    edit "admin_user"
+        set plaintext-password XXXXXX
+        set type password
+    next
+end</code></pre></div><p><strong>What it does:</strong> Creates/modifies local user accounts.</p></div>
+                <div class="command"><h3>config system ntp</h3><div class="command-container"><pre><code>config system ntp
+    set ntpsync enable
+    set server-mode enable
+    set type custom
+    set ntpserver "0.pool.ntp.org"
+end</code></pre></div><p><strong>What it does:</strong> Configures Network Time Protocol (NTP) settings.</p></div>
+                <div class="command"><h3>config system dns</h3><div class="command-container"><pre><code>config system dns
+    set primary 8.8.8.8
+    set secondary 8.8.4.4
+end</code></pre></div><p><strong>What it does:</strong> Configures DNS server settings.</p></div>
+                <div class="command"><h3>config log syslogd setting</h3><div class="command-container"><pre><code>config log syslogd setting
+    set status enable
+    set server "192.168.1.50"
+    set port 514
+end</code></pre></div><p><strong>What it does:</strong> Configures remote syslog logging.</p></div>
+                <div class="command"><h3>execute backup config <filename></h3><div class="command-container"><pre><code>execute backup config usb myconfig.conf</code></pre></div><p><strong>What it does:</strong> Backs up the current configuration to a specified destination (e.g., USB).</p></div>
+                <div class="command"><h3>execute restore config <filename></h3><div class="command-container"><pre><code>execute restore config usb myconfig.conf</code></pre></div><p><strong>What it does:</strong> Restores a configuration from a specified source (e.g., USB).</p></div>
+                <div class="command"><h3>config system admin</h3><div class="command-container"><pre><code>config system admin
+    edit "admin"
+        set accprofile "super_admin"
+        set password ENC XXXXXX
+    next
+end</code></pre></div><p><strong>What it does:</strong> Configures administrative user accounts.</p></div>
+                <div class="command"><h3>config system console</h3><div class="command-container"><pre><code>config system console
+    set output standard
+end</code></pre></div><p><strong>What it does:</strong> Configures console settings, like output type.</p></div>
+                <div class="command"><h3>config system vdom</h3><div class="command-container"><pre><code>config system vdom
+    edit "new-vdom"
+    next
+end</code></pre></div><p><strong>What it does:</strong> Creates a new Virtual Domain (VDOM).</p></div>
+                <div class="command"><h3>config system snmp sysinfo</h3><div class="command-container"><pre><code>config system snmp sysinfo
+    set status enable
+    set contact "IT Admin"
+    set location "Datacenter"
+end</code></pre></div><p><strong>What it does:</strong> Configures SNMP system information.</p></div>
+                <div class="command"><h3>config system fortilink</h3><div class="command-container"><pre><code>config system fortilink
+    set fortilink-split-up enable
+    set sn-fgfm enable
+end</code></pre></div><p><strong>What it does:</strong> Configures FortiLink for managing FortiSwitches/FortiAPs.</p></div>
+                <div class="command"><h3>config system switch-interface</h3><div class="command-container"><pre><code>config system switch-interface
+    edit "internal"
+        set vlanid 1
+        set ip 192.168.1.1 255.255.255.0
+    next
+end</code></pre></div><p><strong>What it does:</strong> Configures software switch interfaces.</p></div>
+                <div class="command"><h3>config wireless-controller vap</h3><div class="command-container"><pre><code>config wireless-controller vap
+    edit "Guest-WiFi"
+        set ssid "Guest-WiFi"
+        set security wpa2-only-personal
+        set password ENC XXXXXX
+    next
+end</code></pre></div><p><strong>What it does:</strong> Configures Virtual Access Points (VAPs) on integrated FortiAPs.</p></div>
+                <div class="command"><h3>execute ping-options</h3><div class="command-container"><pre><code>execute ping-options
+    set adaptive-ping enable
+    set source "port1"
+end</code></pre></div><p><strong>What it does:</strong> Configures options for the `execute ping` command.</p></div>
             </section>
 
             <section class="command-category" data-category="troubleshooting">
                 <h2>Troubleshooting</h2>
-                <div class="command">
-                    <h3>diagnose debug flow</h3>
-                    <div class="command-container">
-                        <pre><code>diagnose debug flow filter addr [ip]
+                <div class="command"><h3>diagnose debug flow</h3><div class="command-container"><pre><code>diagnose debug flow filter addr [ip]
 diagnose debug flow show function-name enable
 diagnose debug flow trace start 100
-diagnose debug enable</code></pre>
-                    </div>
-                    <p><strong>What it does:</strong> A powerful tool for tracing the path of a packet as it is processed by the FortiGate.</p>
-                    <p><strong>When to use it:</strong> Essential for in-depth troubleshooting of complex traffic issues.</p>
-                </div>
-                 <div class="command">
-                    <h3>execute ping &lt;ip&gt;</h3>
-                    <div class="command-container">
-                        <pre><code>execute ping 8.8.8.8</code></pre>
-                    </div>
-                    <p><strong>What it does:</strong> Basic connectivity testing from firewall.</p>
-                    <p><strong>When to use it:</strong> To test basic network connectivity from the FortiGate itself.</p>
-                </div>
-                <div class="command">
-                    <h3>execute traceroute &lt;ip&gt;</h3>
-                    <div class="command-container">
-                        <pre><code>execute traceroute 8.8.8.8</code></pre>
-                    </div>
-                    <p><strong>What it does:</strong> Traces packet path for routing issues.</p>
-                    <p><strong>When to use it:</strong> To identify routing loops or points of failure in a network path.</p>
-                </div>
-                <div class="command">
-                    <h3>diagnose debug application ike -1</h3>
-                    <div class="command-container">
-                        <pre><code>diagnose debug application ike -1</code></pre>
-                    </div>
-                    <p><strong>What it does:</strong> Enables IKE debug for VPN troubleshooting.</p>
-                    <p><strong>When to use it:</strong> For in-depth troubleshooting of IPsec VPN Phase 1 negotiations.</p>
-                </div>
-                 <div class="command">
-                    <h3>diagnose debug enable</h3>
-                    <div class="command-container">
-                        <pre><code>diagnose debug enable</code></pre>
-                    </div>
-                    <p><strong>What it does:</strong> Starts debug output (must be disabled after use).</p>
-                    <p><strong>When to use it:</strong> To start viewing debug output after enabling specific debug flags.</p>
-                </div>
-                <div class="command">
-                    <h3>diagnose sys session list</h3>
-                    <div class="command-container">
-                        <pre><code>diagnose sys session list</code></pre>
-                    </div>
-                    <p><strong>What it does:</strong> Displays active firewall sessions.</p>
-                    <p><strong>When to use it:</strong> To see live traffic flows and verify policy matching.</p>
-                </div>
-                <div class="command">
-                    <h3>diagnose sniffer packet any "host &lt;ip&gt;" 4</h3>
-                    <div class="command-container">
-                        <pre><code>diagnose sniffer packet any "host 10.0.0.1" 4</code></pre>
-                    </div>
-                    <p><strong>What it does:</strong> Packet capture directly on FortiGate.</p>
-                    <p><strong>When to use it:</strong> For deep packet-level troubleshooting to see actual traffic hitting the firewall.</p>
-                </div>
+diagnose debug enable</code></pre></div><p><strong>What it does:</strong> A powerful tool for tracing the path of a packet as it is processed by the FortiGate.</p></div>
+                <div class="command"><h3>execute ping &lt;ip&gt;</h3><div class="command-container"><pre><code>execute ping 8.8.8.8</code></pre></div><p><strong>What it does:</strong> Basic connectivity testing from firewall.</p></div>
+                <div class="command"><h3>execute traceroute &lt;ip&gt;</h3><div class="command-container"><pre><code>execute traceroute 8.8.8.8</code></pre></div><p><strong>What it does:</strong> Traces packet path for routing issues.</p></div>
+                <div class="command"><h3>diagnose debug application ike -1</h3><div class="command-container"><pre><code>diagnose debug application ike -1</code></pre></div><p><strong>What it does:</strong> Enables IKE debug for VPN troubleshooting.</p></div>
+                <div class="command"><h3>diagnose debug enable</h3><div class="command-container"><pre><code>diagnose debug enable</code></pre></div><p><strong>What it does:</strong> Starts debug output (must be disabled after use with `diagnose debug disable`).</p></div>
+                <div class="command"><h3>diagnose sys session list</h3><div class="command-container"><pre><code>diagnose sys session list</code></pre></div><p><strong>What it does:</strong> Displays active firewall sessions.</p></div>
+                <div class="command"><h3>diagnose sniffer packet any "host &lt;ip&gt;" 4</h3><div class="command-container"><pre><code>diagnose sniffer packet any "host 10.0.0.1" 4</code></pre></div><p><strong>What it does::</strong> Packet capture directly on FortiGate.</p></div>
+                <div class="command"><h3>diagnose debug application urlfilter -1</h3><div class="command-container"><pre><code>diagnose debug application urlfilter -1</code></pre></div><p><strong>What it does:</strong> Enables URL filtering debug for web filtering issues.</p></div>
+                <div class="command"><h3>diagnose debug flow show console enable</h3><div class="command-container"><pre><code>diagnose debug flow show console enable</code></pre></div><p><strong>What it does:</strong> Directs flow debug output to the console.</p></div>
+                <div class="command"><h3>diagnose debug flow show function-name enable</h3><div class="command-container"><pre><code>diagnose debug flow show function-name enable</code></pre></div><p><strong>What it does:</strong> Shows function names in flow debug output for better context.</p></div>
+                <div class="command"><h3>diagnose debug application utm -1</h3><div class="command-container"><pre><code>diagnose debug application utm -1</code></pre></div><p><strong>What it does:</strong> Enables debug for Unified Threat Management (UTM) features.</p></div>
+                <div class="command"><h3>diagnose test application urlfilter <url></h3><div class="command-container"><pre><code>diagnose test application urlfilter example.com</code></pre></div><p><strong>What it does:</strong> Tests how the URL filter classifies a specific URL.</p></div>
+                <div class="command"><h3>diagnose hardware sysinfo cpu</h3><div class="command-container"><pre><code>diagnose hardware sysinfo cpu</code></pre></div><p><strong>What it does:</strong> Displays detailed CPU information.</p></div>
+                <div class="command"><h3>diagnose hardware sysinfo memory</h3><div class="command-container"><pre><code>diagnose hardware sysinfo memory</code></pre></div><p><strong>What it does:</strong> Displays detailed memory information.</p></div>
+                <div class="command"><h3>diagnose debug fsck /dev/sda1</h3><div class="command-container"><pre><code>diagnose debug fsck /dev/sda1</code></pre></div><p><strong>What it does:</strong> Checks and repairs filesystem on a given partition (use with caution).</p></div>
+                <div class="command"><h3>diagnose system print config grep "my_policy_name"</h3><div class="command-container"><pre><code>diagnose system print config grep "my_policy_name"</code></pre></div><p><strong>What it does:</strong> Searches the running configuration for specific text.</p></div>
+                <div class="command"><h3>get system performance top-summary</h3><div class="command-container"><pre><code>get system performance top-summary</code></pre></div><p><strong>What it does:</strong> Provides a quick summary of top resource consumers.</p></div>
+                <div class="command"><h3>execute log filter category 1</h3><div class="command-container"><pre><code>execute log filter category 1
+execute log display</code></pre></div><p><strong>What it does:</strong> Filters logs by category (e.g., traffic) and displays them.</p></div>
+                <div class="command"><h3>diagnose debug reset</h3><div class="command-container"><pre><code>diagnose debug reset</code></pre></div><p><strong>What it does:</strong> Resets all debug flags to default (essential after debugging).</p></div>
+                <div class="command"><h3>diagnose test application fnbamd 2</h3><div class="command-container"><pre><code>diagnose test application fnbamd 2</code></pre></div><p><strong>What it does:</strong> Tests connectivity to FortiGuard servers for authentication and reputation services.</p></div>
             </section>
 
         </div>

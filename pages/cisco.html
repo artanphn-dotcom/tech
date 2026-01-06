@@ -32,136 +32,148 @@
 
             <section class="command-category" data-category="system">
                 <h2>System</h2>
-                <div class="command">
-                    <h3>show running-config</h3>
-                    <div class="command-container">
-                        <pre><code>show running-config</code></pre>
-                    </div>
-                    <p><strong>What it does:</strong> Displays active configuration.</p>
-                    <p><strong>When to use it:</strong> Essential for viewing the active configuration.</p>
-                </div>
-                 <div class="command">
-                    <h3>show version</h3>
-                    <div class="command-container">
-                        <pre><code>show version</code></pre>
-                    </div>
-                    <p><strong>What it does:</strong> Displays OS version and hardware info.</p>
-                    <p><strong>When to use it:</strong> To identify the device model and software version.</p>
-                </div>
+                <div class="command"><h3>show running-config</h3><div class="command-container"><pre><code>show running-config</code></pre></div><p><strong>What it does:</strong> Displays active configuration.</p></div>
+                <div class="command"><h3>show version</h3><div class="command-container"><pre><code>show version</code></pre></div><p><strong>What it does:</strong> Displays OS version and hardware info.</p></div>
+                <div class="command"><h3>show startup-config</h3><div class="command-container"><pre><code>show startup-config</code></pre></div><p><strong>What it does:</strong> Displays the configuration that will be loaded on next reboot.</p></div>
+                <div class="command"><h3>show processes cpu</h3><div class="command-container"><pre><code>show processes cpu sorted</code></pre></div><p><strong>What it does:</strong> Shows CPU utilization by process, sorted by usage.</p></div>
+                <div class="command"><h3>show memory</h3><div class="command-container"><pre><code>show memory summary</code></pre></div><p><strong>What it does:</strong> Displays memory usage summary.</p></div>
+                <div class="command"><h3>show platform</h3><div class="command-container"><pre><code>show platform</code></pre></div><p><strong>What it does:</strong> Displays detailed platform and hardware information.</p></div>
+                <div class="command"><h3>show inventory</h3><div class="command-container"><pre><code>show inventory</code></pre></div><p><strong>What it does:</strong> Shows a list of all hardware components, including serial numbers.</p></div>
+                <div class="command"><h3>show users</h3><div class="command-container"><pre><code>show users</code></pre></div><p><strong>What it does:</strong> Displays currently connected console and VTY users.</p></div>
+                <div class="command"><h3>show clock</h3><div class="command-container"><pre><code>show clock detail</code></pre></div><p><strong>What it does:</strong> Shows the current system time and its synchronization status.</p></div>
+                <div class="command"><h3>show calendar</h3><div class="command-container"><pre><code>show calendar</code></pre></div><p><strong>What it does:</strong> Displays the hardware calendar time.</p></div>
+                <div class="command"><h3>show license</h3><div class="command-container"><pre><code>show license feature</code></pre></div><p><strong>What it does:</strong> Shows status of licensed features.</p></div>
+                <div class="command"><h3>show boot</h3><div class="command-container"><pre><code>show boot</code></pre></div><p><strong>What it does:</strong> Displays the boot variables configured.</p></div>
+                <div class="command"><h3>show file systems</h3><div class="command-container"><pre><code>show file systems</code></pre></div><p><strong>What it does:</strong> Lists available file systems on the device.</p></div>
+                <div class="command"><h3>show flash:</h3><div class="command-container"><pre><code>show flash:</code></pre></div><p><strong>What it does:</strong> Displays contents of the flash memory.</p></div>
+                <div class="command"><h3>show rommon</h3><div class="command-container"><pre><code>show rommon</code></pre></div><p><strong>What it does:</strong> Displays information about the ROM Monitor (ROMMON) version.</p></div>
+                <div class="command"><h3>show reload</h3><div class="command-container"><pre><code>show reload</code></pre></div><p><strong>What it does:</strong> Displays information about a pending reload.</p></div>
+                <div class="command"><h3>show environment</h3><div class="command-container"><pre><code>show environment all</code></pre></div><p><strong>What it does:</strong> Displays environmental monitor status (e.g., power supplies, fans, temperature).</p></div>
+                <div class="command"><h3>show redundancy</h3><div class="command-container"><pre><code>show redundancy state</code></pre></div><p><strong>What it does:</strong> Shows redundancy state for HA setups.</p></div>
+                <div class="command"><h3>show controllers</h3><div class="command-container"><pre><code>show controllers</code></pre></div><p><strong>What it does:</strong> Displays hardware controller information.</p></div>
+                <div class="command"><h3>show vlan brief</h3><div class="command-container"><pre><code>show vlan brief</code></pre></div><p><strong>What it does:</strong> Provides a summary of configured VLANs and their assigned ports.</p></div>
             </section>
 
             <section class="command-category" data-category="interface">
                 <h2>Interface</h2>
-                <div class="command">
-                    <h3>show ip interface brief</h3>
-                    <div class="command-container">
-                        <pre><code>show ip interface brief</code></pre>
-                    </div>
-                    <p><strong>What it does:</strong> Quick overview of interface status and IPs.</p>
-                    <p><strong>When to use it:</strong> A primary command to check interface status and IP configuration.</p>
-                </div>
-                <div class="command">
-                    <h3>show interface</h3>
-                    <div class="command-container">
-                        <pre><code>show interface GigabitEthernet0/1</code></pre>
-                    </div>
-                    <p><strong>What it does:</strong> Displays detailed information about a specific interface.</p>
-                    <p><strong>When to use it:</strong> To troubleshoot interface errors, duplex, and speed issues.</p>
-                </div>
+                <div class="command"><h3>show ip interface brief</h3><div class="command-container"><pre><code>show ip interface brief</code></pre></div><p><strong>What it does:</strong> Quick overview of interface status and IPs.</p></div>
+                <div class="command"><h3>show interface &lt;type/num&gt;</h3><div class="command-container"><pre><code>show interface GigabitEthernet0/1</code></pre></div><p><strong>What it does:</strong> Displays detailed information about a specific interface.</p></div>
+                <div class="command"><h3>show interface status</h3><div class="command-container"><pre><code>show interface status</code></pre></div><p><strong>What it does:</strong> Shows connection status (connected, notconnect), speed, and duplex for switch ports.</p></div>
+                <div class="command"><h3>show interface description</h3><div class="command-container"><pre><code>show interface description</code></pre></div><p><strong>What it does:</strong> Displays configured descriptions for all interfaces.</p></div>
+                <div class="command"><h3>show interfaces counters errors</h3><div class="command-container"><pre><code>show interfaces counters errors</code></pre></div><p><strong>What it does:</strong> Shows error counts per interface.</p></div>
+                <div class="command"><h3>show interfaces transceiver</h3><div class="command-container"><pre><code>show interfaces transceiver detail</code></pre></div><p><strong>What it does:</strong> Displays detailed information about fiber optic transceivers.</p></div>
+                <div class="command"><h3>show cdp neighbors detail</h3><div class="command-container"><pre><code>show cdp neighbors detail</code></pre></div><p><strong>What it does:</strong> Shows detailed information about directly connected Cisco devices via CDP.</p></div>
+                <div class="command"><h3>show spanning-tree summary</h3><div class="command-container"><pre><code>show spanning-tree summary</code></pre></div><p><strong>What it does:</strong> Displays a summary of Spanning Tree Protocol (STP) status.</p></div>
+                <div class="command"><h3>show etherchannel summary</h3><div class="command-container"><pre><code>show etherchannel summary</code></pre></div><p><strong>What it does:</strong> Shows a summary of configured EtherChannels (LAGs).</p></div>
+                <div class="command"><h3>show port-security interface &lt;type/num&gt;</h3><div class="command-container"><pre><code>show port-security interface GigabitEthernet0/1</code></pre></div><p><strong>What it does:</strong> Displays port security status for an interface.</p></div>
+                <div class="command"><h3>show vlan id &lt;vlan-id&gt;</h3><div class="command-container"><pre><code>show vlan id 10</code></pre></div><p><strong>What it does:</strong> Shows detailed information for a specific VLAN.</p></div>
+                <div class="command"><h3>show ip route &lt;ip-address&gt;</h3><div class="command-container"><pre><code>show ip route 10.0.0.1</code></pre></div><p><strong>What it does:</strong> Shows routing table entry for a specific IP address.</p></div>
+                <div class="command"><h3>show ip protocols</h3><div class="command-container"><pre><code>show ip protocols</code></pre></div><p><strong>What it does:</strong> Displays parameters and current status of active routing protocols.</p></div>
+                <div class="command"><h3>show ip nat translations</h3><div class="command-container"><pre><code>show ip nat translations</code></pre></div><p><strong>What it does:</strong> Shows active Network Address Translation (NAT) translations.</p></div>
+                <div class="command"><h3>show ip bgp summary</h3><div class="command-container"><pre><code>show ip bgp summary</code></pre></div><p><strong>What it does:</strong> Displays a summary of BGP peer connections.</p></div>
+                <div class="command"><h3>show ip ospf neighbor</h3><div class="command-container"><pre><code>show ip ospf neighbor</code></pre></div><p><strong>What it does:</strong> Shows OSPF neighbor relationships.</p></div>
+                <div class="command"><h3>show interface &lt;type/num&gt; transceiver properties</h3><div class="command-container"><pre><code>show interface gigabitEthernet0/1 transceiver properties</code></pre></div><p><strong>What it does:</strong> Displays physical properties of the transceiver on an interface.</p></div>
+                <div class="command"><h3>show power inline</h3><div class="command-container"><pre><code>show power inline</code></pre></div><p><strong>What it does:</strong> Displays Power over Ethernet (PoE) status.</p></div>
+                <div class="command"><h3>show logging</h3><div class="command-container"><pre><code>show logging</code></pre></div><p><strong>What it does:</strong> Displays the content of the system log buffer.</p></div>
+                <div class="command"><h3>show standby brief</h3><div class="command-container"><pre><code>show standby brief</code></pre></div><p><strong>What it does:</strong> Shows Hot Standby Router Protocol (HSRP) group status.</p></div>
             </section>
 
             <section class="command-category" data-category="vpn">
                 <h2>VPN</h2>
-                <div class="command">
-                    <h3>show crypto isakmp sa</h3>
-                    <div class="command-container">
-                        <pre><code>show crypto isakmp sa</code></pre>
-                    </div>
-                    <p><strong>What it does:</strong> Verifies VPN IKE Phase 1 status.</p>
-                    <p><strong>When to use it:</strong> To check if the IKE security association (Phase 1) is established.</p>
-                </div>
-                 <div class="command">
-                    <h3>show crypto ipsec sa</h3>
-                    <div class="command-container">
-                        <pre><code>show crypto ipsec sa</code></pre>
-                    </div>
-                    <p><strong>What it does:</strong> Checks IPsec Phase 2 encryption counters.</p>
-                    <p><strong>When to use it:</strong> To verify if the IPsec security association (Phase 2) is established and actively passing traffic.</p>
-                </div>
+                <div class="command"><h3>show crypto isakmp sa</h3><div class="command-container"><pre><code>show crypto isakmp sa</code></pre></div><p><strong>What it does:</strong> Verifies VPN IKE Phase 1 status.</p></div>
+                <div class="command"><h3>show crypto ipsec sa</h3><div class="command-container"><pre><code>show crypto ipsec sa</code></pre></div><p><strong>What it does:</strong> Checks IPsec Phase 2 encryption counters.</p></div>
+                <div class="command"><h3>show crypto session</h3><div class="command-container"><pre><code>show crypto session</code></pre></div><p><strong>What it does:</strong> Displays active crypto sessions, useful for troubleshooting VPN connections.</p></div>
+                <div class="command"><h3>show vpn-sessiondb summary</h3><div class="command-container"><pre><code>show vpn-sessiondb summary</code></pre></div><p><strong>What it does:</strong> Provides a summary of all active VPN sessions (e.g., AnyConnect, L2L).</p></div>
+                <div class="command"><h3>show vpn-sessiondb detail l2l</h3><div class="command-container"><pre><code>show vpn-sessiondb detail l2l</code></pre></div><p><strong>What it does:</strong> Shows detailed information for LAN-to-LAN VPN sessions.</p></div>
+                <div class="command"><h3>show vpn-sessiondb detail anyconnect</h3><div class="command-container"><pre><code>show vpn-sessiondb detail anyconnect</code></pre></div><p><strong>What it does:</strong> Shows detailed information for AnyConnect VPN sessions.</p></div>
+                <div class="command"><h3>debug crypto isakmp</h3><div class="command-container"><pre><code>debug crypto isakmp</code></pre></div><p><strong>What it does:</strong> Enables debugging for IKE (Phase 1) negotiations (use with caution).</p></div>
+                <div class="command"><h3>debug crypto ipsec</h3><div class="command-container"><pre><code>debug crypto ipsec</code></pre></div><p><strong>What it does:</strong> Enables debugging for IPsec (Phase 2) negotiations (use with caution).</p></div>
+                <div class="command"><h3>clear crypto sa</h3><div class="command-container"><pre><code>clear crypto sa</code></pre></div><p><strong>What it does:</strong> Clears all IKE and IPsec Security Associations, forcing renegotiation.</p></div>
+                <div class="command"><h3>show run | section crypto</h3><div class="command-container"><pre><code>show run | section crypto</code></pre></div><p><strong>What it does:</strong> Displays the crypto-related configuration from the running config.</p></div>
+                <div class="command"><h3>show access-list &lt;acl-name&gt;</h3><div class="command-container"><pre><code>show access-list VPN_ACL</code></pre></div><p><strong>What it does:</strong> Shows the access list used for interesting traffic in VPNs.</p></div>
+                <div class="command"><h3>show route map &lt;map-name&gt;</h3><div class="command-container"><pre><code>show route-map VPN_RM</code></pre></div><p><strong>What it does:</strong> Displays the route map, often used for policy-based VPNs or routing.</p></div>
+                <div class="command"><h3>show ip nat translations verbose</h3><div class="command-container"><pre><code>show ip nat translations verbose</code></pre></div><p><strong>What it does:</strong> Shows verbose NAT translations, useful for checking if VPN traffic is being NAT'd.</p></div>
+                <div class="command"><h3>show interface tunnel &lt;num&gt;</h3><div class="command-container"><pre><code>show interface Tunnel0</code></pre></div><p><strong>What it does:</strong> Displays status and configuration of a tunnel interface (e.g., for GRE/IPsec).</p></div>
+                <div class="command"><h3>configure terminal</h3><div class="command-container"><pre><code>configure terminal
+crypto isakmp policy 10
+ authentication pre-share
+ encryption aes
+ hash sha256
+ group 5
+ lifetime 86400
+crypto ipsec transform-set MY_TRANSFORM_SET esp-aes 256 esp-sha256-hmac
+ mode tunnel</code></pre></div><p><strong>What it does:</strong> Configuration commands for setting up IPsec VPNs.</p></div>
+                <div class="command"><h3>show clients vpn &lt;client-type&gt;</h3><div class="command-container"><pre><code>show clients vpn anyconnect</code></pre></div><p><strong>What it does:</strong> Displays information about connected VPN clients.</p></div>
+                <div class="command"><h3>show user-id statistics</h3><div class="command-container"><pre><code>show user-id statistics</code></pre></div><p><strong>What it does:</strong> Shows statistics related to user identification, potentially for VPN users.</p></div>
+                <div class="command"><h3>show vpn-sessiondb svc detail</h3><div class="command-container"><pre><code>show vpn-sessiondb svc detail</code></pre></div><p><strong>What it does:</strong> Displays detailed SVC (SSL VPN Client) session information.</p></div>
+                <div class="command"><h3>show module &lt;module-number&gt; vpn</h3><div class="command-container"><pre><code>show module 1 vpn</code></pre></div><p><strong>What it does:</strong> Shows VPN status for a specific service module.</p></div>
+                <div class="command"><h3>show ssl vpn session-info</h3><div class="command-container"><pre><code>show ssl vpn session-info</code></pre></div><p><strong>What it does:</strong> Displays information about SSL VPN sessions.</p></div>
             </section>
 
             <section class="command-category" data-category="config">
                 <h2>Configuration</h2>
-                <div class="command">
-                    <h3>configure terminal</h3>
-                    <div class="command-container">
-                        <pre><code>configure terminal</code></pre>
-                    </div>
-                    <p><strong>What it does:</strong> Enters global configuration mode.</p>
-                    <p><strong>When to use it:</strong> To make any changes to the device's configuration.</p>
-                </div>
-                <div class="command">
-                    <h3>interface GigabitEthernet0/1</h3>
-                    <div class="command-container">
-                        <pre><code>interface GigabitEthernet0/1
+                <div class="command"><h3>configure terminal</h3><div class="command-container"><pre><code>configure terminal</code></pre></div><p><strong>What it does:</strong> Enters global configuration mode.</p></div>
+                <div class="command"><h3>interface GigabitEthernet0/1</h3><div class="command-container"><pre><code>interface GigabitEthernet0/1
  ip address 192.168.1.1 255.255.255.0
- no shutdown</code></pre>
-                    </div>
-                    <p><strong>What it does:</strong> Enters interface configuration mode and sets an IP address.</p>
-                    <p><strong>When to use it:</strong> To configure a specific interface.</p>
-                </div>
-                 <div class="command">
-                    <h3>ip route</h3>
-                    <div class="command-container">
-                        <pre><code>ip route 0.0.0.0 0.0.0.0 192.168.1.254</code></pre>
-                    </div>
-                    <p><strong>What it does:</strong> Creates a static route. This example creates a default route.</p>
-                    <p><strong>When to use it:</strong> To manually define a path for traffic.</p>
-                </div>
+ no shutdown</code></pre></div><p><strong>What it does:</strong> Configures an interface with an IP address and brings it up.</p></div>
+                <div class="command"><h3>ip route</h3><div class="command-container"><pre><code>ip route 0.0.0.0 0.0.0.0 192.168.1.254</code></pre></div><p><strong>What it does:</strong> Creates a static default route.</p></div>
+                <div class="command"><h3>hostname &lt;name&gt;</h3><div class="command-container"><pre><code>hostname MyRouter</code></pre></div><p><strong>What it does:</strong> Sets the device hostname.</p></div>
+                <div class="command"><h3>enable secret &lt;password&gt;</h3><div class="command-container"><pre><code>enable secret MyStrongPassword</code></pre></div><p><strong>What it does:</strong> Configures an encrypted password for privileged EXEC mode.</p></div>
+                <div class="command"><h3>line vty 0 4</h3><div class="command-container"><pre><code>line vty 0 4
+ password cisco
+ login
+ transport input ssh</code></pre></div><p><strong>What it does:</strong> Configures virtual terminal lines for Telnet/SSH access.</p></div>
+                <div class="command"><h3>logging host &lt;ip-address&gt;</h3><div class="command-container"><pre><code>logging host 10.0.0.50</code></pre></div><p><strong>What it does:</strong> Sends system logs to a remote syslog server.</p></div>
+                <div class="command"><h3>ntp server &lt;ip-address&gt;</h3><div class="command-container"><pre><code>ntp server 1.pool.ntp.org</code></pre></div><p><strong>What it does:</strong> Configures an NTP server for time synchronization.</p></div>
+                <div class="command"><h3>snmp-server community &lt;string&gt; ro</h3><div class="command-container"><pre><code>snmp-server community public RO</code></pre></div><p><strong>What it does:</strong> Configures an SNMP read-only community string.</p></div>
+                <div class="command"><h3>banner motd &lt;delimiting-character&gt; &lt;message&gt; &lt;delimiting-character&gt;</h3><div class="command-container"><pre><code>banner motd # Unauthorized access prohibited #</code></pre></div><p><strong>What it does:</strong> Configures a Message Of The Day banner.</p></div>
+                <div class="command"><h3>router ospf &lt;process-id&gt;</h3><div class="command-container"><pre><code>router ospf 1
+ network 192.168.1.0 0.0.0.255 area 0</code></pre></div><p><strong>What it does:</strong> Configures OSPF routing protocol.</p></div>
+                <div class="command"><h3>router bgp &lt;asn&gt;</h3><div class="command-container"><pre><code>router bgp 65000
+ neighbor 10.0.0.1 remote-as 65001</code></pre></div><p><strong>What it does:</strong> Configures BGP routing protocol.</p></div>
+                <div class="command"><h3>access-list &lt;acl-num/name&gt; deny/permit &lt;criteria&gt;</h3><div class="command-container"><pre><code>access-list 101 permit ip any any</code></pre></div><p><strong>What it does:</strong> Creates an Access Control List (ACL).</p></div>
+                <div class="command"><h3>route-map &lt;map-name&gt; permit &lt;sequence-num&gt;</h3><div class="command-container"><pre><code>route-map MY_ROUTE_MAP permit 10
+ match ip address 101</code></pre></div><p><strong>What it does:</strong> Creates a route map for policy-based routing or filtering.</p></div>
+                <div class="command"><h3>vlan &lt;vlan-id&gt;</h3><div class="command-container"><pre><code>vlan 10
+ name Sales</code></pre></div><p><strong>What it does:</strong> Creates a new VLAN.</p></div>
+                <div class="command"><h3>interface Vlan&lt;vlan-id&gt;</h3><div class="command-container"><pre><code>interface Vlan10
+ ip address 10.10.10.1 255.255.255.0</code></pre></div><p><strong>What it does:</strong> Configures a Switch Virtual Interface (SVI) for a VLAN.</p></div>
+                <div class="command"><h3>crypto isakmp policy &lt;priority&gt;</h3><div class="command-container"><pre><code>crypto isakmp policy 10
+ authentication pre-share
+ encryption aes 256
+ hash sha256
+ group 5
+ lifetime 86400</code></pre></div><p><strong>What it does:</strong> Configures an IKE Phase 1 policy for VPNs.</p></div>
+                <div class="command"><h3>crypto ipsec transform-set &lt;name&gt; esp-&lt;encryption&gt; esp-&lt;hash&gt;</h3><div class="command-container"><pre><code>crypto ipsec transform-set MY_TRANSFORM_SET esp-aes 256 esp-sha256-hmac
+ mode tunnel</code></pre></div><p><strong>What it does:</strong> Configures an IPsec Phase 2 transform set.</p></div>
+                <div class="command"><h3>ip dhcp pool &lt;name&gt;</h3><div class="command-container"><pre><code>ip dhcp pool VLAN10_POOL
+ network 10.10.10.0 255.255.255.0
+ default-router 10.10.10.1</code></pre></div><p><strong>What it does:</strong> Configures a DHCP server pool.</p></div>
+                <div class="command"><h3>username &lt;username&gt; privilege &lt;level&gt; secret &lt;password&gt;</h3><div class="command-container"><pre><code>username admin privilege 15 secret MyAdminPassword</code></pre></div><p><strong>What it does:</strong> Creates a local user with specified privilege level and password.</p></div>
             </section>
 
              <section class="command-category" data-category="troubleshooting">
                 <h2>Troubleshooting</h2>
-                <div class="command">
-                    <h3>show ip route</h3>
-                    <div class="command-container">
-                        <pre><code>show ip route</code></pre>
-                    </div>
-                    <p><strong>What it does:</strong> Shows routing table and protocol sources.</p>
-                    <p><strong>When to use it:</strong> A primary command to troubleshoot routing issues.</p>
-                </div>
-                 <div class="command">
-                    <h3>show logging</h3>
-                    <div class="command-container">
-                        <pre><code>show logging</code></pre>
-                    </div>
-                    <p><strong>What it does:</strong> Displays system logs and errors.</p>
-                    <p><strong>When to use it:</strong> To check for errors, status messages, and other events.</p>
-                </div>
-                <div class="command">
-                    <h3>ping &lt;ip&gt;</h3>
-                    <div class="command-container">
-                        <pre><code>ping 8.8.8.8</code></pre>
-                    </div>
-                    <p><strong>What it does:</strong> Basic reachability test.</p>
-                    <p><strong>When to use it:</strong> For basic connectivity testing.</p>
-                </div>
-                 <div class="command">
-                    <h3>traceroute &lt;ip&gt;</h3>
-                    <div class="command-container">
-                        <pre><code>traceroute 8.8.8.8</code></pre>
-                    </div>
-                    <p><strong>What it does:</strong> Path analysis for routing issues.</p>
-                    <p><strong>When to use it:</strong> To identify routing loops or points of failure in a network path.</p>
-                </div>
-                 <div class="command">
-                    <h3>debug ip packet detail</h3>
-                    <div class="command-container">
-                        <pre><code>debug ip packet detail</code></pre>
-                    </div>
-                    <p><strong>What it does:</strong> Deep packet-level troubleshooting.</p>
-                    <p><strong>When to use it:</strong> For real-time packet inspection to diagnose complex network issues (use with caution in production).</p>
-                </div>
+                <div class="command"><h3>show ip route</h3><div class="command-container"><pre><code>show ip route</code></pre></div><p><strong>What it does:</strong> Shows routing table and protocol sources.</p></div>
+                <div class="command"><h3>show logging</h3><div class="command-container"><pre><code>show logging</code></pre></div><p><strong>What it does:</strong> Displays system logs and errors.</p></div>
+                <div class="command"><h3>ping &lt;ip&gt;</h3><div class="command-container"><pre><code>ping 8.8.8.8</code></pre></div><p><strong>What it does:</strong> Basic reachability test.</p></div>
+                <div class="command"><h3>traceroute &lt;ip&gt;</h3><div class="command-container"><pre><code>traceroute 8.8.8.8</code></pre></div><p><strong>What it does:</strong> Path analysis for routing issues.</p></div>
+                <div class="command"><h3>debug ip packet detail</h3><div class="command-container"><pre><code>debug ip packet detail</code></pre></div><p><strong>What it does:</strong> Deep packet-level troubleshooting.</p></div>
+                <div class="command"><h3>show ip arp</h3><div class="command-container"><pre><code>show ip arp</code></pre></div><p><strong>What it does:</strong> Displays the ARP table, useful for Layer 2 connectivity issues.</p></div>
+                <div class="command"><h3>show cdp neighbors detail</h3><div class="command-container"><pre><code>show cdp neighbors detail</code></pre></div><p><strong>What it does:</strong> Shows detailed information about directly connected Cisco devices via CDP.</p></div>
+                <div class="command"><h3>show ip nat translations</h3><div class="command-container"><pre><code>show ip nat translations verbose</code></pre></div><p><strong>What it does:</strong> Shows active NAT translations, useful for troubleshooting NAT issues.</p></div>
+                <div class="command"><h3>show interface &lt;type/num&gt; counters errors</h3><div class="command-container"><pre><code>show interface GigabitEthernet0/1 counters errors</code></pre></div><p><strong>What it does:</strong> Displays error and discard counters for a specific interface.</p></div>
+                <div class="command"><h3>show spanning-tree &lt;vlan-id&gt; detail</h3><div class="command-container"><pre><code>show spanning-tree 10 detail</code></pre></div><p><strong>What it does:</strong> Shows detailed Spanning Tree Protocol (STP) information for a VLAN.</p></div>
+                <div class="command"><h3>show processes cpu history</h3><div class="command-container"><pre><code>show processes cpu history</code></pre></div><p><strong>What it does:</strong> Displays a history of CPU utilization.</p></div>
+                <div class="command"><h3>show memory allocating-process totals</h3><div class="command-container"><pre><code>show memory allocating-process totals</code></pre></div><p><strong>What it does:</strong> Shows which processes are consuming the most memory.</p></div>
+                <div class="command"><h3>show ip traffic</h3><div class="command-container"><pre><code>show ip traffic</code></pre></div><p><strong>What it does:</strong> Displays IP traffic statistics for various protocols.</p></div>
+                <div class="command"><h3>show access-lists</h3><div class="command-container"><pre><code>show access-lists 101</code></pre></div><p><strong>What it does:</strong> Displays the contents of a specific Access Control List (ACL).</p></div>
+                <div class="command"><h3>debug ip icmp</h3><div class="command-container"><pre><code>debug ip icmp</code></pre></div><p><strong>What it does:</strong> Enables debugging for ICMP packets (ping/traceroute related).</p></div>
+                <div class="command"><h3>test aaa group &lt;group-name&gt; &lt;username&gt; &lt;password&gt;</h3><div class="command-container"><pre><code>test aaa group tacacs+ admin MyPassword</code></pre></div><p><strong>What it does:</strong> Tests AAA (Authentication, Authorization, Accounting) server connectivity and credentials.</p></div>
+                <div class="command"><h3>show power inline</h3><div class="command-container"><pre><code>show power inline detail</code></pre></div><p><strong>What it does:</strong> Displays Power over Ethernet (PoE) status and consumption.</p></div>
+                <div class="command"><h3>show cable-diagnostics tdr interface &lt;type/num&gt;</h3><div class="command-container"><pre><code>show cable-diagnostics tdr interface GigabitEthernet0/1</code></pre></div><p><strong>What it does:</strong> Performs Time Domain Reflectometry (TDR) test on a copper cable to detect faults.</p></div>
+                <div class="command"><h3>show processes cpu platform</h3><div class="command-container"><pre><code>show processes cpu platform</code></pre></div><p><strong>What it does:</strong> Displays CPU usage of platform-specific processes.</p></div>
+                <div class="command"><h3>show policy-map interface &lt;type/num&gt; input/output</h3><div class="command-container"><pre><code>show policy-map interface GigabitEthernet0/1 input</code></pre></div><p><strong>What it does:</strong> Displays QoS policy map statistics on an interface.</p></div>
             </section>
 
         </div>

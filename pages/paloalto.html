@@ -34,176 +34,220 @@
 
             <section class="command-category" data-category="system">
                 <h2>System</h2>
-                <div class="command">
-                    <h3>show system info</h3>
-                    <div class="command-container">
-                        <pre><code>show system info</code></pre>
-                    </div>
-                    <p><strong>What it does:</strong> Displays system version, uptime, serial, and hostname.</p>
-                    <p><strong>When to use it:</strong> For quickly identifying the device and its current software state.</p>
-                </div>
-                <div class="command">
-                    <h3>show clock</h3>
-                    <div class="command-container">
-                        <pre><code>show clock</code></pre>
-                    </div>
-                    <p><strong>What it does:</strong> Displays the current date and time of the firewall.</p>
-                    <p><strong>When to use it:</strong> To verify the system clock, which is important for logging and certificate validation.</p>
-                </div>
+                <div class="command"><h3>show system info</h3><div class="command-container"><pre><code>show system info</code></pre></div><p><strong>What it does:</strong> Displays system version, uptime, serial, and hostname.</p></div>
+                <div class="command"><h3>show clock</h3><div class="command-container"><pre><code>show clock</code></pre></div><p><strong>What it does:</strong> Displays the current date and time of the firewall.</p></div>
+                <div class="command"><h3>show system resources</h3><div class="command-container"><pre><code>show system resources</code></pre></div><p><strong>What it does:</strong> Shows CPU and memory utilization for management and dataplane.</p></div>
+                <div class="command"><h3>show jobs all</h3><div class="command-container"><pre><code>show jobs all</code></pre></div><p><strong>What it does:</strong> Lists all active and completed jobs (e.g., commits, firmware upgrades).</p></div>
+                <div class="command"><h3>show admins</h3><div class="command-container"><pre><code>show admins</code></pre></div><p><strong>What it does:</strong> Displays currently logged-in administrators.</p></div>
+                <div class="command"><h3>show arp all</h3><div class="command-container"><pre><code>show arp all</code></pre></div><p><strong>What it does:</b> Shows the Address Resolution Protocol (ARP) table for all interfaces.</p></div>
+                <div class="command"><h3>show mac all</h3><div class="command-container"><pre><code>show mac all</code></pre></div><p><strong>What it does:</strong> Displays the MAC address table for all interfaces.</p></div>
+                <div class="command"><h3>show session info</h3><div class="command-container"><pre><code>show session info</code></pre></div><p><strong>What it does:</strong> Shows global session table information (e.g., max sessions, active sessions).</p></div>
+                <div class="command"><h3>show high-availability state</h3><div class="command-container"><pre><code>show high-availability state</code></pre></div><p><strong>What it does:</strong> Displays the High Availability (HA) state of the firewall.</p></div>
+                <div class="command"><h3>show log system</h3><div class="command-container"><pre><code>show log system</code></pre></div><p><strong>What it does:</strong> Displays recent system logs.</p></div>
+                <div class="command"><h3>show pan-os-info</h3><div class="command-container"><pre><code>show pan-os-info</code></pre></div><p><strong>What it does:</strong> Detailed information about the PAN-OS version and content updates.</p></div>
+                <div class="command"><h3>show content version</h3><div class="command-container"><pre><code>show content version</code></pre></div><p><strong>What it does:</strong> Displays the currently installed content (applications and threats) version.</p></div>
+                <div class="command"><h3>show url-database version</h3><div class="command-container"><pre><code>show url-database version</code></pre></div><p><strong>What it does:</strong> Shows the URL filtering database version.</p></div>
+                <div class="command"><h3>show dhcp server lease</h3><div class="command-container"><pre><code>show dhcp server lease</code></pre></div><p><strong>What it does:</strong> Displays active DHCP leases managed by the firewall.</p></div>
+                <div class="command"><h3>show dhcp client lease</h3><div class="command-container"><pre><code>show dhcp client lease</code></pre></div><p><strong>What it does:</strong> Shows DHCP client lease information for interfaces configured as DHCP clients.</p></div>
+                <div class="command"><h3>show running config</h3><div class="command-container"><pre><code>show running config</code></pre></div><p><strong>What it does:</strong> Displays the complete current running configuration of the device.</p></div>
+                <div class="command"><h3>show config running</h3><div class="command-container"><pre><code>show config running | match hostname</code></pre></div><p><strong>What it does:</strong> Displays the running configuration, with an option to filter output.</p></div>
+                <div class="command"><h3>show system setting management</h3><div class="command-container"><pre><code>show system setting management</code></pre></div><p><strong>What it does:</strong> Displays management interface settings.</p></div>
+                <div class="command"><h3>show system setting dns</h3><div class="command-container"><pre><code>show system setting dns</code></pre></div><p><strong>What it does:</b> Displays DNS server settings for the firewall.</p></div>
+                <div class="command"><h3>show system disk usage</h3><div class="command-container"><pre><code>show system disk usage</code></pre></div><p><strong>What it does:</strong> Displays disk space utilization for various partitions on the firewall.</p></div>
             </section>
 
             <section class="command-category" data-category="interface">
                 <h2>Interface</h2>
-                <div class="command">
-                    <h3>show interface all</h3>
-                    <div class="command-container">
-                        <pre><code>show interface all</code></pre>
-                    </div>
-                    <p><strong>What it does:</strong> Verifies interface status, speed, and link state.</p>
-                    <p><strong>When to use it:</strong> To check the link status, IP addresses, and counters for all interfaces.</p>
-                </div>
-                 <div class="command">
-                    <h3>show interface ethernet1/1</h3>
-                    <div class="command-container">
-                        <pre><code>show interface ethernet1/1</code></pre>
-                    </div>
-                    <p><strong>What it does:</strong> Displays detailed information for a specific interface.</p>
-                    <p><strong>When to use it:</strong> To troubleshoot issues on a single interface, such as errors or traffic counters.</p>
-                </div>
+                <div class="command"><h3>show interface all</h3><div class="command-container"><pre><code>show interface all</code></pre></div><p><strong>What it does:</strong> Verifies interface status, speed, and link state for all interfaces.</p></div>
+                <div class="command"><h3>show interface ethernet1/1</h3><div class="command-container"><pre><code>show interface ethernet1/1</code></pre></div><p><strong>What it does:</b> Displays detailed information for a specific Ethernet interface, including statistics.</p></div>
+                <div class="command"><h3>show interface logical</h3><div class="command-container"><pre><code>show interface logical</code></pre></div><p><strong>What it does:</b> Shows logical interface configuration and status (e.g., VLAN interfaces, aggregate interfaces).</p></div>
+                <div class="command"><h3>show interface management</h3><div class="command-container"><pre><code>show interface management</code></pre></div><p><strong>What it does:</b> Displays the configuration and status of the dedicated management interface.</p></div>
+                <div class="command"><h3>show interface loopback</h3><div class="command-container"><pre><code>show interface loopback</code></pre></div><p><strong>What it does:</b> Shows configured loopback interfaces and their status.</p></div>
+                <div class="command"><h3>show zone all</h3><div class="command-container"><pre><code>show zone all</code></pre></div><p><strong>What it does:</b> Displays all configured security zones and their member interfaces.</p></div>
+                <div class="command"><h3>show zone-mapping all</h3><div class="command-container"><pre><code>show zone-mapping all</code></pre></div><p><strong>What it does:</b> Shows mapping of interfaces to security zones.</p></div>
+                <div class="command"><h3>clear interface ethernet1/1 statistics</h3><div class="command-container"><pre><code>clear interface ethernet1/1 statistics</code></pre></div><p><strong>What it does:</b> Clears the traffic and error counters for a specific interface.</p></div>
+                <div class="command"><h3>show global-arp</h3><div class="command-container"><pre><code>show global-arp</code></pre></div><p><strong>What it does:</b> Displays the global ARP table, useful for troubleshooting Layer 2 connectivity.</p></div>
+                <div class="command"><h3>show interface <name> counters</h3><div class="command-container"><pre><code>show interface ethernet1/1 counters</code></pre></div><p><strong>What it does:</b> Displays detailed packet and error counters for a specific interface.</p></div>
+                <div class="command"><h3>show interface <name> rate</h3><div class="command-container"><pre><code>show interface ethernet1/1 rate</code></pre></div><p><strong>What it does:</b> Shows current transmit and receive rates for an interface.</p></div>
+                <div class="command"><h3>show aggregate-ethernet summary</h3><div class="command-container"><pre><code>show aggregate-ethernet summary</code></pre></div><p><strong>What it does:</b> Displays a summary of configured Aggregate Ethernet (LAG/LACP) interfaces.</p></div>
+                <div class="command"><h3>show vlan all</h3><div class="command-container"><pre><code>show vlan all</code></pre></div><p><strong>What it does:</b> Shows all configured VLANs and their associated interfaces.</p></div>
+                <div class="command"><h3>set interface ethernet1/1 layer2</h3><div class="command-container"><pre><code>configure
+set network interface ethernet ethernet1/1 layer2
+commit</code></pre></div><p><strong>What it does:</b> Changes an interface to Layer 2 mode (requires entering config mode).</p></div>
+                <div class="command"><h3>set interface ethernet1/1 layer3</h3><div class="command-container"><pre><code>configure
+set network interface ethernet ethernet1/1 layer3 ip 10.0.0.1/24
+commit</code></pre></div><p><strong>What it does:</b> Changes an interface to Layer 3 mode and assigns an IP address.</p></div>
+                <div class="command"><h3>show virtual-wire all</h3><div class="command-container"><pre><code>show virtual-wire all</code></pre></div><p><strong>What it does:</strong> Displays configured Virtual Wire interfaces.</p></div>
+                <div class="command"><h3>show tunnel all</h3><div class="command-container"><pre><code>show tunnel all</code></pre></div><p><strong>What it does:</strong> Shows all configured tunnel interfaces (e.g., for VPNs).</p></div>
+                <div class="command"><h3>show system state filter-value interface</h3><div class="command-container"><pre><code>show system state filter-value interface</code></pre></div><p><strong>What it does:</strong> Displays system state information related to interfaces.</p></div>
+                <div class="command"><h3>show interface <name> flow-control</h3><div class="command-container"><pre><code>show interface ethernet1/1 flow-control</code></pre></div><p><strong>What it does:</strong> Shows the flow control settings for a specific interface.</p></div>
+                <div class="command"><h3>show interface <name> duplex</h3><div class="command-container"><pre><code>show interface ethernet1/1 duplex</code></pre></div><p><strong>What it does:</strong> Displays the duplex setting (full/half) for an interface.</p></div>
             </section>
 
             <section class="command-category" data-category="routing">
                 <h2>Routing</h2>
-                <div class="command">
-                    <h3>show routing route</h3>
-                    <div class="command-container">
-                        <pre><code>show routing route</code></pre>
-                    </div>
-                    <p><strong>What it does:</strong> Shows routing table and route selection.</p>
-                    <p><strong>When to use it:</strong> To inspect the firewall's routing table and verify route paths.</p>
-                </div>
-                 <div class="command">
-                    <h3>test routing fib-lookup ip &lt;destination&gt;</h3>
-                    <div class="command-container">
-                        <pre><code>test routing fib-lookup ip 8.8.8.8</code></pre>
-                    </div>
-                    <p><strong>What it does:</strong> Confirms which route/interface will be used for a specific destination IP.</p>
-                    <p><strong>When to use it:</strong> To troubleshoot routing decisions and verify next-hop reachability.</p>
-                </div>
+                <div class="command"><h3>show routing route</h3><div class="command-container"><pre><code>show routing route</code></pre></div><p><strong>What it does:</strong> Shows the complete routing table and route selection.</p></div>
+                <div class="command"><h3>test routing fib-lookup ip &lt;destination&gt;</h3><div class="command-container"><pre><code>test routing fib-lookup ip 8.8.8.8</code></pre></div><p><strong>What it does:</strong> Confirms which route/interface will be used for a specific destination IP.</p></div>
+                <div class="command"><h3>show routing protocol bgp peer</h3><div class="command-container"><pre><code>show routing protocol bgp peer</code></pre></div><p><strong>What it does:</strong> Displays the status of BGP peer connections.</p></div>
+                <div class="command"><h3>show routing protocol bgp route</h3><div class="command-container"><pre><code>show routing protocol bgp route</code></pre></div><p><strong>What it does:</strong> Shows routes learned via BGP.</p></div>
+                <div class="command"><h3>show routing protocol ospf neighbor</h3><div class="command-container"><pre><code>show routing protocol ospf neighbor</code></pre></div><p><strong>What it does:</b> Displays OSPF neighbor relationships.</p></div>
+                <div class="command"><h3>show routing protocol ospf route</h3><div class="command-container"><pre><code>show routing protocol ospf route</code></pre></div><p><strong>What it does:</b> Shows routes learned via OSPF.</p></div>
+                <div class="command"><h3>show routing fib</h3><div class="command-container"><pre><code>show routing fib</code></pre></div><p><strong>What it does:</b> Displays the Forwarding Information Base (FIB).</p></div>
+                <div class="command"><h3>clear routing ip</h3><div class="command-container"><pre><code>clear routing ip</code></pre></div><p><strong>What it does:</b> Clears the IP routing table.</p></div>
+                <div class="command"><h3>clear routing bgp soft in</h3><div class="command-container"><pre><code>clear routing bgp soft in</code></pre></div><p><strong>What it does:</b> Performs a soft reset of BGP inbound routes.</p></div>
+                <div class="command"><h3>show routing virtual-router &lt;name&gt;</h3><div class="command-container"><pre><code>show routing virtual-router default</code></pre></div><p><strong>What it does:</b> Displays routing information for a specific virtual router.</p></div>
+                <div class="command"><h3>show routing path-selection &lt;destination&gt;</h3><div class="command-container"><pre><code>show routing path-selection 1.1.1.1</code></pre></div><p><strong>What it does:</b> Shows the path selection process for a destination.</p></div>
+                <div class="command"><h3>set routing protocol bgp enable</h3><div class="command-container"><pre><code>configure
+set routing protocol bgp enable yes
+commit</code></pre></div><p><strong>What it does:</b> Enables the BGP routing protocol.</p></div>
+                <div class="command"><h3>set routing protocol static route</h3><div class="command-container"><pre><code>configure
+set routing protocol static route 192.168.2.0/24 nexthop ip-address 10.0.0.1 interface ethernet1/2
+commit</code></pre></div><p><strong>What it does:</b> Configures a static route.</p></div>
+                <div class="command"><h3>show pbf rule all</h3><div class="command-container"><pre><code>show pbf rule all</code></pre></div><p><strong>What it does:</b> Displays all configured Policy Based Forwarding (PBF) rules.</p></div>
+                <div class="command"><h3>test pbf-match</h3><div class="command-container"><pre><code>test pbf-match from ethernet1/1 source 10.1.1.1 destination 8.8.8.8</code></pre></div><p><strong>What it does:</b> Simulates traffic to see if it matches any PBF rules.</p></div>
+                <div class="command"><h3>show nexthop ip</h3><div class="command-container"><pre><code>show nexthop ip 10.0.0.1</code></pre></div><p><strong>What it does:</b> Displays information about a specific next-hop IP address.</p></div>
+                <div class="command"><h3>show bgp all summary</h3><div class="command-container"><pre><code>show bgp all summary</code></pre></div><p><strong>What it does:</b> Provides a summary of all BGP peer sessions.</p></div>
+                <div class="command"><h3>show ospf all neighbor</h3><div class="command-container"><pre><code>show ospf all neighbor</code></pre></div><p><strong>What it does:</b> Shows OSPF neighbor states for all instances.</p></div>
+                <div class="command"><h3>show running route</h3><div class="command-container"><pre><code>show running route</code></pre></div><p><strong>What it does:</b> Displays only the routing configuration from the running config.</p></div>
+                <div class="command"><h3>show running virtual-router</h3><div class="command-container"><pre><code>show running virtual-router default</code></pre></div><p><strong>What it does:</b> Displays the configuration for a specific virtual router.</p></div>
             </section>
 
             <section class="command-category" data-category="vpn">
                 <h2>VPN</h2>
-                <div class="command">
-                    <h3>show vpn ike-sa</h3>
-                    <div class="command-container">
-                        <pre><code>show vpn ike-sa</code></pre>
-                    </div>
-                    <p><strong>What it does:</strong> Checks IKE Phase 1 status for VPNs.</p>
-                    <p><strong>When to use it:</strong> To verify if the IKE security association (Phase 1) is established.</p>
-                </div>
-                 <div class="command">
-                    <h3>show vpn ipsec-sa</h3>
-                    <div class="command-container">
-                        <pre><code>show vpn ipsec-sa</code></pre>
-                    </div>
-                    <p><strong>What it does:</strong> Verifies IPsec Phase 2 tunnel status and counters.</p>
-                    <p><strong>When to use it:</strong> To check if the IPsec security association (Phase 2) is established and actively passing traffic.</p>
-                </div>
-                 <div class="command">
-                    <h3>test vpn ike-sa gateway &lt;name&gt;</h3>
-                    <div class="command-container">
-                        <pre><code>test vpn ike-sa gateway my-vpn-gw</code></pre>
-                    </div>
-                    <p><strong>What it does:</strong> Initiates or tests an IKE VPN tunnel.</p>
-                    <p><strong>When to use it:</strong> To manually bring up a VPN tunnel or test its configuration.</p>
-                </div>
+                <div class="command"><h3>show vpn ike-sa</h3><div class="command-container"><pre><code>show vpn ike-sa</code></pre></div><p><strong>What it does:</strong> Checks IKE Phase 1 status for VPNs.</p></div>
+                <div class="command"><h3>show vpn ipsec-sa</h3><div class="command-container"><pre><code>show vpn ipsec-sa</code></pre></div><p><strong>What it does:</strong> Verifies IPsec Phase 2 tunnel status and counters.</p></div>
+                <div class="command"><h3>test vpn ike-sa gateway &lt;name&gt;</h3><div class="command-container"><pre><code>test vpn ike-sa gateway my-vpn-gw</code></pre></div><p><strong>What it does:</strong> Initiates or tests an IKE VPN tunnel.</p></div>
+                <div class="command"><h3>show vpn flow</h3><div class="command-container"><pre><code>show vpn flow</code></pre></div><p><strong>What it does:</b> Displays VPN session information and traffic details.</p></div>
+                <div class="command"><h3>show vpn tunnel statistics</h3><div class="command-container"><pre><code>show vpn tunnel statistics</code></pre></div><p><strong>What it does:</b> Shows aggregated statistics for all VPN tunnels.</p></div>
+                <div class="command"><h3>clear vpn ike-sa</h3><div class="command-container"><pre><code>clear vpn ike-sa</code></pre></div><p><strong>What it does:</b> Clears the IKE Phase 1 Security Associations, forcing re-negotiation.</p></div>
+                <div class="command"><h3>clear vpn ipsec-sa</h3><div class="command-container"><pre><code>clear vpn ipsec-sa</code></pre></div><p><strong>What it does:</b> Clears the IPsec Phase 2 Security Associations.</p></div>
+                <div class="command"><h3>debug vpn level debug</h3><div class="command-container"><pre><code>debug vpn level debug
+debug vpn on</code></pre></div><p><strong>What it does:</b> Enables detailed VPN debugging (use with caution in production).</p></div>
+                <div class="command"><h3>show global-protect-gateway current-user</h3><div class="command-container"><pre><code>show global-protect-gateway current-user</code></pre></div><p><strong>What it does:</b> Displays current GlobalProtect VPN users connected to a gateway.</p></div>
+                <div class="command"><h3>show global-protect-portal current-user</h3><div class="command-container"><pre><code>show global-protect-portal current-user</code></pre></div><p><strong>What it does:</b> Shows current GlobalProtect portal users.</p></div>
+                <div class="command"><h3>show global-protect-client-info</h3><div class="command-container"><pre><code>show global-protect-client-info all</code></pre></div><p><strong>What it does:</b> Displays detailed information about connected GlobalProtect clients.</p></div>
+                <div class="command"><h3>test global-protect-connection</h3><div class="command-container"><pre><code>test global-protect-connection source 1.1.1.1 user testuser</code></pre></div><p><strong>What it does:</b> Simulates a GlobalProtect connection to troubleshoot policies.</p></div>
+                <div class="command"><h3>show tunnel ipsec</h3><div class="command-container"><pre><code>show tunnel ipsec</code></pre></div><p><strong>What it does:</b> Displays the status of IPsec tunnel interfaces.</p></div>
+                <div class="command"><h3>show tunnel global-protect</h3><div class="command-container"><pre><code>show tunnel global-protect</code></pre></div><p><strong>What it does:</b> Displays the status of GlobalProtect tunnel interfaces.</p></div>
+                <div class="command"><h3>show vpn monitoring ipsec-sa</h3><div class="command-container"><pre><code>show vpn monitoring ipsec-sa</code></pre></div><p><strong>What it does:</b> Shows IPsec tunnel monitoring status.</p></div>
+                <div class="command"><h3>set network vpn ipsec tunnel &lt;name&gt; enable yes</h3><div class="command-container"><pre><code>configure
+set network vpn ipsec tunnel my-ipsec-tunnel enable yes
+commit</code></pre></div><p><strong>What it does:</b> Enables an IPsec tunnel (configuration command).</p></div>
+                <div class="command"><h3>set network vpn ike gateway &lt;name&gt; enable yes</h3><div class="command-container"><pre><code>configure
+set network vpn ike gateway my-ike-gw enable yes
+commit</code></pre></div><p><strong>What it does:</b> Enables an IKE gateway (configuration command).</p></div>
+                <div class="command"><h3>show vpn ipsec-tunnel brief</h3><div class="command-container"><pre><code>show vpn ipsec-tunnel brief</code></pre></div><p><strong>What it does:</strong> Provides a brief summary of all IPsec tunnels.</p></div>
+                <div class="command"><h3>show vpn statistics global</h3><div class="command-container"><pre><code>show vpn statistics global</code></pre></div><p><strong>What it does:</strong> Displays global VPN statistics.</p></div>
+                <div class="command"><h3>show vpn statistics flow</h3><div class="command-container"><pre><code>show vpn statistics flow</code></pre></div><p><strong>What it does:</strong> Shows VPN traffic flow statistics.</p></div>
             </section>
 
             <section class="command-category" data-category="policy">
                 <h2>Security Policy</h2>
-                <div class="command">
-                    <h3>show running security-policy</h3>
-                    <div class="command-container">
-                        <pre><code>show running security-policy</code></pre>
-                    </div>
-                    <p><strong>What it does:</strong> Displays all configured security policy rules.</p>
-                    <p><strong>When to use it:</strong> To review and verify the firewall's security rulebase.</p>
-                </div>
-                <div class="command">
-                    <h3>test security-policy-match</h3>
-                    <div class="command-container">
-                        <pre><code>test security-policy-match from [zone] to [zone] source [ip] destination [ip] protocol [number]</code></pre>
-                    </div>
-                    <p><strong>What it does:</strong> Simulates a packet flow to see which security policy it would match.</p>
-                    <p><strong>When to use it:</strong> Extremely useful for troubleshooting why traffic is being allowed or denied.</p>
-                </div>
+                <div class="command"><h3>show running security-policy</h3><div class="command-container"><pre><code>show running security-policy</code></pre></div><p><strong>What it does:</strong> Displays all configured security policy rules.</p></div>
+                <div class="command"><h3>test security-policy-match</h3><div class="command-container"><pre><code>test security-policy-match from [zone] to [zone] source [ip] destination [ip] protocol [number]</code></pre></div><p><strong>What it does:</strong> Simulates a packet flow to see which security policy it would match.</p></div>
+                <div class="command"><h3>show rule-hit-count</h3><div class="command-container"><pre><code>show rule-hit-count</code></pre></div><p><strong>What it does:</strong> Displays hit counts for all security policies.</p></div>
+                <div class="command"><h3>clear rule-hit-count</h3><div class="command-container"><pre><code>clear rule-hit-count</code></pre></div><p><strong>What it does:</strong> Resets hit counts for security policies.</p></div>
+                <div class="command"><h3>show security-policy</h3><div class="command-container"><pre><code>show security-policy name my-policy</code></pre></div><p><strong>What it does:</strong> Displays details of a specific security policy rule.</p></div>
+                <div class="command"><h3>show security-rule-base</h3><div class="command-container"><pre><code>show security-rule-base</code></pre></div><p><strong>What it does:</strong> Shows the entire security rulebase.</p></div>
+                <div class="command"><h3>set rulebase security rules &lt;name&gt; action allow</h3><div class="command-container"><pre><code>configure
+set rulebase security rules my-new-rule from zone untrust to zone trust source any destination any application any service any action allow
+commit</code></pre></div><p><strong>What it does:</strong> Creates a new security policy rule to allow traffic.</p></div>
+                <div class="command"><h3>set rulebase security rules &lt;name&gt; action deny</h3><div class="command-container"><pre><code>configure
+set rulebase security rules my-deny-rule from any to any source any destination any application any service any action deny
+commit</code></pre></div><p><strong>What it does:</strong> Creates a new security policy rule to deny traffic.</p></div>
+                <div class="command"><h3>show global-policy-match</h3><div class="command-container"><pre><code>show global-policy-match from untrust to trust source 10.1.1.1 destination 8.8.8.8 protocol 6 dport 80</code></pre></div><p><strong>What it does:</strong> Simulates a packet match against the global policy rulebase.</p></div>
+                <div class="command"><h3>show policy-rule-statistics</h3><div class="command-container"><pre><code>show policy-rule-statistics</code></pre></div><p><strong>What it does:</strong> Displays detailed statistics for policy rules.</p></div>
+                <div class="command"><h3>show threat-exception</h3><div class="command-container"><pre><code>show threat-exception</code></pre></div><p><strong>What it does:</strong> Displays configured threat exceptions.</p></div>
+                <div class="command"><h3>show vulnerability-profile</h3><div class="command-container"><pre><code>show vulnerability-profile</code></pre></div><p><strong>What it does:</strong> Shows configured vulnerability protection profiles.</p></div>
+                <div class="command"><h3>show antivirus-profile</h3><div class="command-container"><pre><code>show antivirus-profile</code></pre></div><p><strong>What it does:</strong> Displays configured antivirus profiles.</p></div>
+                <div class="command"><h3>show antispyware-profile</h3><div class="command-container"><pre><code>show antispyware-profile</code></pre></div><p><strong>What it does:</strong> Shows configured anti-spyware profiles.</p></div>
+                <div class="command"><h3>show file-blocking-profile</h3><div class="command-container"><pre><code>show file-blocking-profile</code></pre></div><p><strong>What it does:</strong> Displays configured file blocking profiles.</p></div>
+                <div class="command"><h3>show data-filtering-profile</h3><div class="command-container"><pre><code>show data-filtering-profile</code></pre></div><p><strong>What it does:</strong> Shows configured data filtering profiles.</p></div>
+                <div class="command"><h3>show wildfire-analysis-profile</h3><div class="command-container"><pre><code>show wildfire-analysis-profile</code></pre></div><p><strong>What it does:</strong> Displays configured WildFire analysis profiles.</p></div>
+                <div class="command"><h3>show url-filtering-profile</h3><div class="command-container"><pre><code>show url-filtering-profile</code></pre></div><p><strong>What it does:</strong> Shows configured URL filtering profiles.</p></div>
+                <div class="command"><h3>show zone-protection-profile</h3><div class="command-container"><pre><code>show zone-protection-profile</code></pre></div><p><strong>What it does:</strong> Displays configured zone protection profiles.</p></div>
+                <div class="command"><h3>show dos-protection-profile</h3><div class="command-container"><pre><code>show dos-protection-profile</code></pre></div><p><strong>What it does:</strong> Shows configured DDoS protection profiles.</p></div>
             </section>
 
             <section class="command-category" data-category="config">
                 <h2>Configuration Mode</h2>
-                 <div class="command">
-                    <h3>configure</h3>
-                    <div class="command-container">
-                        <pre><code>configure</code></pre>
-                    </div>
-                    <p><strong>What it does:</strong> Enters the device's configuration mode.</p>
-                    <p><strong>When to use it:</strong> All configuration changes must be made in this mode.</p>
-                </div>
-                <div class="command">
-                    <h3>set deviceconfig system hostname</h3>
-                    <div class="command-container">
-                        <pre><code>set deviceconfig system hostname my-firewall</code></pre>
-                    </div>
-                    <p><strong>What it does:</strong> Sets the hostname of the firewall.</p>
-                    <p><strong>When to use it:</strong> A basic configuration step to identify the device on the network.</p>
-                </div>
-                 <div class="command">
-                    <h3>commit</h3>
-                    <div class="command-container">
-                        <pre><code>commit</code></pre>
-                    </div>
-                    <p><strong>What it does:</strong> Validates and applies the candidate configuration to the running configuration.</p>
-                    <p><strong>When to use it:</strong> After making configuration changes, you must commit them to make them active.</p>
-                </div>
+                <div class="command"><h3>configure</h3><div class="command-container"><pre><code>configure</code></pre></div><p><strong>What it does:</strong> Enters the device's configuration mode.</p></div>
+                <div class="command"><h3>set deviceconfig system hostname</h3><div class="command-container"><pre><code>set deviceconfig system hostname my-firewall</code></pre></div><p><strong>What it does:</strong> Sets the hostname of the firewall.</p></div>
+                <div class="command"><h3>commit</h3><div class="command-container"><pre><code>commit</code></pre></div><p><strong>What it does:</strong> Validates and applies the candidate configuration to the running configuration.</p></div>
+                <div class="command"><h3>save config to &lt;filename&gt;</h3><div class="command-container"><pre><code>save config to my_backup_config.xml</code></pre></div><p><strong>What it does:</strong> Saves the current running configuration to a specified file.</p></div>
+                <div class="command"><h3>load config from &lt;filename&gt;</h3><div class="command-container"><pre><code>load config from my_backup_config.xml</code></pre></div><p><strong>What it does:</strong> Loads a configuration from a specified file into the candidate configuration.</p></div>
+                <div class="command"><h3>revert config</h3><div class="command-container"><pre><code>revert config</code></pre></div><p><strong>What it does:</strong> Reverts the candidate configuration to the last committed configuration.</p></div>
+                <div class="command"><h3>set network interface ethernet &lt;name&gt; layer3 ip &lt;ip/mask&gt;</h3><div class="command-container"><pre><code>configure
+set network interface ethernet ethernet1/1 layer3 ip 10.0.0.1/24
+commit</code></pre></div><p><strong>What it does:</strong> Configures an Ethernet interface for Layer 3 operations with an IP address.</p></div>
+                <div class="command"><h3>set network interface ethernet &lt;name&gt; link-state up</h3><div class="command-container"><pre><code>configure
+set network interface ethernet ethernet1/1 link-state up
+commit</code></pre></div><p><strong>What it does:</strong> Brings an interface up (administratively enable).</p></div>
+                <div class="command"><h3>set zone &lt;zone-name&gt; network layer3 interface &lt;interface-name&gt;</h3><div class="command-container"><pre><code>configure
+set zone trust network layer3 interface ethernet1/1
+commit</code></pre></div><p><strong>What it does:</strong> Assigns a Layer 3 interface to a security zone.</p></div>
+                <div class="command"><h3>set virtual-router &lt;vr-name&gt; interface &lt;interface-name&gt;</h3><div class="command-container"><pre><code>configure
+set virtual-router default interface ethernet1/1
+commit</code></pre></div><p><strong>What it does:</strong> Adds an interface to a virtual router.</p></div>
+                <div class="command"><h3>set tag &lt;name&gt; color &lt;color&gt;</h3><div class="command-container"><pre><code>configure
+set tag web-servers color red
+commit</code></pre></div><p><strong>What it does:</strong> Creates a custom tag for objects, with a specified color.</p></div>
+                <div class="command"><h3>set address &lt;name&gt; ip-netmask &lt;ip/mask&gt;</h3><div class="command-container"><pre><code>configure
+set address my-webserver ip-netmask 10.1.1.1/32
+commit</code></pre></div><p><strong>What it does:</strong> Creates a new address object by IP/netmask.</p></div>
+                <div class="command"><h3>set service &lt;name&gt; protocol tcp port &lt;port&gt;</h3><div class="command-container"><pre><code>configure
+set service web-http protocol tcp port 80
+commit</code></pre></div><p><strong>What it does:</strong> Creates a new service object for a specific TCP port.</p></div>
+                <div class="command"><h3>set profile-group &lt;name&gt; antivirus &lt;profile&gt;</h3><div class="command-container"><pre><code>configure
+set profile-group my-profiles antivirus default
+commit</code></pre></div><p><strong>What it does:</strong> Creates a profile group and assigns an antivirus profile.</p></div>
+                <div class="command"><h3>set log-settings system-log export-format syslog</h3><div class="command-container"><pre><code>configure
+set log-settings system-log export-format syslog
+commit</code></pre></div><p><strong>What it does:</strong> Configures system logs to be exported via syslog.</p></div>
+                <div class="command"><h3>set log-settings system-log syslog-server &lt;ip&gt;</h3><div class="command-container"><pre><code>configure
+set log-settings system-log syslog-server 192.168.1.10
+commit</code></pre></div><p><strong>What it does:</strong> Configures a syslog server for system logs.</p></div>
+                <div class="command"><h3>set management user &lt;name&gt; password</h3><div class="command-container"><pre><code>configure
+set management user admin password
+commit</code></pre></div><p><strong>What it does:</strong> Sets/changes the password for a management user.</p></div>
+                <div class="command"><h3>set management allowed-ip &lt;ip/mask&gt;</h3><div class="command-container"><pre><code>configure
+set management allowed-ip 192.168.1.0/24
+commit</code></pre></div><p><strong>What it does:</strong> Restricts management access to specific IP ranges.</p></div>
+                <div class="command"><h3>set management ssh permit yes</h3><div class="command-container"><pre><code>configure
+set management ssh permit yes
+commit</code></pre></div><p><strong>What it does:</strong> Enables SSH access to the management interface.</p></div>
+                <div class="command"><h3>set system setting timezone &lt;zone&gt;</h3><div class="command-container"><pre><code>configure
+set system setting timezone America/New_York
+commit</code></pre></div><p><strong>What it does:</strong> Sets the system timezone.</p></div>
             </section>
 
             <section class="command-category" data-category="troubleshooting">
                 <h2>Troubleshooting</h2>
-                <div class="command">
-                    <h3>show session all filter source &lt;ip&gt;</h3>
-                    <div class="command-container">
-                        <pre><code>show session all filter source 10.1.1.1</code></pre>
-                    </div>
-                    <p><strong>What it does:</strong> Troubleshoots traffic sessions and policies by displaying active firewall sessions filtered by source IP.</p>
-                    <p><strong>When to use it:</strong> A primary tool for troubleshooting live traffic flows.</p>
-                </div>
-                <div class="command">
-                    <h3>ping</h3>
-                    <div class="command-container">
-                        <pre><code>ping source [ip] host [destination_ip]</code></pre>
-                    </div>
-                    <p><strong>What it does:</strong> Sends ICMP packets to test reachability.</p>
-                    <p><strong>When to use it:</strong> To test basic network connectivity from the firewall itself.</p>
-                </div>
-                <div class="command">
-                    <h3>debug dataplane packet-diag set filter match &lt;criteria&gt;</h3>
-                    <div class="command-container">
-                        <pre><code>debug dataplane packet-diag set filter match source 10.1.1.1 destination 8.8.8.8
+                <div class="command"><h3>show session all filter source &lt;ip&gt;</h3><div class="command-container"><pre><code>show session all filter source 10.1.1.1</code></pre></div><p><strong>What it does:</strong> Troubleshoots traffic sessions and policies by displaying active firewall sessions filtered by source IP.</p></div>
+                <div class="command"><h3>ping</h3><div class="command-container"><pre><code>ping source [ip] host [destination_ip]</code></pre></div><p><strong>What it does:</strong> Sends ICMP packets to test reachability from the firewall itself.</p></div>
+                <div class="command"><h3>debug dataplane packet-diag set filter match &lt;criteria&gt;</h3><div class="command-container"><pre><code>debug dataplane packet-diag set filter match source 10.1.1.1 destination 8.8.8.8
 debug dataplane packet-diag set log feature flow basic
-debug dataplane packet-diag on</code></pre>
-                    </div>
-                    <p><strong>What it does:</strong> Captures traffic for deep packet troubleshooting. A powerful packet capture and debugging tool for the dataplane.</p>
-                    <p><strong>When to use it:</strong> For in-depth analysis of how a packet is being processed by the firewall.</p>
-                </div>
-                <div class="command">
-                    <h3>less mp-log system.log</h3>
-                    <div class="command-container">
-                        <pre><code>less mp-log system.log</code></pre>
-                    </div>
-                    <p><strong>What it does:</strong> Reads system logs for errors and events.</p>
-                    <p><strong>When to use it:</strong> To review system-level events and troubleshoot appliance issues.</p>
-                </div>
+debug dataplane packet-diag on</code></pre></div><p><strong>What it does:</strong> Captures traffic for deep packet troubleshooting. A powerful packet capture and debugging tool for the dataplane.</p></div>
+                <div class="command"><h3>less mp-log system.log</h3><div class="command-container"><pre><code>less mp-log system.log</code></pre></div><p><strong>What it does:</strong> Reads system logs for errors and events from the dataplane.</p></div>
+                <div class="command"><h3>test security-policy-match</h3><div class="command-container"><pre><code>test security-policy-match from [zone] to [zone] source [ip] destination [ip] protocol [number]</code></pre></div><p><strong>What it does:</strong> Simulates a packet flow to see which security policy it would match.</p></div>
+                <div class="command"><h3>show counter global</h3><div class="command-container"><pre><code>show counter global</code></pre></div><p><strong>What it does:</strong> Displays global counters for various firewall functions, useful for identifying bottlenecks or issues.</p></div>
+                <div class="command"><h3>show counter global filter pkt-proc flow</h3><div class="command-container"><pre><code>show counter global filter pkt-proc flow</code></pre></div><p><strong>What it does:</strong> Filters global counters to show packet processing and flow-related statistics.</p></div>
+                <div class="command"><h3>clear session all</h3><div class="command-container"><pre><code>clear session all</code></pre></div><p><strong>What it does:</strong> Clears all active sessions (use with extreme caution in production).</p></div>
+                <div class="command"><h3>clear session all filter source &lt;ip&gt;</h3><div class="command-container"><pre><code>clear session all filter source 10.1.1.1</code></pre></div><p><strong>What it does:</strong> Clears sessions matching a specific filter, e.g., by source IP.</p></div>
+                <div class="command"><h3>debug flow basic</h3><div class="command-container"><pre><code>debug flow basic
+debug flow on</code></pre></div><p><strong>What it does:</strong> Enables basic flow debugging (use with caution).</p></div>
+                <div class="command"><h3>debug routing</h3><div class="command-container"><pre><code>debug routing
+debug routing on</code></pre></div><p><strong>What it does:</strong> Enables debugging for routing protocols and functions.</p></div>
+                <div class="command"><h3>debug pbf</h3><div class="command-container"><pre><code>debug pbf
+debug pbf on</code></pre></div><p><strong>What it does:</strong> Enables debugging for Policy Based Forwarding (PBF).</p></div>
+                <div class="command"><h3>tail follow yes mp-log pan_packet_diag.log</h3><div class="command-container"><pre><code>tail follow yes mp-log pan_packet_diag.log</code></pre></div><p><strong>What it does:</strong> Follows the packet diagnostic log in real-time after enabling packet diagnostics.</p></div>
+                <div class="command"><h3>show running resource-monitor</h3><div class="command-container"><pre><code>show running resource-monitor</code></pre></div><p><strong>What it does:</strong> Displays the current resource monitoring configuration.</p></div>
+                <div class="command"><h3>show autocommits</h3><div class="command-container"><pre><code>show autocommits</code></pre></div><p><strong>What it does:</strong> Shows details about pending or failed automatic commits.</p></div>
+                <div class="command"><h3>show system state filter-value session</h3><div class="command-container"><pre><code>show system state filter-value session</code></pre></div><p><strong>What it does:</strong> Displays system state information related to sessions.</p></div>
+                <div class="command"><h3>test url &lt;url&gt;</h3><div class="command-container"><pre><code>test url www.google.com</code></pre></div><p><strong>What it does:</strong> Tests URL filtering functionality for a given URL.</p></div>
+                <div class="command"><h3>test security-policy-match all</h3><div class="command-container"><pre><code>test security-policy-match all source 10.1.1.1 destination 8.8.8.8 protocol 6 dport 443</code></pre></div><p><strong>What it does:</strong> Tests against all rulebases (security, NAT, PBF) for a simulated traffic flow.</p></div>
+                <div class="command"><h3>view log system</h3><div class="command-container"><pre><code>view log system</code></pre></div><p><strong>What it does:</strong> Views the system logs.</p></div>
+                <div class="command"><h3>view log traffic</h3><div class="command-container"><pre><code>view log traffic</code></pre></div><p><strong>What it does:</strong> Views the traffic logs.</p></div>
             </section>
 
         </div>

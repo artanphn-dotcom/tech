@@ -34,158 +34,170 @@
 
             <section class="command-category" data-category="compute">
                 <h2>Compute Engine (List/Connect)</h2>
-                <div class="command">
-                    <h3>gcloud compute instances list</h3>
-                    <div class="command-container">
-                        <pre><code>gcloud compute instances list</code></pre>
-                    </div>
-                    <p><strong>What it does:</strong> Confirms VM status and IP assignments.</p>
-                    <p><strong>When to use it:</strong> To get a quick overview of your virtual machines and their statuses.</p>
-                </div>
-                 <div class="command">
-                    <h3>gcloud compute ssh</h3>
-                    <div class="command-container">
-                        <pre><code>gcloud compute ssh [INSTANCE_NAME] --zone [ZONE]</code></pre>
-                    </div>
-                    <p><strong>What it does:</strong> Connects to a Compute Engine instance using SSH.</p>
-                    <p><strong>When to use it:</strong> To securely access the command line of a VM.</p>
-                </div>
+                <div class="command"><h3>gcloud compute instances list</h3><div class="command-container"><pre><code>gcloud compute instances list --filter="zone:us-central1-a"</code></pre></div><p><strong>What it does:</strong> Confirms VM status and IP assignments, optionally filtered by zone.</p></div>
+                <div class="command"><h3>gcloud compute ssh</h3><div class="command-container"><pre><code>gcloud compute ssh [INSTANCE_NAME] --zone [ZONE]</code></pre></div><p><strong>What it does:</strong> Connects to a Compute Engine instance using SSH.</p></div>
+                <div class="command"><h3>gcloud compute instances describe</h3><div class="command-container"><pre><code>gcloud compute instances describe [INSTANCE_NAME] --zone [ZONE]</code></pre></div><p><strong>What it does:</strong> Displays detailed information about a specific VM instance.</p></div>
+                <div class="command"><h3>gcloud compute disks list</h3><div class="command-container"><pre><code>gcloud compute disks list</code></pre></div><p><strong>What it does:</strong> Lists all persistent disks in the current project.</p></div>
+                <div class="command"><h3>gcloud compute images list</h3><div class="command-container"><pre><code>gcloud compute images list --project ubuntu-os-cloud</code></pre></div><p><strong>What it does:</strong> Lists available Compute Engine images, useful for creating new VMs.</p></div>
+                <div class="command"><h3>gcloud compute zones list</h3><div class="command-container"><pre><code>gcloud compute zones list</code></pre></div><p><strong>What it does:</strong> Lists all available Compute Engine zones.</p></div>
+                <div class="command"><h3>gcloud compute regions list</h3><div class="command-container"><pre><code>gcloud compute regions list</code></pre></div><p><strong>What it does:</strong> Lists all available Compute Engine regions.</p></div>
+                <div class="command"><h3>gcloud compute firewall-rules list</h3><div class="command-container"><pre><code>gcloud compute firewall-rules list --filter="network:default"</code></pre></div><p><strong>What it does:</strong> Shows firewall rules, optionally filtered by network.</p></div>
+                <div class="command"><h3>gcloud compute networks list</h3><div class="command-container"><pre><code>gcloud compute networks list</code></pre></div><p><strong>What it does:</strong> Lists available VPC networks.</p></div>
+                <div class="command"><h3>gcloud compute project-info describe</h3><div class="command-container"><pre><code>gcloud compute project-info describe --project [PROJECT_ID]</code></pre></div><p><strong>What it does:</strong> Displays metadata for a project, including default service accounts and quotas.</p></div>
+                <div class="command"><h3>gcloud compute service-accounts list</h3><div class="command-container"><pre><code>gcloud compute service-accounts list</code></pre></div><p><strong>What it does:</strong> Lists service accounts used by Compute Engine instances.</p></div>
+                <div class="command"><h3>gcloud compute instance-groups list</h3><div class="command-container"><pre><code>gcloud compute instance-groups list</code></pre></div><p><strong>What it does:</strong> Lists managed and unmanaged instance groups.</p></div>
+                <div class="command"><h3>gcloud compute instance-templates list</h3><div class="command-container"><pre><code>gcloud compute instance-templates list</code></pre></div><p><strong>What it does:</strong> Lists configured instance templates for VM creation.</p></div>
+                <div class="command"><h3>gcloud compute backend-services list</h3><div class="command-container"><pre><code>gcloud compute backend-services list</code></pre></div><p><strong>What it does:</strong> Lists configured backend services for load balancers.</p></div>
+                <div class="command"><h3>gcloud compute url-maps list</h3><div class="command-container"><pre><code>gcloud compute url-maps list</code></pre></div><p><strong>What it does:</strong> Lists URL maps used by HTTP(S) Load Balancing.</p></div>
+                <div class="command"><h3>gcloud compute target-pools list</h3><div class="command-container"><pre><code>gcloud compute target-pools list</code></pre></div><p><strong>What it does:</strong> Lists target pools used by Network Load Balancing.</p></div>
+                <div class="command"><h3>gcloud compute health-checks list</h3><div class="command-container"><pre><code>gcloud compute health-checks list</code></pre></div><p><strong>What it does:</strong> Lists configured health checks for load balancing.</p></div>
+                <div class="command"><h3>gcloud compute sole-tenancy node-templates list</h3><div class="command-container"><pre><code>gcloud compute sole-tenancy node-templates list</code></pre></div><p><strong>What it does:</strong> Lists node templates for sole-tenant nodes.</p></div>
+                <div class="command"><h3>gcloud compute target-instances list</h3><div class="command-container"><pre><code>gcloud compute target-instances list</code></pre></div><p><strong>What it does:</strong> Lists target instances for proxy network load balancing.</p></div>
+                <div class="command"><h3>gcloud compute networks peerings list</h3><div class="command-container"><pre><code>gcloud compute networks peerings list</code></pre></div><p><strong>What it does:</strong> Lists VPC Network Peering connections.</p></div>
             </section>
 
             <section class="command-category" data-category="network">
                 <h2>Network (List/View)</h2>
-                <div class="command">
-                    <h3>gcloud compute networks list</h3>
-                    <div class="command-container">
-                        <pre><code>gcloud compute networks list</code></pre>
-                    </div>
-                    <p><strong>What it does:</strong> Lists available VPC networks.</p>
-                    <p><strong>When to use it:</strong> To review configured Virtual Private Cloud networks.</p>
-                </div>
-                <div class="command">
-                    <h3>gcloud compute routes list</h3>
-                    <div class="command-container">
-                        <pre><code>gcloud compute routes list</code></pre>
-                    </div>
-                    <p><strong>What it does:</strong> Displays routing table for a VPC.</p>
-                    <p><strong>When to use it:</strong> To verify network routes and troubleshoot traffic flow issues.</p>
-                </div>
-                 <div class="command">
-                    <h3>gcloud compute firewall-rules list</h3>
-                    <div class="command-container">
-                        <pre><code>gcloud compute firewall-rules list</code></pre>
-                    </div>
-                    <p><strong>What it does:</strong> Shows firewall rules and priorities.</p>
-                    <p><strong>When to use it:</strong> To examine configured firewall policies and ensure desired traffic control.</p>
-                </div>
-                <div class="command">
-                    <h3>gcloud compute networks subnets list</h3>
-                    <div class="command-container">
-                        <pre><code>gcloud compute networks subnets list</code></pre>
-                    </div>
-                    <p><strong>What it does:</strong> Lists subnet ranges and regions.</p>
-                    <p><strong>When to use it:</strong> To review subnet configurations within your VPC networks.</p>
-                </div>
+                <div class="command"><h3>gcloud compute networks list</h3><div class="command-container"><pre><code>gcloud compute networks list</code></pre></div><p><strong>What it does:</strong> Lists available VPC networks.</p></div>
+                <div class="command"><h3>gcloud compute routes list</h3><div class="command-container"><pre><code>gcloud compute routes list --filter="network:default"</code></pre></div><p><strong>What it does:</strong> Displays routing table for a VPC, optionally filtered by network.</p></div>
+                <div class="command"><h3>gcloud compute firewall-rules list</h3><div class="command-container"><pre><code>gcloud compute firewall-rules list --filter="direction:INGRESS"</code></pre></div><p><strong>What it does:</strong> Shows firewall rules and priorities, optionally filtered by direction.</p></div>
+                <div class="command"><h3>gcloud compute networks subnets list</h3><div class="command-container"><pre><code>gcloud compute networks subnets list --region us-central1</code></pre></div><p><strong>What it does:</strong> Lists subnet ranges and regions, optionally filtered by region.</p></div>
+                <div class="command"><h3>gcloud compute addresses list</h3><div class="command-container"><pre><code>gcloud compute addresses list --global</code></pre></div><p><strong>What it does:</strong> Lists static external IP addresses in your project.</p></div>
+                <div class="command"><h3>gcloud compute forwarding-rules list</h3><div class="command-container"><pre><code>gcloud compute forwarding-rules list</code></pre></div><p><strong>What it does:</strong> Displays configured forwarding rules for load balancers.</p></div>
+                <div class="command"><h3>gcloud compute network-attachments list</h3><div class="command-container"><pre><code>gcloud compute network-attachments list</code></pre></div><p><strong>What it does:</strong> Lists network attachments for private service connect.</p></div>
+                <div class="command"><h3>gcloud compute ssl-policies list</h3><div class="command-container"><pre><code>gcloud compute ssl-policies list</code></pre></div><p><strong>What it does:</strong> Lists SSL policies for load balancers.</p></div>
+                <div class="command"><h3>gcloud compute target-http-proxies list</h3><div class="command-container"><pre><code>gcloud compute target-http-proxies list</code></pre></div><p><strong>What it does:</strong> Lists target HTTP proxies for load balancers.</p></div>
+                <div class="command"><h3>gcloud compute target-https-proxies list</h3><div class="command-container"><pre><code>gcloud compute target-https-proxies list</code></pre></div><p><strong>What it does:</strong> Lists target HTTPS proxies for load balancers.</p></div>
+                <div class="command"><h3>gcloud compute target-ssl-proxies list</h3><div class="command-container"><pre><code>gcloud compute target-ssl-proxies list</code></pre></div><p><strong>What it does:</strong> Lists target SSL proxies for load balancers.</p></div>
+                <div class="command"><h3>gcloud compute vpn-gateways list</h3><div class="command-container"><pre><code>gcloud compute vpn-gateways list</code></pre></div><p><strong>What it does:</strong> Lists HA VPN gateways.</p></div>
+                <div class="command"><h3>gcloud compute interconnects list</h3><div class="command-container"><pre><code>gcloud compute interconnects list</code></pre></div><p><strong>What it does:</strong> Lists Dedicated Interconnect connections.</p></div>
+                <div class="command"><h3>gcloud compute routers list</h3><div class="command-container"><pre><code>gcloud compute routers list</code></pre></div><p><strong>What it does:</strong> Lists Cloud Routers.</p></div>
+                <div class="command"><h3>gcloud compute network-endpoint-groups list</h3><div class="command-container"><pre><code>gcloud compute network-endpoint-groups list</code></pre></div><p><strong>What it does:</strong> Lists network endpoint groups (NEGs).</p></div>
+                <div class="command"><h3>gcloud compute ssl-certificates list</h3><div class="command-container"><pre><code>gcloud compute ssl-certificates list</code></pre></div><p><strong>What it does:</strong> Lists SSL certificates for load balancers.</p></div>
+                <div class="command"><h3>gcloud compute vpn-tunnels list</h3><div class="command-container"><pre><code>gcloud compute vpn-tunnels list</code></pre></div><p><strong>What it does:</strong> Lists VPN tunnels.</p></div>
+                <div class="command"><h3>gcloud compute xpn list-shared-projects</h3><div class="command-container"><pre><code>gcloud compute xpn list-shared-projects [HOST_PROJECT_ID]</code></pre></div><p><strong>What it does:</strong> Lists shared projects in a Shared VPC setup.</p></div>
+                <div class="command"><h3>gcloud compute reservations list</h3><div class="command-container"><pre><code>gcloud compute reservations list</code></pre></div><p><strong>What it does:</strong> Lists VM instance reservations.</p></div>
+                <div class="command"><h3>gcloud compute routes describe <name></h3><div class="command-container"><pre><code>gcloud compute routes describe default-route-1234 --project [PROJECT_ID]</code></pre></div><p><strong>What it does:</strong> Displays details about a specific route.</p></div>
             </section>
-
+            
             <section class="command-category" data-category="gke">
                 <h2>Kubernetes Engine</h2>
-                <div class="command">
-                    <h3>gcloud container clusters list</h3>
-                    <div class="command-container">
-                        <pre><code>gcloud container clusters list</code></pre>
-                    </div>
-                    <p><strong>What it does:</strong> Lists all GKE clusters in the project.</p>
-                    <p><strong>When to use it:</strong> To see your Kubernetes clusters and their locations.</p>
-                </div>
-                <div class="command">
-                    <h3>gcloud container clusters get-credentials</h3>
-                    <div class="command-container">
-                        <pre><code>gcloud container clusters get-credentials [CLUSTER_NAME] --zone [ZONE]</code></pre>
-                    </div>
-                    <p><strong>What it does:</strong> Configures `kubectl` with credentials to access your GKE cluster.</p>
-                    <p><strong>When to use it:</strong> The first step to interacting with your cluster using `kubectl`.</p>
-                </div>
+                <div class="command"><h3>gcloud container clusters list</h3><div class="command-container"><pre><code>gcloud container clusters list --region us-central1</code></pre></div><p><strong>What it does:</strong> Lists all GKE clusters in the project, optionally filtered by region.</p></div>
+                <div class="command"><h3>gcloud container clusters get-credentials</h3><div class="command-container"><pre><code>gcloud container clusters get-credentials [CLUSTER_NAME] --zone [ZONE]</code></pre></div><p><strong>What it does:</strong> Configures `kubectl` with credentials to access your GKE cluster.</p></div>
+                <div class="command"><h3>kubectl get nodes</h3><div class="command-container"><pre><code>kubectl get nodes</code></pre></div><p><strong>What it does:</strong> Lists all worker nodes in the Kubernetes cluster.</p></div>
+                <div class="command"><h3>kubectl get pods</h3><div class="command-container"><pre><code>kubectl get pods -n [NAMESPACE]</code></pre></div><p><strong>What it does:</strong> Lists pods in a specific namespace (or all namespaces if -A is used).</p></div>
+                <div class="command"><h3>kubectl get services</h3><div class="command-container"><pre><code>kubectl get services -n [NAMESPACE]</code></pre></div><p><strong>What it does:</strong> Lists services in a specific namespace.</p></div>
+                <div class="command"><h3>kubectl describe pod</h3><div class="command-container"><pre><code>kubectl describe pod [POD_NAME] -n [NAMESPACE]</code></pre></div><p><strong>What it does:</strong> Shows detailed information about a specific pod.</p></div>
+                <div class="command"><h3>kubectl logs</h3><div class="command-container"><pre><code>kubectl logs [POD_NAME] -n [NAMESPACE]</code></pre></div><p><strong>What it does:</strong> Fetches logs for a container in a pod.</p></div>
+                <div class="command"><h3>kubectl exec</h3><div class="command-container"><pre><code>kubectl exec -it [POD_NAME] -n [NAMESPACE] -- /bin/bash</code></pre></div><p><strong>What it does:</strong> Executes a command in a running container.</p></div>
+                <div class="command"><h3>gcloud container node-pools list</h3><div class="command-container"><pre><code>gcloud container node-pools list --cluster [CLUSTER_NAME] --zone [ZONE]</code></pre></div><p><strong>What it does:</strong> Lists node pools within a GKE cluster.</p></div>
+                <div class="command"><h3>gcloud container operations list</h3><div class="command-container"><pre><code>gcloud container operations list --cluster [CLUSTER_NAME]</code></pre></div><p><strong>What it does:</strong> Lists ongoing and recent operations on a GKE cluster.</p></div>
+                <div class="command"><h3>gcloud container clusters get-server-config</h3><div class="command-container"><pre><code>gcloud container clusters get-server-config --zone [ZONE]</code></pre></div><p><strong>What it does:</strong> Displays server configuration details for GKE, including supported Kubernetes versions.</p></div>
+                <div class="command"><h3>gcloud container images list</h3><div class="command-container"><pre><code>gcloud container images list --repository=gcr.io/[PROJECT_ID]</code></pre></div><p><strong>What it does:</strong> Lists container images in Google Container Registry (GCR).</p></div>
+                <div class="command"><h3>kubectl get deployments</h3><div class="command-container"><pre><code>kubectl get deployments -n [NAMESPACE]</code></pre></div><p><strong>What it does:</strong> Lists Kubernetes deployments.</p></div>
+                <div class="command"><h3>kubectl get ingresses</h3><div class="command-container"><pre><code>kubectl get ingresses -n [NAMESPACE]</code></pre></div><p><strong>What it does:</strong> Lists Kubernetes Ingress resources.</p></div>
+                <div class="command"><h3>kubectl get persistentvolumeclaims</h3><div class="command-container"><pre><code>kubectl get persistentvolumeclaims -n [NAMESPACE]</code></pre></div><p><strong>What it does:</strong> Lists PersistentVolumeClaims.</p></div>
+                <div class="command"><h3>kubectl top pods</h3><div class="command-container"><pre><code>kubectl top pods -n [NAMESPACE]</code></pre></div><p><strong>What it does:</strong> Shows resource (CPU/memory) usage for pods.</p></div>
+                <div class="command"><h3>kubectl top nodes</h3><div class="command-container"><pre><code>kubectl top nodes</code></pre></div><p><strong>What it does:</strong> Shows resource (CPU/memory) usage for nodes.</p></div>
+                <div class="command"><h3>gcloud auth print-access-token</h3><div class="command-container"><pre><code>gcloud auth print-access-token</code></pre></div><p><strong>What it does:</strong> Prints the access token for the current authenticated user.</p></div>
+                <div class="command"><h3>gcloud container clusters update</h3><div class="command-container"><pre><code>gcloud container clusters update [CLUSTER_NAME] --zone [ZONE] --enable-stackdriver-logging --enable-stackdriver-monitoring</code></pre></div><p><strong>What it does:</strong> Updates a GKE cluster's settings.</p></div>
+                <div class="command"><h3>gcloud container node-pools delete</h3><div class="command-container"><pre><code>gcloud container node-pools delete [NODE_POOL_NAME] --cluster [CLUSTER_NAME] --zone [ZONE]</code></pre></div><p><strong>What it does:</strong> Deletes a node pool from a GKE cluster.</p></div>
             </section>
 
             <section class="command-category" data-category="storage">
                 <h2>Cloud Storage</h2>
-                <div class="command">
-                    <h3>gcloud storage ls</h3>
-                    <div class="command-container">
-                        <pre><code>gcloud storage ls gs://[BUCKET_NAME]</code></pre>
-                    </div>
-                    <p><strong>What it does:</strong> Lists the contents of a Cloud Storage bucket.</p>
-                    <p><strong>When to use it:</strong> To view the objects stored in a bucket.</p>
-                </div>
-                <div class="command">
-                    <h3>gcloud storage cp</h3>
-                    <div class="command-container">
-                        <pre><code>gcloud storage cp [LOCAL_FILE] gs://[BUCKET_NAME]/</code></pre>
-                    </div>
-                    <p><strong>What it does:</strong> Copies files between your local machine and Cloud Storage.</p>
-                    <p><strong>When to use it:</strong> To upload or download files from a storage bucket.</p>
-                </div>
+                <div class="command"><h3>gcloud storage ls</h3><div class="command-container"><pre><code>gcloud storage ls gs://[BUCKET_NAME]</code></pre></div><p><strong>What it does:</strong> Lists the contents of a Cloud Storage bucket.</p></div>
+                <div class="command"><h3>gcloud storage cp</h3><div class="command-container"><pre><code>gcloud storage cp [LOCAL_FILE] gs://[BUCKET_NAME]/</code></pre></div><p><strong>What it does:</strong> Copies files between your local machine and Cloud Storage.</p></div>
+                <div class="command"><h3>gcloud storage rm</h3><div class="command-container"><pre><code>gcloud storage rm gs://[BUCKET_NAME]/[OBJECT_NAME]</code></pre></div><p><strong>What it does:</strong> Removes objects from a Cloud Storage bucket.</p></div>
+                <div class="command"><h3>gcloud storage buckets describe</h3><div class="command-container"><pre><code>gcloud storage buckets describe gs://[BUCKET_NAME]</code></pre></div><p><strong>What it does:</strong> Displays detailed information about a Cloud Storage bucket.</p></div>
+                <div class="command"><h3>gcloud storage objects list</h3><div class="command-container"><pre><code>gcloud storage objects list gs://[BUCKET_NAME]</code></pre></div><p><strong>What it does:</strong> Lists objects within a Cloud Storage bucket.</p></div>
+                <div class="command"><h3>gcloud storage buckets create</h3><div class="command-container"><pre><code>gcloud storage buckets create gs://my-unique-bucket-name --project=[PROJECT_ID] --location=us-central1</code></pre></div><p><strong>What it does:</strong> Creates a new Cloud Storage bucket.</p></div>
+                <div class="command"><h3>gcloud storage buckets update</h3><div class="command-container"><pre><code>gcloud storage buckets update gs://[BUCKET_NAME] --default-storage-class=NEARLINE</code></pre></div><p><strong>What it does:</strong> Updates properties of a Cloud Storage bucket.</p></div>
+                <div class="command"><h3>gcloud storage buckets delete</h3><div class="command-container"><pre><code>gcloud storage buckets delete gs://[BUCKET_NAME]</code></pre></div><p><strong>What it does:</strong> Deletes a Cloud Storage bucket (must be empty).</p></div>
+                <div class="command"><h3>gcloud storage acl get</h3><div class="command-container"><pre><code>gcloud storage acl get gs://[BUCKET_NAME]</code></pre></div><p><strong>What it does:</strong> Displays the Access Control List (ACL) for a bucket.</p></div>
+                <div class="command"><h3>gcloud storage acl set</h3><div class="command-container"><pre><code>gcloud storage acl set public-read gs://[BUCKET_NAME]</code></pre></div><p><strong>What it does:</strong> Sets predefined ACLs for a bucket, e.g., making it publicly readable.</p></div>
+                <div class="command"><h3>gcloud storage objects describe</h3><div class="command-container"><pre><code>gcloud storage objects describe gs://[BUCKET_NAME]/[OBJECT_NAME]</code></pre></div><p><strong>What it does:</strong> Displays detailed information about a specific object.</p></div>
+                <div class="command"><h3>gcloud storage objects update</h3><div class="command-container"><pre><code>gcloud storage objects update gs://[BUCKET_NAME]/[OBJECT_NAME] --content-type=text/html</code></pre></div><p><strong>What it does:</strong> Updates metadata for a Cloud Storage object.</p></div>
+                <div class="command"><h3>gcloud storage compose</h3><div class="command-container"><pre><code>gcloud storage compose gs://[BUCKET]/object1.txt gs://[BUCKET]/object2.txt gs://[BUCKET]/composed_object.txt</code></pre></div><p><strong>What it does:</strong> Concatenates multiple objects into a single new object.</p></div>
+                <div class="command"><h3>gcloud storage cp --recursive</h3><div class="command-container"><pre><code>gcloud storage cp --recursive gs://[SOURCE_BUCKET]/folder/ gs://[DESTINATION_BUCKET]/</code></pre></div><p><strong>What it does:</strong> Copies an entire directory recursively between buckets or local filesystem.</p></div>
+                <div class="command"><h3>gcloud storage du</h3><div class="command-container"><pre><code>gcloud storage du gs://[BUCKET_NAME]</code></pre></div><p><strong>What it does:</strong> Reports disk usage of buckets and objects.</p></div>
+                <div class="command"><h3>gcloud storage events list</h3><div class="command-container"><pre><code>gcloud storage events list gs://[BUCKET_NAME]</code></pre></div><p><strong>What it does:</strong> Lists Cloud Storage event notifications.</p></div>
+                <div class="command"><h3>gcloud storage rsync</h3><div class="command-container"><pre><code>gcloud storage rsync -r ./local_dir gs://[BUCKET_NAME]/remote_dir</code></pre></div><p><strong>What it does:</strong> Synchronizes content between a local directory and a bucket, or between two buckets.</p></div>
+                <div class="command"><h3>gcloud storage set-default-event-based-hold</h3><div class="command-container"><pre><code>gcloud storage set-default-event-based-hold gs://[BUCKET_NAME] --enable</code></pre></div><p><strong>What it does:</strong> Enables default event-based hold on new objects in a bucket.</p></div>
+                <div class="command"><h3>gcloud storage buckets add-iam-policy-binding</h3><div class="command-container"><pre><code>gcloud storage buckets add-iam-policy-binding gs://[BUCKET_NAME] --member='user:user@example.com' --role='roles/storage.objectViewer'</code></pre></div><p><strong>What it does:</strong> Grants IAM permissions to a bucket.</p></div>
+                <div class="command"><h3>gcloud storage buckets get-iam-policy</h3><div class="command-container"><pre><code>gcloud storage buckets get-iam-policy gs://[BUCKET_NAME]</code></pre></div><p><strong>What it does:</strong> Retrieves the IAM policy for a bucket.</p></div>
             </section>
 
             <section class="command-category" data-category="vpn">
                 <h2>VPN</h2>
-                <div class="command">
-                    <h3>gcloud compute vpn-tunnels list</h3>
-                    <div class="command-container">
-                        <pre><code>gcloud compute vpn-tunnels list</code></pre>
-                    </div>
-                    <p><strong>What it does:</strong> Checks VPN tunnel status.</p>
-                    <p><strong>When to use it:</strong> To quickly ascertain the operational state of your Cloud VPN tunnels.</p>
-                </div>
-                 <div class="command">
-                    <h3>gcloud compute routers get-status &lt;router&gt;</h3>
-                    <div class="command-container">
-                        <pre><code>gcloud compute routers get-status my-cloud-router</code></pre>
-                    </div>
-                    <p><strong>What it does:</strong> Verifies Cloud Router and BGP state.</p>
-                    <p><strong>When to use it:</strong> To check the status of BGP sessions on a Cloud Router, particularly for HA VPNs.</p>
-                </div>
-                 <div class="command">
-                    <h3>gcloud compute routers describe &lt;router&gt;</h3>
-                    <div class="command-container">
-                        <pre><code>gcloud compute routers describe my-cloud-router</code></pre>
-                    </div>
-                    <p><strong>What it does:</strong> Displays BGP peers and ASN details.</p>
-                    <p><strong>When to use it:</strong> To get detailed configuration and status of a Cloud Router and its BGP peers.</p>
-                </div>
-                <div class="command">
-                    <h3>gcloud compute vpn-gateways describe &lt;name&gt;</h3>
-                    <div class="command-container">
-                        <pre><code>gcloud compute vpn-gateways describe my-ha-vpn-gateway</code></pre>
-                    </div>
-                    <p><strong>What it does:</strong> Displays HA VPN gateway details.</p>
-                    <p><strong>When to use it:</strong> To review the configuration and status of a Highly Available VPN gateway.</p>
-                </div>
+                <div class="command"><h3>gcloud compute vpn-tunnels list</h3><div class="command-container"><pre><code>gcloud compute vpn-tunnels list --region us-central1</code></pre></div><p><strong>What it does:</strong> Checks VPN tunnel status, optionally filtered by region.</p></div>
+                <div class="command"><h3>gcloud compute routers get-status &lt;router&gt;</h3><div class="command-container"><pre><code>gcloud compute routers get-status my-cloud-router --region us-central1</code></pre></div><p><strong>What it does:</strong> Verifies Cloud Router and BGP state.</p></div>
+                <div class="command"><h3>gcloud compute routers describe &lt;router&gt;</h3><div class="command-container"><pre><code>gcloud compute routers describe my-cloud-router --region us-central1</code></pre></div><p><strong>What it does:</strong> Displays BGP peers and ASN details for a Cloud Router.</p></div>
+                <div class="command"><h3>gcloud compute vpn-gateways describe &lt;name&gt;</h3><div class="command-container"><pre><code>gcloud compute vpn-gateways describe my-ha-vpn-gateway --region us-central1</code></pre></div><p><strong>What it does:</strong> Displays HA VPN gateway details.</p></div>
+                <div class="command"><h3>gcloud compute vpn-gateways list</h3><div class="command-container"><pre><code>gcloud compute vpn-gateways list --region us-central1</code></pre></div><p><strong>What it does:</strong> Lists HA VPN gateways in a specified region.</p></div>
+                <div class="command"><h3>gcloud compute interconnects list</h3><div class="command-container"><pre><code>gcloud compute interconnects list --region us-central1</code></pre></div><p><strong>What it does:</strong> Lists Dedicated Interconnect connections.</p></div>
+                <div class="command"><h3>gcloud compute external-vpn-gateways list</h3><div class="command-container"><pre><code>gcloud compute external-vpn-gateways list</code></pre></div><p><strong>What it does:</strong> Lists external VPN gateways.</p></div>
+                <div class="command"><h3>gcloud compute interconnect-attachments list</h3><div class="command-container"><pre><code>gcloud compute interconnect-attachments list --region us-central1</code></pre></div><p><strong>What it does:</strong> Lists VLAN attachments for Dedicated Interconnect.</p></div>
+                <div class="command"><h3>gcloud compute vpn-tunnels describe &lt;name&gt;</h3><div class="command-container"><pre><code>gcloud compute vpn-tunnels describe my-vpn-tunnel --region us-central1</code></pre></div><p><strong>What it does:</strong> Displays detailed information about a specific VPN tunnel.</p></div>
+                <div class="command"><h3>gcloud compute routers get-nat-mapping-info &lt;router&gt;</h3><div class="command-container"><pre><code>gcloud compute routers get-nat-mapping-info my-cloud-router --region us-central1</code></pre></div><p><strong>What it does:</strong> Shows NAT mapping information for Cloud NAT configured on a Cloud Router.</p></div>
+                <div class="command"><h3>gcloud compute vpn-gateways get-status &lt;name&gt;</h3><div class="command-container"><pre><code>gcloud compute vpn-gateways get-status my-ha-vpn-gateway --region us-central1</code></pre></div><p><strong>What it does:</strong> Provides the current status of an HA VPN gateway.</p></div>
+                <div class="command"><h3>gcloud compute interconnects get-diagnostics &lt;name&gt;</h3><div class="command-container"><pre><code>gcloud compute interconnects get-diagnostics my-interconnect --region us-central1</code></pre></div><p><strong>What it does:</strong> Runs diagnostics on a Dedicated Interconnect connection.</p></div>
+                <div class="command"><h3>gcloud compute routers create</h3><div class="command-container"><pre><code>gcloud compute routers create my-router --network my-network --region us-central1</code></pre></div><p><strong>What it does:</strong> Creates a new Cloud Router.</p></div>
+                <div class="command"><h3>gcloud compute vpn-tunnels create</h3><div class="command-container"><pre><code>gcloud compute vpn-tunnels create my-vpn-tunnel --peer-external-gateway-interface 0 --peer-external-gateway my-external-vpn-gateway --region us-central1 --shared-secret [SECRET] --ike-version 2 --router my-cloud-router --tunnel-bgp-peer 169.254.1.2 --local-traffic-selector 0.0.0.0/0 --remote-traffic-selector 0.0.0.0/0</code></pre></div><p><strong>What it does:</strong> Creates a new classic VPN tunnel.</p></div>
+                <div class="command"><h3>gcloud compute vpn-gateways create</h3><div class="command-container"><pre><code>gcloud compute vpn-gateways create my-ha-vpn-gateway --network my-network --region us-central1</code></pre></div><p><strong>What it does:</strong> Creates a new HA VPN gateway.</p></div>
+                <div class="command"><h3>gcloud compute interconnect-attachments create</h3><div class="command-container"><pre><code>gcloud compute interconnect-attachments create my-vlan-attachment --interconnect my-interconnect --router my-cloud-router --region us-central1 --candidate-subnets 10.0.0.0/29</code></pre></div><p><strong>What it does:</strong> Creates a new VLAN attachment for Dedicated Interconnect.</p></div>
+                <div class="command"><h3>gcloud compute routes create</h3><div class="command-container"><pre><code>gcloud compute routes create my-static-route --destination-range 10.10.10.0/24 --next-hop-instance my-vm --next-hop-instance-zone us-central1-a --network my-network</code></pre></div><p><strong>What it does:</strong> Creates a new static route in a VPC network.</p></div>
+                <div class="command"><h3>gcloud compute firewall-rules create</h3><div class="command-container"><pre><code>gcloud compute firewall-rules create allow-vpn-traffic --network my-network --allow tcp:443,udp:500,udp:4500 --source-ranges 0.0.0.0/0</code></pre></div><p><strong>What it does:</strong> Creates a firewall rule to allow VPN-related traffic.</p></div>
+                <div class="command"><h3>gcloud compute external-vpn-gateways create</h3><div class="command-container"><pre><code>gcloud compute external-vpn-gateways create my-external-vpn-gateway --interfaces 0=203.0.113.1</code></pre></div><p><strong>What it does:</strong> Creates a new external VPN gateway for classic VPN connections.</p></div>
+                <div class="command"><h3>gcloud compute routes delete</h3><div class="command-container"><pre><code>gcloud compute routes delete my-static-route</code></pre></div><p><strong>What it does:</strong> Deletes a static route.</p></div>
             </section>
 
             <section class="command-category" data-category="config">
                 <h2>Configuration</h2>
-                <div class="command">
-                    <h3>gcloud compute instances create</h3>
-                    <div class="command-container">
-                        <pre><code>gcloud compute instances create my-vm --machine-type=e2-medium --image-family=ubuntu-2004-lts --image-project=ubuntu-os-cloud</code></pre>
-                    </div>
-                    <p><strong>What it does:</strong> Creates a new Google Compute Engine virtual machine.</p>
-                    <p><strong>When to use it:</strong> When you need to provision a new server in GCP.</p>
-                </div>
+                <div class="command"><h3>gcloud compute instances create</h3><div class="command-container"><pre><code>gcloud compute instances create my-vm --machine-type=e2-medium --image-family=ubuntu-2004-lts --image-project=ubuntu-os-cloud --zone=us-central1-a</code></pre></div><p><strong>What it does:</strong> Creates a new Google Compute Engine virtual machine.</p></div>
+                <div class="command"><h3>gcloud compute networks create</h3><div class="command-container"><pre><code>gcloud compute networks create my-custom-network --subnet-mode=custom</code></pre></div><p><strong>What it does:</strong> Creates a new custom mode VPC network.</p></div>
+                <div class="command"><h3>gcloud compute firewall-rules create</h3><div class="command-container"><pre><code>gcloud compute firewall-rules create allow-http --network=default --action=ALLOW --rules=tcp:80 --source-ranges=0.0.0.0/0</code></pre></div><p><strong>What it does:</strong> Creates a new firewall rule to allow HTTP traffic.</p></div>
+                <div class="command"><h3>gcloud compute addresses create</h3><div class="command-container"><pre><code>gcloud compute addresses create my-static-ip --region=us-central1</code></pre></div><p><strong>What it does:</strong> Creates a new static external IP address.</p></div>
+                <div class="command"><h3>gcloud container clusters create</h3><div class="command-container"><pre><code>gcloud container clusters create my-gke-cluster --zone=us-central1-a --num-nodes=1</code></pre></div><p><strong>What it does:</strong> Creates a new GKE cluster with specified zone and node count.</p></div>
+                <div class="command"><h3>gcloud iam service-accounts create</h3><div class="command-container"><pre><code>gcloud iam service-accounts create my-service-account --display-name="My Service Account"</code></pre></div><p><strong>What it does:</strong> Creates a new IAM service account.</p></div>
+                <div class="command"><h3>gcloud projects create</h3><div class="command-container"><pre><code>gcloud projects create my-new-project-123 --name="My New Project"</code></pre></div><p><strong>What it does:</strong> Creates a new Google Cloud project.</p></div>
+                <div class="command"><h3>gcloud compute disks create</h3><div class="command-container"><pre><code>gcloud compute disks create my-data-disk --size=50GB --zone=us-central1-a</code></pre></div><p><strong>What it does:</strong> Creates a new persistent disk.</p></div>
+                <div class="command"><h3>gcloud compute images create</h3><div class="command-container"><pre><code>gcloud compute images create my-custom-image --source-disk=my-disk --source-disk-zone=us-central1-a</code></pre></div><p><strong>What it does:</strong> Creates a custom image from a persistent disk.</p></div>
+                <div class="command"><h3>gcloud compute instance-templates create</h3><div class="command-container"><pre><code>gcloud compute instance-templates create my-instance-template --machine-type=e2-small --image-family=debian-10</code></pre></div><p><strong>What it does:</strong> Creates an instance template for managed instance groups.</p></div>
+                <div class="command"><h3>gcloud compute instance-groups managed create</h3><div class="command-container"><pre><code>gcloud compute instance-groups managed create my-mig --template=my-instance-template --zone=us-central1-a --size=2</code></pre></div><p><strong>What it does:</strong> Creates a managed instance group based on a template.</p></div>
+                <div class="command"><h3>gcloud compute backend-services create</h3><div class="command-container"><pre><code>gcloud compute backend-services create my-backend --protocol=HTTP --port-name=http --global --health-checks=my-health-check</code></pre></div><p><strong>What it does:</strong> Creates a new backend service for a load balancer.</p></div>
+                <div class="command"><h3>gcloud compute url-maps create</h3><div class="command-container"><pre><code>gcloud compute url-maps create my-url-map --default-service=my-backend</code></pre></div><p><strong>What it does:</strong> Creates a new URL map for HTTP(S) load balancing.</p></div>
+                <div class="command"><h3>gcloud compute target-http-proxies create</h3><div class="command-container"><pre><code>gcloud compute target-http-proxies create my-http-proxy --url-map=my-url-map</code></pre></div><p><strong>What it does:</strong> Creates a new target HTTP proxy.</p></div>
+                <div class="command"><h3>gcloud compute global-forwarding-rules create</h3><div class="command-container"><pre><code>gcloud compute global-forwarding-rules create my-http-rule --target-http-proxy=my-http-proxy --ports=80</code></pre></div><p><strong>What it does:</strong> Creates a new global forwarding rule to direct traffic to a proxy.</p></div>
+                <div class="command"><h3>gcloud compute ssh-keys add</h3><div class="command-container"><pre><code>gcloud compute ssh-keys add --user=[USERNAME] --zone=[ZONE] --instance=[INSTANCE_NAME] --ssh-key-file=[PATH_TO_PUBLIC_KEY]</code></pre></div><p><strong>What it does:</strong> Adds an SSH key to a VM instance's metadata.</p></div>
+                <div class="command"><h3>gcloud services enable</h3><div class="command-container"><pre><code>gcloud services enable compute.googleapis.com</code></pre></div><p><strong>What it does:</strong> Enables a Google Cloud API service for a project.</p></div>
+                <div class="command"><h3>gcloud auth login</h3><div class="command-container"><pre><code>gcloud auth login</code></pre></div><p><strong>What it does:</strong> Authorizes gcloud to access Google Cloud using a user account.</p></div>
+                <div class="command"><h3>gcloud config set project</h3><div class="command-container"><pre><code>gcloud config set project [PROJECT_ID]</code></pre></div><p><strong>What it does:</strong> Sets the default project for gcloud commands.</p></div>
+                <div class="command"><h3>gcloud config set compute/zone</h3><div class="command-container"><pre><code>gcloud config set compute/zone us-central1-a</code></pre></div><p><strong>What it does:</strong> Sets the default compute zone for gcloud commands.</p></div>
             </section>
 
             <section class="command-category" data-category="troubleshooting">
-                 <h2>Troubleshooting</h2>
-                <div class="command">
-                    <h3>gcloud logging read</h3>
-                    <div class="command-container">
-                        <pre><code>gcloud logging read "resource.type=gce_instance AND resource.labels.instance_id=[INSTANCE_ID]" --limit=50</code></pre>
-                    </div>
-                    <p><strong>What it does:</strong> Reads logs for firewall, VPN, or network issues.</p>
-                    <p><strong>When to use it:</strong> To view logs for a specific resource, such as a VM instance, to diagnose issues.</p>
-                </div>
+                <h2>Troubleshooting</h2>
+                <div class="command"><h3>gcloud logging read</h3><div class="command-container"><pre><code>gcloud logging read "resource.type=gce_instance AND resource.labels.instance_id=[INSTANCE_ID]" --limit=50 --order=desc</code></pre></div><p><strong>What it does:</strong> Reads logs for firewall, VPN, or network issues, filtered by resource and ordered by recency.</p></div>
+                <div class="command"><h3>gcloud compute operations list</h3><div class="command-container"><pre><code>gcloud compute operations list --filter="status=DONE AND error.code:*"</code></pre></div><p><strong>What it does:</strong> Lists recent Compute Engine operations, filtered for errors.</p></div>
+                <div class="command"><h3>gcloud compute firewall-rules describe</h3><div class="command-container"><pre><code>gcloud compute firewall-rules describe [FIREWALL_RULE_NAME]</code></pre></div><p><strong>What it does:</strong> Displays details of a specific firewall rule to verify its configuration.</p></div>
+                <div class="command"><h3>gcloud compute networks describe</h3><div class="command-container"><pre><code>gcloud compute networks describe [NETWORK_NAME]</code></pre></div><p><strong>What it does:</strong> Shows details about a VPC network, including subnet ranges and peerings.</p></div>
+                <div class="command"><h3>gcloud compute routes describe</h3><div class="command-container"><pre><code>gcloud compute routes describe [ROUTE_NAME]</code></pre></div><p><strong>What it does:</strong> Displays details about a specific route, including its next hop.</p></div>
+                <div class="command"><h3>gcloud compute interconnects get-diagnostics</h3><div class="command-container"><pre><code>gcloud compute interconnects get-diagnostics [INTERCONNECT_NAME] --region [REGION]</code></pre></div><p><strong>What it does:</strong> Runs diagnostics on a Dedicated Interconnect connection to check for physical issues.</p></div>
+                <div class="command"><h3>gcloud alpha network-management connectivity-tests run</h3><div class="command-container"><pre><code>gcloud alpha network-management connectivity-tests run my-test --source-ip 10.1.1.1 --destination-ip 10.2.2.2 --protocol TCP --destination-port 80</code></pre></div><p><strong>What it does:</strong> Runs a connectivity test between two endpoints to diagnose network reachability.</p></div>
+                <div class="command"><h3>gcloud compute diagnose</h3><div class="command-container"><pre><code>gcloud compute diagnose</code></pre></div><p><strong>What it does:</strong> Runs a series of diagnostic tests to check for common Compute Engine issues.</p></div>
+                <div class="command"><h3>gcloud container clusters get-master-auth</h3><div class="command-container"><pre><code>gcloud container clusters get-master-auth [CLUSTER_NAME] --zone [ZONE]</code></pre></div><p><strong>What it does:</strong> Displays master authentication credentials for a GKE cluster.</p></div>
+                <div class="command"><h3>gcloud iam list-grantable-roles</h3><div class="command-container"><pre><code>gcloud iam list-grantable-roles //cloudresourcemanager.googleapis.com/projects/[PROJECT_ID]</code></pre></div><p><strong>What it does:</strong> Lists IAM roles that can be granted on a resource.</p></div>
+                <div class="command"><h3>gcloud auth revoke</h3><div class="command-container"><pre><code>gcloud auth revoke [ACCOUNT_EMAIL]</code></pre></div><p><strong>What it does:</strong> Revokes credentials for a specific account.</p></div>
+                <div class="command"><h3>gcloud config list</h3><div class="command-container"><pre><code>gcloud config list</code></pre></div><p><strong>What it does:</strong> Lists all gcloud configuration properties.</p></div>
+                <div class="command"><h3>gcloud components update</h3><div class="command-container"><pre><code>gcloud components update</code></pre></div><p><strong>What it does:</strong> Updates the Google Cloud CLI components.</p></div>
+                <div class="command"><h3>gcloud info</h3><div class="command-container"><pre><code>gcloud info</code></pre></div><p><strong>What it does:</strong> Displays information about the gcloud environment and configuration.</p></div>
+                <div class="command"><h3>gcloud projects get-iam-policy</h3><div class="command-container"><pre><code>gcloud projects get-iam-policy [PROJECT_ID]</code></pre></div><p><strong>What it does:</strong> Shows the IAM policy for a project.</p></div>
+                <div class="command"><h3>gcloud compute project-info add-metadata</h3><div class="command-container"><pre><code>gcloud compute project-info add-metadata --metadata enable-oslogin=TRUE</code></pre></div><p><strong>What it does:</strong> Adds metadata to the project, can be used to enable/disable features like OS Login.</p></div>
+                <div class="command"><h3>gcloud services list</h3><div class="command-container"><pre><code>gcloud services list --enabled</code></pre></div><p><strong>What it does:</strong> Lists enabled Google Cloud APIs for the current project.</p></div>
+                <div class="command"><h3>gcloud compute networks peerings describe</h3><div class="command-container"><pre><code>gcloud compute networks peerings describe my-peering --network my-network</code></pre></div><p><strong>What it does:</strong> Displays details of a VPC Network Peering connection.</p></div>
+                <div class="command"><h3>gcloud compute instances get-serial-port-output</h3><div class="command-container"><pre><code>gcloud compute instances get-serial-port-output [INSTANCE_NAME] --zone [ZONE]</code></pre></div><p><strong>What it does:</strong> Retrieves serial port output for a VM instance, useful for boot issues.</p></div>
+                <div class="command"><h3>gcloud compute networks describe-effective-firewalls</h3><div class="command-container"><pre><code>gcloud compute networks describe-effective-firewalls [NETWORK_NAME]</code></pre></div><p><strong>What it does:</strong> Shows the effective firewall rules for a network, including hierarchical firewall policies.</p></div>
             </section>
 
         </div>

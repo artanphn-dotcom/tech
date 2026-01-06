@@ -33,210 +33,149 @@
 
             <section class="command-category" data-category="file">
                 <h2>File and Directory Management</h2>
-                <div class="command">
-                    <h3>ls - List directory contents</h3>
-                    <div class="command-container">
-                        <pre><code>ls -la</code></pre>
-                    </div>
-                    <p><strong>What it does:</strong> Lists files and directories with detailed information.</p>
-                    <p><strong>When to use it:</strong> For navigating the filesystem and inspecting file permissions and metadata.</p>
-                </div>
-                <div class="command">
-                    <h3>cd - Change directory</h3>
-                    <div class="command-container">
-                        <pre><code>cd /var/log</code></pre>
-                    </div>
-                    <p><strong>What it does:</strong> Navigates to the specified directory.</p>
-                    <p><strong>When to use it:</strong> To move between directories.</p>
-                </div>
-                <div class="command">
-                    <h3>pwd - Print working directory</h3>
-                    <div class="command-container">
-                        <pre><code>pwd</code></pre>
-                    </div>
-                    <p><strong>What it does:</strong> Displays the full path of the current directory.</p>
-                    <p><strong>When to use it:</strong> When you need to know the absolute path of your current location.</p>
-                </div>
-                <div class="command">
-                    <h3>cp - Copy files</h3>
-                    <div class="command-container">
-                        <pre><code>cp source.txt destination.txt</code></pre>
-                    </div>
-                    <p><strong>What it does:</strong> Copies files or directories.</p>
-                    <p><strong>When to use it:</strong> To duplicate files. Use `cp -r` for directories.</p>
-                </div>
-                 <div class="command">
-                    <h3>mv - Move or rename files</h3>
-                    <div class="command-container">
-                        <pre><code>mv old-name.txt new-name.txt</code></pre>
-                    </div>
-                    <p><strong>What it does:</strong> Moves or renames files and directories.</p>
-                    <p><strong>When to use it:</strong> To relocate files or change their names.</p>
-                </div>
-                 <div class="command">
-                    <h3>rm - Remove files</h3>
-                    <div class="command-container">
-                        <pre><code>rm file.txt</code></pre>
-                    </div>
-                    <p><strong>What it does:</strong> Deletes files. Use with caution.</p>
-                    <p><strong>When to use it:</strong> To permanently delete files. Use `rm -r` for directories.</p>
-                </div>
-                <div class="command">
-                    <h3>find - Search for files</h3>
-                    <div class="command-container">
-                        <pre><code>find . -name "*.txt"</code></pre>
-                    </div>
-                    <p><strong>What it does:</strong> Searches for files in a directory hierarchy.</p>
-                    <p><strong>When to use it:</strong> To locate files based on name, size, modification time, etc.</p>
-                </div>
-                <div class="command">
-                    <h3>grep - Search text</h3>
-                    <div class="command-container">
-                        <pre><code>grep "error" /var/log/syslog</code></pre>
-                    </div>
-                    <p><strong>What it does:</strong> Searches for a pattern of text within files.</p>
-                    <p><strong>When to use it:</strong> Essential for finding specific lines in log files or any text document.</p>
-                </div>
+                <!-- Add 20+ commands here -->
+                <div class="command"><h3>ls</h3><div class="command-container"><pre><code>ls -lath</code></pre></div><p><strong>What it does:</strong> Lists directory contents in a long format, including hidden files, with human-readable sizes, sorted by modification time.</p></div>
+                <div class="command"><h3>cd</h3><div class="command-container"><pre><code>cd /var/log</code></pre></div><p><strong>What it does:</strong> Changes the current directory.</p></div>
+                <div class="command"><h3>pwd</h3><div class="command-container"><pre><code>pwd</code></pre></div><p><strong>What it does:</strong> Prints the current working directory.</p></div>
+                <div class="command"><h3>cp</h3><div class="command-container"><pre><code>cp -r /source /destination</code></pre></div><p><strong>What it does:</strong> Copies files and directories recursively.</p></div>
+                <div class="command"><h3>mv</h3><div class="command-container"><pre><code>mv oldfile.txt newfile.txt</code></pre></div><p><strong>What it does:</strong> Moves or renames files and directories.</p></div>
+                <div class="command"><h3>rm</h3><div class="command-container"><pre><code>rm -rf /path/to/dir</code></pre></div><p><strong>What it does:</strong> Removes files and directories forcefully and recursively (use with extreme caution).</p></div>
+                <div class="command"><h3>mkdir</h3><div class="command-container"><pre><code>mkdir -p /new/nested/dir</code></pre></div><p><strong>What it does:</strong> Creates a new directory, including parent directories if they don't exist.</p></div>
+                <div class="command"><h3>touch</h3><div class="command-container"><pre><code>touch newfile.txt</code></pre></div><p><strong>What it does:</strong> Creates an empty file or updates the modification timestamp of an existing file.</p></div>
+                <div class="command"><h3>find</h3><div class="command-container"><pre><code>find . -type f -name "*.log"</code></pre></div><p><strong>What it does:</strong> Searches for files based on various criteria like name, type, size, etc.</p></div>
+                <div class="command"><h3>grep</h3><div class="command-container"><pre><code>grep -r "error" /var/log</code></pre></div><p><strong>What it does:</strong> Searches for patterns in text recursively within a directory.</p></div>
+                <div class="command"><h3>cat</h3><div class="command-container"><pre><code>cat /etc/passwd</code></pre></div><p><strong>What it does:</strong> Concatenates and displays the content of files.</p></div>
+                <div class="command"><h3>less</h3><div class="command-container"><pre><code>less /var/log/syslog</code></pre></div><p><strong>What it does:</strong> Views file content one page at a time, allowing for navigation.</p></div>
+                <div class="command"><h3>head</h3><div class="command-container"><pre><code>head -n 20 file.txt</code></pre></div><p><strong>What it does:</strong> Displays the first few lines of a file.</p></div>
+                <div class="command"><h3>tail</h3><div class="command-container"><pre><code>tail -f /var/log/syslog</code></pre></div><p><strong>What it does:</strong> Displays the last few lines of a file, with `-f` to follow the file in real-time.</p></div>
+                <div class="command"><h3>chmod</h3><div class="command-container"><pre><code>chmod +x script.sh</code></pre></div><p><strong>What it does:</strong> Changes the permissions of a file or directory.</p></div>
+                <div class="command"><h3>chown</h3><div class="command-container"><pre><code>chown user:group file.txt</code></pre></div><p><strong>What it does:</strong> Changes the owner and group of a file or directory.</p></div>
+                <div class="command"><h3>ln</h3><div class="command-container"><pre><code>ln -s /path/to/original /path/to/link</code></pre></div><p><strong>What it does:</strong> Creates a symbolic link to a file or directory.</p></div>
+                <div class="command"><h3>du</h3><div class="command-container"><pre><code>du -sh /var/log</code></pre></div><p><strong>What it does:</strong> Shows the disk usage of a directory in a human-readable summary.</p></div>
+                <div class="command"><h3>df</h3><div class="command-container"><pre><code>df -h</code></pre></div><p><strong>What it does:</strong> Shows the disk free space on all mounted filesystems.</p></div>
+                <div class="command"><h3>tar</h3><div class="command-container"><pre><code>tar -czvf archive.tar.gz /path/to/dir</code></pre></div><p><strong>What it does:</strong> Creates a compressed archive of a directory.</p></div>
             </section>
 
             <section class="command-category" data-category="system">
                 <h2>System Information</h2>
-                <div class="command">
-                    <h3>uname - Kernel information</h3>
-                    <div class="command-container">
-                        <pre><code>uname -a</code></pre>
-                    </div>
-                    <p><strong>What it does:</strong> Prints detailed information about the Linux kernel and system architecture.</p>
-                    <p><strong>When to use it:</strong> To quickly identify the kernel version, hostname, and processor type.</p>
-                </div>
-                <div class="command">
-                    <h3>df - Disk space usage</h3>
-                    <div class="command-container">
-                        <pre><code>df -h</code></pre>
-                    </div>
-                    <p><strong>What it does:</strong> Reports the amount of available disk space on all mounted filesystems.</p>
-                    <p><strong>When to use it:</strong> To monitor disk capacity. The `-h` flag makes the output human-readable.</p>
-                </div>
-                <div class="command">
-                    <h3>free - Memory usage</h3>
-                    <div class="command-container">
-                        <pre><code>free -h</code></pre>
-                    </div>
-                    <p><strong>What it does:</strong> Shows the amount of free and used memory in the system.</p>
-                    <p><strong>When to use it:</strong> To check memory consumption and availability.</p>
-                </div>
+                <div class="command"><h3>uname</h3><div class="command-container"><pre><code>uname -a</code></pre></div><p><strong>What it does:</strong> Displays all system information, including kernel version, hostname, and architecture.</p></div>
+                <div class="command"><h3>hostname</h3><div class="command-container"><pre><code>hostname -I</code></pre></div><p><strong>What it does:</strong> Shows the IP addresses of the system.</p></div>
+                <div class="command"><h3>uptime</h3><div class="command-container"><pre><code>uptime</code></pre></div><p><strong>What it does:</strong> Shows how long the system has been running and the current load average.</p></div>
+                <div class="command"><h3>lscpu</h3><div class="command-container"><pre><code>lscpu</code></pre></div><p><strong>What it does:</strong> Displays detailed information about the CPU architecture.</p></div>
+                <div class="command"><h3>lsblk</h3><div class="command-container"><pre><code>lsblk</code></pre></div><p><strong>What it does:</strong> Lists block devices like hard drives and their partitions.</p></div>
+                <div class="command"><h3>lspci</h3><div class="command-container"><pre><code>lspci -nn</code></pre></div><p><strong>What it does:</strong> Lists all PCI devices and their vendor/device codes.</p></div>
+                <div class="command"><h3>lsusb</h3><div class="command-container"><pre><code>lsusb</code></pre></div><p><strong>What it does:</strong> Lists all USB devices.</p></div>
+                <div class="command"><h3>free</h3><div class="command-container"><pre><code>free -h</code></pre></div><p><strong>What it does:</strong> Shows the amount of free and used memory in a human-readable format.</p></div>
+                <div class="command"><h3>dmesg</h3><div class="command-container"><pre><code>dmesg -T</code></pre></div><p><strong>What it does:</strong> Prints the kernel ring buffer, useful for diagnosing hardware and driver issues.</p></div>
+                <div class="command"><h3>who</h3><div class="command-container"><pre><code>who -a</code></pre></div><p><strong>What it does:</strong> Shows who is logged on to the system.</p></div>
+                <div class="command"><h3>last</h3><div class="command-container"><pre><code>last</code></pre></div><p><strong>What it does:</strong> Shows a history of the last logged-in users.</p></div>
+                <div class="command"><h3>date</h3><div class="command-container"><pre><code>date</code></pre></div><p><strong>What it does:</strong> Displays the current system date and time.</p></div>
+                <div class="command"><h3>timedatectl</h3><div class="command-container"><pre><code>timedatectl status</code></pre></div><p><strong>What it does:</strong> Queries and changes the system clock and its settings.</p></div>
+                <div class="command"><h3>lshw</h3><div class="command-container"><pre><code>sudo lshw -short</code></pre></div><p><strong>What it does:</strong> Lists hardware configuration in a summary format.</p></div>
+                <div class="command"><h3>dmidecode</h3><div class="command-container"><pre><code>sudo dmidecode -t system</code></pre></div><p><strong>What it does:</strong> Dumps DMI (SMBIOS) data, which contains detailed hardware information.</p></div>
+                <div class="command"><h3>fdisk</h3><div class="command-container"><pre><code>sudo fdisk -l</code></pre></div><p><strong>What it does:</strong> Lists disk partition tables.</p></div>
+                <div class="command"><h3>mount</h3><div class="command-container"><pre><code>mount | column -t</code></pre></div><p><strong>What it does:</strong> Displays all mounted filesystems in a clean, columnized format.</p></div>
+                <div class="command"><h3>sysctl</h3><div class="command-container"><pre><code>sysctl -a</code></pre></div><p><strong>What it does:</strong> Reads or modifies kernel parameters at runtime.</p></div>
+                <div class="command"><h3>lsof</h3><div class="command-container"><pre><code>sudo lsof -n -i</code></pre></div><p><strong>What it does:</strong> Lists open files, including network connections.</p></div>
+                <div class="command"><h3>journalctl</h3><div class="command-container"><pre><code>journalctl -b</code></pre></div><p><strong>What it does:</strong> Shows all log messages from the current boot.</p></div>
             </section>
-
+            
             <section class="command-category" data-category="networking">
                 <h2>Networking</h2>
-                <div class="command">
-                    <h3>ip addr show - Display IP addresses</h3>
-                    <div class="command-container">
-                        <pre><code>ip addr show</code></pre>
-                    </div>
-                    <p><strong>What it does:</strong> Shows all network interfaces and their assigned IP addresses.</p>
-                    <p><strong>When to use it:</strong> For network troubleshooting and verifying IP configurations.</p>
-                </div>
-                <div class="command">
-                    <h3>ping - Check network connectivity</h3>
-                    <div class="command-container">
-                        <pre><code>ping 8.8.8.8</code></pre>
-                    </div>
-                    <p><strong>What it does:</strong> Sends ICMP packets to a host to test connectivity.</p>
-                    <p><strong>When to use it:</strong> To check if a remote host is reachable.</p>
-                </div>
-                <div class="command">
-                    <h3>netstat - Network statistics</h3>
-                    <div class="command-container">
-                        <pre><code>netstat -tuln</code></pre>
-                    </div>
-                    <p><strong>What it does:</strong> Displays network connections, routing tables, and interface statistics.</p>
-                    <p><strong>When to use it:</strong> To see which ports are open and what connections are active.</p>
-                </div>
-                 <div class="command">
-                    <h3>ss - Socket statistics</h3>
-                    <div class="command-container">
-                        <pre><code>ss -tuln</code></pre>
-                    </div>
-                    <p><strong>What it does:</strong> A modern replacement for netstat, used to investigate sockets.</p>
-                    <p><strong>When to use it:</strong> Offers better performance than netstat for viewing network connections.</p>
-                </div>
+                <div class="command"><h3>ip</h3><div class="command-container"><pre><code>ip addr show</code></pre></div><p><strong>What it does:</strong> The modern tool for showing and manipulating routing, devices, and tunnels.</p></div>
+                <div class="command"><h3>ping</h3><div class="command-container"><pre><code>ping -c 5 google.com</code></pre></div><p><strong>What it does:</strong> Tests network connectivity by sending ICMP packets.</p></div>
+                <div class="command"><h3>ss</h3><div class="command-container"><pre><code>ss -tulnp</code></pre></div><p><strong>What it does:</strong> A modern tool for investigating sockets (network connections), showing TCP, UDP, listening, and numeric output with process names.</p></div>
+                <div class="command"><h3>netstat</h3><div class="command-container"><pre><code>netstat -tulnp</code></pre></div><p><strong>What it does:</strong> The classic tool for showing network connections, routing tables, and interface statistics.</p></div>
+                <div class="command"><h3>traceroute</h3><div class="command-container"><pre><code>traceroute google.com</code></pre></div><p><strong>What it does:</strong> Traces the network path to a destination host.</p></div>
+                <div class="command"><h3>mtr</h3><div class="command-container"><pre><code>mtr google.com</code></pre></div><p><strong>What it does:</strong> A powerful combination of `ping` and `traceroute` that provides a continuously updated view of network path performance.</p></div>
+                <div class="command"><h3>dig</h3><div class="command-container"><pre><code>dig +short google.com</code></pre></div><p><strong>What it does:</strong> A flexible DNS lookup utility.</p></div>
+                <div class="command"><h3>nslookup</h3><div class="command-container"><pre><code>nslookup google.com</code></pre></div><p><strong>What it does:</strong> A simpler DNS lookup utility.</p></div>
+                <div class="command"><h3>host</h3><div class="command-container"><pre><code>host google.com</code></pre></div><p><strong>What it does:</strong> A straightforward DNS lookup utility.</p></div>
+                <div class="command"><h3>curl</h3><div class="command-container"><pre><code>curl -I https://google.com</code></pre></div><p><strong>What it does:</strong> A versatile tool for transferring data with URLs, often used to test web server responses.</p></div>
+                <div class="command"><h3>wget</h3><div class="command-container"><pre><code>wget https://example.com/file.zip</code></pre></div><p><strong>What it does:</strong> A non-interactive tool for downloading files from the internet.</p></div>
+                <div class="command"><h3>nmap</h3><div class="command-container"><pre><code>nmap -sT 192.168.1.1</code></pre></div><p><strong>What it does:</strong> A powerful network scanning tool for security audits and port discovery.</p></div>
+                <div class="command"><h3>tcpdump</h3><div class="command-container"><pre><code>sudo tcpdump -i any -n 'port 80'</code></pre></div><p><strong>What it does:</strong> A command-line packet analyzer for capturing network traffic.</p></div>
+                <div class="command"><h3>iptables</h3><div class="command-container"><pre><code>sudo iptables -L -n</code></pre></div><p><strong>What it does:</strong> The classic tool for configuring the Linux kernel firewall.</p></div>
+                <div class="command"><h3>ufw</h3><div class="command-container"><pre><code>sudo ufw status verbose</code></pre></div><p><strong>What it does:</strong> A user-friendly front-end for managing `iptables`.</p></div>
+                <div class="command"><h3>route</h3><div class="command-container"><pre><code>route -n</code></pre></div><p><strong>What it does:</strong> A classic tool for showing and manipulating the IP routing table.</p></div>
+                <div class="command"><h3>arp</h3><div class="command-container"><pre><code>arp -n</code></pre></div><p><strong>What it does:</strong> Shows the kernel's ARP cache.</p></div>
+                <div class="command"><h3>ethtool</h3><div class="command-container"><pre><code>sudo ethtool eth0</code></pre></div><p><strong>What it does:</strong> Queries and controls network driver and hardware settings.</p></div>
+                <div class="command"><h3>iwconfig</h3><div class="command-container"><pre><code>iwconfig</code></pre></div><p><strong>What it does:</strong> Configures wireless network interfaces.</p></div>
+                <div class="command"><h3>ncat</h3><div class="command-container"><pre><code>ncat -l -p 8080</code></pre></div><p><strong>What it does:</strong> A modern `netcat` for reading and writing data across networks.</p></div>
+                <div class="command"><h3>ifconfig</h3><div class="command-container"><pre><code>ifconfig -a</code></pre></div><p><strong>What it does:</strong> Displays network interface configuration (Older tool, `ip addr show` is preferred now but still widely used).</p></div>
+                <div class="command"><h3>route</h3><div class="command-container"><pre><code>route -n</code></pre></div><p><strong>What it does:</strong> Shows the IP routing table (Older tool, `ip route show` is preferred now but still widely used).</p></div>
             </section>
-
+            
             <section class="command-category" data-category="process">
                 <h2>Process Management</h2>
-                <div class="command">
-                    <h3>ps - Process status</h3>
-                    <div class="command-container">
-                        <pre><code>ps aux</code></pre>
-                    </div>
-                    <p><strong>What it does:</strong> Provides a snapshot of all currently running processes.</p>
-                    <p><strong>When to use it:</strong> To see which processes are running and inspect their details.</p>
-                </div>
-                <div class="command">
-                    <h3>top - Display running processes</h3>
-                    <div class="command-container">
-                        <pre><code>top</code></pre>
-                    </div>
-                    <p><strong>What it does:</strong> Provides a real-time, dynamic view of the processes running on the system.</p>
-                    <p><strong>When to use it:</strong> To monitor system resource usage (CPU, memory) in real time.</p>
-                </div>
-                <div class="command">
-                    <h3>kill - Terminate a process</h3>
-                    <div class="command-container">
-                        <pre><code>kill 12345</code></pre>
-                    </div>
-                    <p><strong>What it does:</strong> Sends a signal to a process, typically to terminate it.</p>
-                    <p><strong>When to use it:</strong> To stop a misbehaving or unresponsive process. Use `kill -9` for a force kill.</p>
-                </div>
+                <div class="command"><h3>ps</h3><div class="command-container"><pre><code>ps aux</code></pre></div><p><strong>What it does:</strong> Provides a snapshot of all currently running processes.</p></div>
+                <div class="command"><h3>top</h3><div class="command-container"><pre><code>top</code></pre></div><p><strong>What it does:</strong> Provides a real-time, dynamic view of running processes and system resource usage.</p></div>
+                <div class="command"><h3>htop</h3><div class="command-container"><pre><code>htop</code></pre></div><p><strong>What it does:</strong> An interactive and more user-friendly version of `top`.</p></div>
+                <div class="command"><h3>kill</h3><div class="command-container"><pre><code>kill -9 12345</code></pre></div><p><strong>What it does:</strong> Sends a signal to a process, with `-9` being a forceful termination.</p></div>
+                <div class="command"><h3>pkill</h3><div class="command-container"><pre><code>pkill -f nginx</code></pre></div><p><strong>What it does:</strong> Kills processes based on their name or other attributes.</p></div>
+                <div class="command"><h3>killall</h3><div class="command-container"><pre><code>killall firefox</code></pre></div><p><strong>What it does:</strong> Kills all processes with a specific name.</p></div>
+                <div class="command"><h3>systemctl</h3><div class="command-container"><pre><code>systemctl status nginx</code></pre></div><p><strong>What it does:</strong> The primary tool for managing `systemd` services.</p></div>
+                <div class="command"><h3>service</h3><div class="command-container"><pre><code>service ssh status</code></pre></div><p><strong>What it does:</strong> A high-level script for managing System V init services.</p></div>
+                <div class="command"><h3>lsof</h3><div class="command-container"><pre><code>sudo lsof -i :22</code></pre></div><p><strong>What it does:</strong> Lists open files, often used to see which process is using a specific port.</p></div>
+                <div class="command"><h3>pstree</h3><div class="command-container"><pre><code>pstree -p</code></pre></div><p><strong>What it does:</strong> Displays a tree of running processes showing parent-child relationships.</p></div>
+                <div class="command"><h3>pgrep</h3><div class="command-container"><pre><code>pgrep -u root nginx</code></pre></div><p><strong>What it does:</strong> Finds process IDs based on name and other attributes.</p></div>
+                <div class="command"><h3>pidof</h3><div class="command-container"><pre><code>pidof bash</code></pre></div><p><strong>What it does:</strong> Finds the process ID of a running program.</p></div>
+                <div class="command"><h3>jobs</h3><div class="command-container"><pre><code>jobs</code></pre></div><p><strong>What it does:</strong> Lists jobs running in the background of the current shell.</p></div>
+                <div class="command"><h3>bg</h3><div class="command-container"><pre><code>bg %1</code></pre></div><p><strong>What it does:</strong> Puts a suspended process into the background.</p></div>
+                <div class="command"><h3>fg</h3><div class="command-container"><pre><code>fg %1</code></pre></div><p><strong>What it does:</strong> Brings a background process to the foreground.</p></div>
+                <div class="command"><h3>nohup</h3><div class="command-container"><pre><code>nohup ./my-long-running-script.sh &</code></pre></div><p><strong>What it does:</strong> Allows a process to continue running even after the user has logged out.</p></div>
+                <div class="command"><h3>nice</h3><div class="command-container"><pre><code>nice -n 10 ./my-script.sh</code></pre></div><p><strong>What it does:</strong> Runs a command with a modified scheduling priority.</p></div>
+                <div class="command"><h3>renice</h3><div class="command-container"><pre><code>renice 10 -p 12345</code></pre></div><p><strong>What it does:</strong> Changes the scheduling priority of a running process.</p></div>
+                <div class="command"><h3>strace</h3><div class="command-container"><pre><code>strace -p 12345</code></pre></div><p><strong>What it does:</strong> Traces system calls and signals for a process, useful for deep debugging.</p></div>
+                <div class="command"><h3>watch</h3><div class="command-container"><pre><code>watch -n 2 'ps aux | grep nginx'</code></pre></div><p><strong>What it does:</strong> Executes a command repeatedly, showing its output in fullscreen.</p></div>
             </section>
-
+            
             <section class="command-category" data-category="config">
                 <h2>Configuration</h2>
-                <div class="command">
-                    <h3>ip addr add - Set IP address</h3>
-                    <div class="command-container">
-                        <pre><code>sudo ip addr add 192.168.1.10/24 dev eth0</code></pre>
-                    </div>
-                    <p><strong>What it does:</strong> Assigns an IP address and subnet mask to a network interface.</p>
-                    <p><strong>When to use it:</strong> To manually configure a static IP address on a server.</p>
-                </div>
-                <div class="command">
-                    <h3>iptables - Firewall configuration</h3>
-                    <div class="command-container">
-                        <pre><code>sudo iptables -A INPUT -s 10.0.0.5 -j DROP</code></pre>
-                    </div>
-                    <p><strong>What it does:</strong> Configures the netfilter firewall. This example blocks all incoming traffic from a specific IP.</p>
-                    <p><strong>When to use it:</strong> To set up basic firewall rules. Note that `nftables` is replacing `iptables` on many modern systems.</p>
-                </div>
+                <div class="command"><h3>adduser</h3><div class="command-container"><pre><code>sudo adduser newuser</code></pre></div><p><strong>What it does:</strong> A user-friendly interactive script to add a new user.</p></div>
+                <div class="command"><h3>useradd</h3><div class="command-container"><pre><code>sudo useradd -m -s /bin/bash newuser</code></pre></div><p><strong>What it does:</strong> A low-level utility for adding users.</p></div>
+                <div class="command"><h3>usermod</h3><div class="command-container"><pre><code>sudo usermod -aG sudo newuser</code></pre></div><p><strong>What it does:</strong> Modifies a user account, such as adding them to a group.</p></div>
+                <div class="command"><h3>groupadd</h3><div class="command-container"><pre><code>sudo groupadd newgroup</code></pre></div><p><strong>What it does:</strong> Creates a new user group.</p></div>
+                <div class="command"><h3>passwd</h3><div class="command-container"><pre><code>passwd</code></pre></div><p><strong>What it does:</strong> Changes the password for a user account.</p></div>
+                <div class="command"><h3>crontab</h3><div class="command-container"><pre><code>crontab -e</code></pre></div><p><strong>What it does:</strong> Manages cron jobs, which are scheduled tasks.</p></div>
+                <div class="command"><h3>apt/yum/dnf</h3><div class="command-container"><pre><code>sudo apt update && sudo apt upgrade</code></pre></div><p><strong>What it does:</strong> Manages packages on Debian-based (apt) or RHEL-based (yum/dnf) systems.</p></div>
+                <div class="command"><h3>systemctl enable</h3><div class="command-container"><pre><code>sudo systemctl enable nginx.service</code></pre></div><p><strong>What it does:</strong> Configures a service to start automatically on boot.</p></div>
+                <div class="command"><h3>sysctl (config)</h3><div class="command-container"><pre><code>sudo sysctl -w net.ipv4.ip_forward=1</code></pre></div><p><strong>What it does:</strong> Modifies a kernel parameter at runtime. Changes are not persistent across reboots unless added to `/etc/sysctl.conf`.</p></div>
+                <div class="command"><h3>update-alternatives</h3><div class="command-container"><pre><code>sudo update-alternatives --config java</code></pre></div><p><strong>What it does:</strong> Manages multiple versions of the same command or application.</p></div>
+                <div class="command"><h3>hostnamectl</h3><div class="command-container"><pre><code>sudo hostnamectl set-hostname new-hostname</code></pre></div><p><strong>What it does:</strong> Sets the system hostname.</p></div>
+                <div class="command"><h3>localectl</h3><div class="command-container"><pre><code>sudo localectl set-locale LANG=en_US.UTF-8</code></pre></div><p><strong>What it does:</strong> Manages system locale settings.</p></div>
+                <div class="command"><h3>visudo</h3><div class="command-container"><pre><code>sudo visudo</code></pre></div><p><strong>What it does:</strong> Safely edits the `/etc/sudoers` file to configure user privileges.</p></div>
+                <div class="command"><h3>fstab</h3><div class="command-container"><pre><code># Edit /etc/fstab to manage persistent mounts</code></pre></div><p><strong>What it does:</strong> The filesystem table defines how disk partitions and storage devices are mounted.</p></div>
+                <div class="command"><h3>bashrc / profile</h3><div class="command-container"><pre><code># Edit ~/.bashrc or ~/.profile</code></pre></div><p><strong>What it does:</strong> Configures the shell environment for a user, such as aliases and environment variables.</p></div>
+                <div class="command"><h3>ssh-keygen</h3><div class="command-container"><pre><code>ssh-keygen -t rsa -b 4096</code></pre></div><p><strong>What it does:</strong> Generates a new SSH key pair for secure authentication.</p></div>
+                <div class="command"><h3>ufw allow</h3><div class="command-container"><pre><code>sudo ufw allow ssh</code></pre></div><p><strong>What it does:</strong> A simple way to configure firewall rules.</p></div>
+                <div class="command"><h3>grub-mkconfig</h3><div class="command-container"><pre><code>sudo grub-mkconfig -o /boot/grub/grub.cfg</code></pre></div><p><strong>What it does:</strong> Generates a new GRUB boot loader configuration file.</p></div>
+                <div class="command"><h3>modprobe</h3><div class="command-container"><pre><code>sudo modprobe a-kernel-module</code></pre></div><p><strong>What it does:</strong> Adds or removes kernel modules.</p></div>
+                <div class="command"><h3>ip route add</h3><div class="command-container"><pre><code>sudo ip route add default via 192.168.1.1</code></pre></div><p><strong>What it does:</strong> Adds a new route to the routing table.</p></div>
             </section>
-
+            
             <section class="command-category" data-category="troubleshooting">
                 <h2>Troubleshooting</h2>
-                <div class="command">
-                    <h3>tcpdump - Packet sniffer</h3>
-                    <div class="command-container">
-                        <pre><code>sudo tcpdump -i eth0 -n 'port 80'</code></pre>
-                    </div>
-                    <p><strong>What it does:</strong> Captures and analyzes network packets in real time.</p>
-                    <p><strong>When to use it:</strong> Essential for deep network troubleshooting to see exactly what traffic is flowing.</p>
-                </div>
-                 <div class="command">
-                    <h3>lsof - List open files</h3>
-                    <div class="command-container">
-                        <pre><code>sudo lsof -i :443</code></pre>
-                    </div>
-                    <p><strong>What it does:</strong> Lists all open files and the processes that opened them. Can be used to see which process is using a specific port.</p>
-                    <p><strong>When to use it:</strong> To identify which process is listening on a certain network port.</p>
-                </div>
-                 <div class="command">
-                    <h3>journalctl - Query the systemd journal</h3>
-                    <div class="command-container">
-                        <pre><code>journalctl -u nginx.service -f</code></pre>
-                    </div>
-                    <p><strong>What it does:</strong> Displays logs from the systemd journal. This example follows the logs for the nginx service.</p>
-                    <p><strong>When to use it:</strong> The standard way to view system and service logs on modern Linux distributions.</p>
-                </div>
+                <div class="command"><h3>dmesg</h3><div class="command-container"><pre><code>dmesg -T | grep -i error</code></pre></div><p><strong>What it does:</strong> Displays kernel ring buffer messages, filtered for errors.</p></div>
+                <div class="command"><h3>journalctl</h3><div class="command-container"><pre><code>journalctl -u nginx.service -f</code></pre></div><p><strong>What it does:</strong> Follows the logs for a specific systemd service in real-time.</p></div>
+                <div class="command"><h3>tcpdump</h3><div class="command-container"><pre><code>sudo tcpdump -i any -n 'port 443'</code></pre></div><p><strong>What it does:</strong> Captures and analyzes network packets, essential for deep network troubleshooting.</p></div>
+                <div class="command"><h3>lsof</h3><div class="command-container"><pre><code>sudo lsof -i :80</code></pre></div><p><strong>What it does:</strong> Lists open files and can identify which process is listening on a specific port.</p></div>
+                <div class="command"><h3>strace</h3><div class="command-container"><pre><code>sudo strace -p $(pidof nginx)</code></pre></div><p><strong>What it does:</strong> Traces system calls made by a process, useful for debugging application issues.</p></div>
+                <div class="command"><h3>iostat</h3><div class="command-container"><pre><code>iostat -dx 2</code></pre></div><p><strong>What it does:</strong> Reports CPU and I/O statistics, refreshing every 2 seconds.</p></div>
+                <div class="command"><h3>vmstat</h3><div class="command-container"><pre><code>vmstat 2 5</code></pre></div><p><strong>What it does:</strong> Reports virtual memory statistics, running 5 times with a 2-second interval.</p></div>
+                <div class="command"><h3>mpstat</h3><div class="command-container"><pre><code>mpstat -P ALL 1</code></pre></div><p><strong>What it does:</strong> Shows CPU statistics for all processors, refreshing every second.</p></div>
+                <div class="command"><h3>sar</h3><div class="command-container"><pre><code>sar -u 1 5</code></pre></div><p><strong>What it does:</strong> Collects and reports system activity information, in this case CPU usage.</p></div>
+                <div class="command"><h3>iotop</h3><div class="command-container"><pre><code>sudo iotop</code></pre></div><p><strong>What it does:</strong> An interactive tool to monitor I/O usage by processes.</p></div>
+                <div class="command"><h3>iftop</h3><div class="command-container"><pre><code>sudo iftop -i eth0</code></pre></div><p><strong>What it does:</strong> An interactive tool to monitor network bandwidth usage by connections.</p></div>
+                <div class="command"><h3>nethogs</h3><div class="command-container"><pre><code>sudo nethogs eth0</code></pre></div><p><strong>What it does:</strong> An interactive tool that groups bandwidth usage by process.</p></div>
+                <div class="command"><h3>nc</h3><div class="command-container"><pre><code>nc -zv 192.168.1.100 22</code></pre></div><p><strong>What it does:</strong> A simple tool to test connectivity to a specific TCP/UDP port.</p></div>
+                <div class="command"><h3>openssl s_client</h3><div class="command-container"><pre><code>openssl s_client -connect google.com:443</code></pre></div><p><strong>What it does:</strong> A client for testing SSL/TLS connections and viewing certificate details.</p></div>
+                <div class="command"><h3>mtr</h3><div class="command-container"><pre><code>mtr --report google.com</code></pre></div><p><strong>What it does:</strong> Combines ping and traceroute to diagnose network path issues and packet loss.</p></div>
+                <div class="command"><h3>ss -s</h3><div class="command-container"><pre><code>ss -s</code></pre></div><p><strong>What it does:</strong> Provides a summary of all socket statistics.</p></div>
+                <div class="command"><h3>ip route get</h3><div class="command-container"><pre><code>ip route get 8.8.8.8</code></pre></div><p><strong>What it does:</strong> Shows which route will be taken for a specific destination IP.</p></div>
+                <div class="command"><h3>systemd-analyze</h3><div class="command-container"><pre><code>systemd-analyze blame</code></pre></div><p><strong>What it does:</strong> Shows which systemd services are taking the most time during boot.</p></div>
+                <div class="command"><h3>findmnt</h3><div class="command-container"><pre><code>findmnt /path/to/dir</code></pre></div><p><strong>What it does:</strong> Finds which filesystem a directory belongs to.</p></div>
+                <div class="command"><h3>stat</h3><div class="command-container"><pre><code>stat /path/to/file.txt</code></pre></div><p><strong>What it does:</strong> Displays detailed status information for a file or filesystem.</p></div>
             </section>
 
         </div>

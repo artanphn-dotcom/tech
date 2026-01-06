@@ -23,87 +23,156 @@
 
             <div class="filter-container">
                 <button class="filter-btn active" data-category="all">All</button>
+                <button class="filter-btn" data-category="system">System</button>
                 <button class="filter-btn" data-category="virtual-server">Virtual Server</button>
                 <button class="filter-btn" data-category="pool">Pool</button>
                 <button class="filter-btn" data-category="node">Node</button>
                 <button class="filter-btn" data-category="config">Configuration</button>
                 <button class="filter-btn" data-category="troubleshooting">Troubleshooting</button>
             </div>
+            
+            <section class="command-category" data-category="system">
+                <h2>System</h2>
+                <div class="command"><h3>show /sys version</h3><div class="command-container"><pre><code>show /sys version</code></pre></div><p><strong>What it does:</strong> Displays BIG-IP version, build, and hotfix information.</p></div>
+                <div class="command"><h3>show /sys uptime</h3><div class="command-container"><pre><code>show /sys uptime</code></pre></div><p><strong>What it does:</strong> Shows system uptime and load average.</p></div>
+                <div class="command"><h3>show /sys hardware</h3><div class="command-container"><pre><code>show /sys hardware</code></pre></div><p><strong>What it does:</strong> Displays detailed hardware information for the BIG-IP device.</p></div>
+                <div class="command"><h3>show /sys ha-status</h3><div class="command-container"><pre><code>show /sys ha-status</code></pre></div><p><strong>What it does:</strong> Shows High Availability (HA) status of the device, including active/standby state.</p></div>
+                <div class="command"><h3>show /sys performance system</h3><div class="command-container"><pre><code>show /sys performance system</code></pre></div><p><strong>What it does:</strong> Displays system-wide performance statistics (CPU, memory, disk I/O).</p></div>
+                <div class="command"><h3>show /sys memory</h3><div class="command-container"><pre><code>show /sys memory</code></pre></div><p><strong>What it does:</strong> Shows memory usage breakdown.</p></div>
+                <div class="command"><h3>show /sys disk directory</h3><div class="command-container"><pre><code>show /sys disk directory</code></pre></div><p><strong>What it does:</strong> Displays disk usage for various partitions.</p></div>
+                <div class="command"><h3>show /sys log all</h3><div class="command-container"><pre><code>show /sys log all</code></pre></div><p><strong>What it does:</strong> Displays all system logs (equivalent to `tail -f /var/log/ltm`).</p></div>
+                <div class="command"><h3>show /sys license</h3><div class="command-container"><pre><code>show /sys license</code></pre></div><p><strong>What it does:</strong> Shows installed license details.</p></div>
+                <div class="command"><h3>show /sys connection</h3><div class="command-container"><pre><code>show /sys connection</code></pre></div><p><strong>What it does:</strong> Displays the full connection table, showing active connections processed by BIG-IP.</p></div>
+                <div class="command"><h3>show /net interface</h3><div class="command-container"><pre><code>show /net interface</code></pre></div><p><strong>What it does:</strong> Displays status and statistics for all network interfaces.</p></div>
+                <div class="command"><h3>show /net self</h3><div class="command-container"><pre><code>show /net self</code></pre></div><p><strong>What it does:</strong> Shows configured self-IP addresses.</p></div>
+                <div class="command"><h3>show /net route</h3><div class="command-container"><pre><code>show /net route</code></pre></div><p><strong>What it does:</strong> Displays the BIG-IP routing table.</p></div>
+                <div class="command"><h3>show /auth user</h3><div class="command-container"><pre><code>show /auth user</code></pre></div><p><strong>What it does:</strong> Lists configured local user accounts.</p></div>
+                <div class="command"><h3>show /cm device</h3><div class="command-container"><pre><code>show /cm device</code></pre></div><p><strong>What it does:</strong> Shows status of all devices in the Device Service Clustering (DSC) group.</p></div>
+                <div class="command"><h3>show /cm sync-status</h3><div class="command-container"><pre><code>show /cm sync-status</code></pre></div><p><strong>What it does:</strong> Displays the configuration synchronization status for HA/DSC.</p></div>
+                <div class="command"><h3>show /security firewall policy</h3><div class="command-container"><pre><code>show /security firewall policy</code></pre></div><p><strong>What it does:</strong> Displays configured firewall policies.</p></div>
+                <div class="command"><h3>show /apm policy access-profile</h3><div class="command-container"><pre><code>show /apm policy access-profile</code></pre></div><p><strong>What it does:</strong> Lists Access Policy Manager (APM) access profiles.</p></div>
+                <div class="command"><h3>show /ltm profile client-ssl</h3><div class="command-container"><pre><code>show /ltm profile client-ssl</code></pre></div><p><strong>What it does:</strong> Displays configured client SSL profiles.</p></div>
+                <div class="command"><h3>show /ltm profile server-ssl</h3><div class="command-container"><pre><code>show /ltm profile server-ssl</code></pre></div><p><strong>What it does:</strong> Displays configured server SSL profiles.</p></div>
+            </section>
 
             <section class="command-category" data-category="virtual-server">
                 <h2>Virtual Server</h2>
-                <div class="command">
-                    <h3>show /ltm virtual</h3>
-                    <div class="command-container">
-                        <pre><code>show /ltm virtual</code></pre>
-                    </div>
-                    <p><strong>What it does:</strong> Displays the status and configuration of all virtual servers.</p>
-                    <p><strong>When to use it:</strong> To get a quick overview of your virtual servers and their current state.</p>
-                </div>
+                <div class="command"><h3>show /ltm virtual</h3><div class="command-container"><pre><code>show /ltm virtual</code></pre></div><p><strong>What it does:</strong> Displays the status and configuration of all virtual servers.</p></div>
+                <div class="command"><h3>show /ltm virtual &lt;vs-name&gt;</h3><div class="command-container"><pre><code>show /ltm virtual my_vs</code></pre></div><p><strong>What it does:</strong> Shows detailed status and configuration for a specific virtual server.</p></div>
+                <div class="command"><h3>show /ltm virtual &lt;vs-name&gt; stats</h3><div class="command-container"><pre><code>show /ltm virtual my_vs stats</code></pre></div><p><strong>What it does:</strong> Displays detailed statistics for a specific virtual server.</p></div>
+                <div class="command"><h3>modify /ltm virtual &lt;vs-name&gt; disabled</h3><div class="command-container"><pre><code>modify /ltm virtual my_vs disabled</code></pre></div><p><strong>What it does:</strong> Disables a virtual server, stopping it from processing new connections.</p></div>
+                <div class="command"><h3>modify /ltm virtual &lt;vs-name&gt; enabled</h3><div class="command-container"><pre><code>modify /ltm virtual my_vs enabled</code></pre></div><p><strong>What it does:</strong> Enables a previously disabled virtual server.</p></div>
+                <div class="command"><h3>create /ltm virtual &lt;vs-name&gt; destination &lt;ip:port&gt; pool &lt;pool-name&gt;</h3><div class="command-container"><pre><code>create /ltm virtual my_vs destination 10.1.1.10:80 pool my_pool</code></pre></div><p><strong>What it does:</strong> Creates a basic virtual server. This is an example; full config is complex.</p></div>
+                <div class="command"><h3>delete /ltm virtual &lt;vs-name&gt;</h3><div class="command-container"><pre><code>delete /ltm virtual my_vs</code></pre></div><p><strong>What it does:</strong> Deletes a virtual server (use with caution).</p></div>
+                <div class="command"><h3>show /ltm virtual &lt;vs-name&gt; persistence</h3><div class="command-container"><pre><code>show /ltm virtual my_vs persistence</code></pre></div><p><strong>What it does:</strong> Displays persistence entries for a virtual server.</p></div>
+                <div class="command"><h3>show /ltm virtual &lt;vs-name&gt; clientssl-profile</h3><div class="command-container"><pre><code>show /ltm virtual my_vs clientssl-profile</code></pre></div><p><strong>What it does:</strong> Shows the client SSL profile applied to a virtual server.</p></div>
+                <div class="command"><h3>show /ltm virtual &lt;vs-name&gt; serverssl-profile</h3><div class="command-container"><pre><code>show /ltm virtual my_vs serverssl-profile</code></pre></div><p><strong>What it does:</strong> Shows the server SSL profile applied to a virtual server.</p></div>
+                <div class="command"><h3>show /ltm virtual &lt;vs-name&gt; rules</h3><div class="command-container"><pre><code>show /ltm virtual my_vs rules</code></pre></div><p><strong>What it does:</strong> Displays iRules applied to a virtual server.</p></div>
+                <div class="command"><h3>show /ltm virtual &lt;vs-name&gt; policies</h3><div class="command-container"><pre><code>show /ltm virtual my_vs policies</code></pre></div><p><strong>What it does:</strong> Shows LTM policies applied to a virtual server.</p></div>
+                <div class="command"><h3>show /ltm virtual &lt;vs-name&gt; profiles</h3><div class="command-container"><pre><code>show /ltm virtual my_vs profiles</code></pre></div><p><strong>What it does:</strong> Displays all profiles (e.g., HTTP, TCP, SSL) applied to a virtual server.</p></div>
+                <div class="command"><h3>show /ltm virtual &lt;vs-name&gt; translate-address</h3><div class="command-container"><pre><code>show /ltm virtual my_vs translate-address</code></pre></div><p><strong>What it does:</strong> Shows if address translation is enabled for the virtual server.</p></div>
+                <div class="command"><h3>show /ltm virtual &lt;vs-name&gt; translate-port</h3><div class="command-container"><pre><code>show /ltm virtual my_vs translate-port</code></pre></div><p><strong>What it does:</strong> Shows if port translation is enabled for the virtual server.</p></div>
+                <div class="command"><h3>show /ltm virtual &lt;vs-name&gt; address-status</h3><div class="command-container"><pre><code>show /ltm virtual my_vs address-status</code></pre></div><p><strong>What it does:</strong> Displays the status of the virtual server's IP address (e.g., floating/non-floating).</p></div>
+                <div class="command"><h3>show /ltm virtual &lt;vs-name&gt; connection-mirror</h3><div class="command-container"><pre><code>show /ltm virtual my_vs connection-mirror</code></pre></div><p><strong>What it does:</strong> Shows if connection mirroring is enabled for the virtual server in an HA setup.</p></div>
+                <div class="command"><h3>show /ltm virtual &lt;vs-name&gt; vs-index</h3><div class="command-container"><pre><code>show /ltm virtual my_vs vs-index</code></pre></div><p><strong>What it does:</strong> Displays the virtual server's index number, useful for certain debug commands.</p></div>
+                <div class="command"><h3>show /ltm virtual &lt;vs-name&gt; destination</h3><div class="command-container"><pre><code>show /ltm virtual my_vs destination</code></pre></div><p><strong>What it does:</strong> Shows the destination IP and port the virtual server listens on.</p></div>
+                <div class="command"><h3>show /ltm virtual &lt;vs-name&gt; source-address-translation</h3><div class="command-container"><pre><code>show /ltm virtual my_vs source-address-translation</code></pre></div><p><strong>What it does:</strong> Displays the source address translation (SNAT) configuration for the virtual server.</p></div>
             </section>
 
             <section class="command-category" data-category="pool">
                 <h2>Pool</h2>
-                <div class="command">
-                    <h3>show /ltm pool</h3>
-                    <div class="command-container">
-                        <pre><code>show /ltm pool</code></pre>
-                    </div>
-                    <p><strong>What it does:</strong> Displays the status of all pools of backend servers.</p>
-                    <p><strong>When to use it:</strong> To check the status of pools and their members.</p>
-                </div>
+                <div class="command"><h3>show /ltm pool</h3><div class="command-container"><pre><code>show /ltm pool</code></pre></div><p><strong>What it does:</strong> Displays the status of all pools of backend servers.</p></div>
+                <div class="command"><h3>show /ltm pool &lt;pool-name&gt;</h3><div class="command-container"><pre><code>show /ltm pool my_pool</code></pre></div><p><strong>What it does:</strong> Shows detailed status and configuration for a specific pool.</p></div>
+                <div class="command"><h3>show /ltm pool &lt;pool-name&gt; members</h3><div class="command-container"><pre><code>show /ltm pool my_pool members</code></pre></div><p><strong>What it does:</strong> Displays the status of all members (nodes) within a specific pool.</p></div>
+                <div class="command"><h3>show /ltm pool &lt;pool-name&gt; stats</h3><div class="command-container"><pre><code>show /ltm pool my_pool stats</code></pre></div><p><strong>What it does:</strong> Displays detailed statistics for a specific pool.</p></div>
+                <div class="command"><h3>modify /ltm pool &lt;pool-name&gt; monitor &lt;monitor-name&gt;</h3><div class="command-container"><pre><code>modify /ltm pool my_pool monitor http_monitor</code></pre></div><p><strong>What it does:</strong> Assigns a health monitor to a pool.</p></div>
+                <div class="command"><h3>modify /ltm pool &lt;pool-name&gt; members modify { address &lt;ip&gt; port &lt;port&gt; { session | state } disabled }</h3><div class="command-container"><pre><code>modify /ltm pool my_pool members modify { 10.0.0.1:80 { session user-disabled state user-down } }</code></pre></div><p><strong>What it does:</strong> Disables a specific pool member's session and marks it down (graceful shutdown).</p></div>
+                <div class="command"><h3>modify /ltm pool &lt;pool-name&gt; members modify { address &lt;ip&gt; port &lt;port&gt; { session | state } enabled }</h3><div class="command-container"><pre><code>modify /ltm pool my_pool members modify { 10.0.0.1:80 { session enabled state enabled } }</code></pre></div><p><strong>What it does:</strong> Enables a specific pool member.</p></div>
+                <div class="command"><h3>create /ltm pool &lt;pool-name&gt; members add { &lt;ip:port&gt; }</h3><div class="command-container"><pre><code>create /ltm pool my_new_pool members add { 10.0.0.100:80 }</code></pre></div><p><strong>What it does:</strong> Creates a new pool and adds an initial member.</p></div>
+                <div class="command"><h3>delete /ltm pool &lt;pool-name&gt;</h3><div class="command-container"><pre><code>delete /ltm pool my_pool</code></pre></div><p><strong>What it does:</strong> Deletes a pool (use with caution).</p></div>
+                <div class="command"><h3>show /ltm pool &lt;pool-name&gt; load-balancing-mode</h3><div class="command-container"><pre><code>show /ltm pool my_pool load-balancing-mode</code></pre></div><p><strong>What it does:</strong> Displays the load balancing method configured for a pool.</p></div>
+                <div class="command"><h3>show /ltm pool &lt;pool-name&gt; min-active-members</h3><div class="command-container"><pre><code>show /ltm pool my_pool min-active-members</code></pre></div><p><strong>What it does:</strong> Shows the minimum number of active members required for the pool to be up.</p></div>
+                <div class="command"><h3>show /ltm monitor</h3><div class="command-container"><pre><code>show /ltm monitor</code></pre></div><p><strong>What it does:</strong> Lists all configured health monitors.</p></div>
+                <div class="command"><h3>show /ltm monitor &lt;monitor-name&gt;</h3><div class="command-container"><pre><code>show /ltm monitor http_monitor</code></pre></div><p><strong>What it does:</strong> Displays configuration details for a specific health monitor.</p></div>
+                <div class="command"><h3>show /ltm pool &lt;pool-name&gt; members field-fmt</h3><div class="command-container"><pre><code>show /ltm pool my_pool members field-fmt</code></pre></div><p><strong>What it does:</strong> Displays pool member details in a more structured, parsable format.</p></div>
+                <div class="command"><h3>show /ltm pool &lt;pool-name&gt; priority-group</h3><div class="command-container"><pre><code>show /ltm pool my_pool priority-group</code></pre></div><p><strong>What it does:</strong> Shows the priority group activation setting for a pool.</p></div>
+                <div class="command"><h3>show /ltm pool &lt;pool-name&gt; session</h3><div class="command-container"><pre><code>show /ltm pool my_pool session</code></pre></div><p><strong>What it does:</strong> Displays the session status (enabled/disabled) for the pool itself.</p></div>
+                <div class="command"><h3>show /ltm pool &lt;pool-name&gt; state</h3><div class="command-container"><pre><code>show /ltm pool my_pool state</code></pre></div><p><strong>What it does:</strong> Shows the operational state (up/down) for the pool itself.</p></div>
+                <div class="command"><h3>show /ltm pool &lt;pool-name&gt; members | grep "down"</h3><div class="command-container"><pre><code>show /ltm pool my_pool members | grep "down"</code></pre></div><p><strong>What it does:</strong> Filters pool members to show only those marked as 'down'.</p></div>
+                <div class="command"><h3>show /ltm pool &lt;pool-name&gt; description</h3><div class="command-container"><pre><code>show /ltm pool my_pool description</code></pre></div><p><strong>What it does:</strong> Displays the description configured for a pool.</p></div>
+                <div class="command"><h3>show /ltm pool &lt;pool-name&gt; all-properties</h3><div class="command-container"><pre><code>show /ltm pool my_pool all-properties</code></pre></div><p><strong>What it does:</strong> Shows all configured properties for a pool.</p></div>
             </section>
 
             <section class="command-category" data-category="node">
                 <h2>Node</h2>
-                <div class="command">
-                    <h3>show /ltm node</h3>
-                    <div class="command-container">
-                        <pre><code>show /ltm node</code></pre>
-                    </div>
-                    <p><strong>What it does:</strong> Displays the status of all nodes (backend servers).</p>
-                    <p><strong>When to use it:</strong> To check the health and status of individual backend servers.</p>
-                </div>
-                <div class="command">
-                    <h3>modify /ltm node [node_ip] session user-disabled</h3>
-                    <div class="command-container">
-                        <pre><code>modify /ltm node 10.0.0.10 session user-disabled</code></pre>
-                    </div>
-                    <p><strong>What it does:</strong> Disables a node, preventing new connections from being sent to it.</p>
-                    <p><strong>When to use it:</strong> To gracefully take a server out of rotation for maintenance.</p>
-                </div>
+                <div class="command"><h3>show /ltm node</h3><div class="command-container"><pre><code>show /ltm node</code></pre></div><p><strong>What it does:</strong> Displays the status of all nodes (backend servers).</p></div>
+                <div class="command"><h3>show /ltm node &lt;node-name&gt;</h3><div class="command-container"><pre><code>show /ltm node 10.0.0.10</code></pre></div><p><strong>What it does:</strong> Shows detailed status and configuration for a specific node.</p></div>
+                <div class="command"><h3>show /ltm node &lt;node-name&gt; stats</h3><div class="command-container"><pre><code>show /ltm node 10.0.0.10 stats</code></pre></div><p><strong>What it does:</strong> Displays detailed statistics for a specific node.</p></div>
+                <div class="command"><h3>modify /ltm node &lt;node-name&gt; session user-disabled</h3><div class="command-container"><pre><code>modify /ltm node 10.0.0.10 session user-disabled</code></pre></div><p><strong>What it does:</strong> Disables a node, preventing new connections from being sent to it (graceful shutdown).</p></div>
+                <div class="command"><h3>modify /ltm node &lt;node-name&gt; session enabled</h3><div class="command-container"><pre><code>modify /ltm node 10.0.0.10 session enabled</code></pre></div><p><strong>What it does:</strong> Enables sessions for a node, allowing it to receive new connections.</p></div>
+                <div class="command"><h3>modify /ltm node &lt;node-name&gt; state user-down</h3><div class="command-container"><pre><code>modify /ltm node 10.0.0.10 state user-down</code></pre></div><p><strong>What it does:</strong> Forces a node to a "down" state, removing it from all active pools.</p></div>
+                <div class="command"><h3>modify /ltm node &lt;node-name&gt; state enabled</h3><div class="command-container"><pre><code>modify /ltm node 10.0.0.10 state enabled</code></pre></div><p><strong>What it does:</strong> Forces a node to an "up" state, re-adding it to pools.</p></div>
+                <div class="command"><h3>create /ltm node &lt;node-name&gt; address &lt;ip&gt;</h3><div class="command-container"><pre><code>create /ltm node my_web_server address 10.0.0.10</code></pre></div><p><strong>What it does:</strong> Creates a new node object.</p></div>
+                <div class="command"><h3>delete /ltm node &lt;node-name&gt;</h3><div class="command-container"><pre><code>delete /ltm node my_web_server</code></pre></div><p><strong>What it does:</strong> Deletes a node object (use with caution).</p></div>
+                <div class="command"><h3>show /ltm node &lt;node-name&gt; monitor-status</h3><div class="command-container"><pre><code>show /ltm node 10.0.0.10 monitor-status</code></pre></div><p><strong>What it does:</strong> Displays the health monitor status for a specific node.</p></div>
+                <div class="command"><h3>show /ltm node &lt;node-name&gt; connection-limit</h3><div class="command-container"><pre><code>show /ltm node 10.0.0.10 connection-limit</code></pre></div><p><strong>What it does:</strong> Shows the maximum number of connections allowed for a node.</p></div>
+                <div class="command"><h3>show /ltm node &lt;node-name&gt; rate-limit</h3><div class="command-container"><pre><code>show /ltm node 10.0.0.10 rate-limit</code></pre></div><p><strong>What it does:</strong> Displays the connection rate limit for a node.</p></div>
+                <div class="command"><h3>show /ltm node &lt;node-name&gt; availability-state</h3><div class="command-container"><pre><code>show /ltm node 10.0.0.10 availability-state</code></pre></div><p><strong>What it does:</strong> Shows the overall availability state (e.g., available, unknown, offline).</p></div>
+                <div class="command"><h3>show /ltm node &lt;node-name&gt; status</h3><div class="command-container"><pre><code>show /ltm node 10.0.0.10 status</code></pre></div><p><strong>What it does:</strong> Shows the detailed status of a node, combining availability and enabled states.</p></div>
+                <div class="command"><h3>show /ltm node &lt;node-name&gt; dynamically-discovered</h3><div class="command-container"><pre><code>show /ltm node 10.0.0.10 dynamically-discovered</code></pre></div><p><strong>What it does:</strong> Indicates if a node was dynamically discovered (e.g., by auto-populate on a pool).</p></div>
+                <div class="command"><h3>show /ltm node &lt;node-name&gt; description</h3><div class="command-container"><pre><code>show /ltm node 10.0.0.10 description</code></pre></div><p><strong>What it does:</strong> Displays the description configured for a node.</p></div>
+                <div class="command"><h3>show /ltm node &lt;node-name&gt; all-properties</h3><div class="command-container"><pre><code>show /ltm node 10.0.0.10 all-properties</code></pre></div><p><strong>What it does:</strong> Shows all configured properties for a node.</p></div>
+                <div class="command"><h3>show /ltm node &lt;node-name&gt; address</h3><div class="command-container"><pre><code>show /ltm node 10.0.0.10 address</code></pre></div><p><strong>What it does:</strong> Displays the IP address associated with the node.</p></div>
+                <div class="command"><h3>show /ltm node &lt;node-name&gt; port</h3><div class="command-container"><pre><code>show /ltm node 10.0.0.10 port</code></pre></div><p><strong>What it does:</strong> Displays the default service port associated with the node.</p></div>
+                <div class="command"><h3>show /ltm node &lt;node-name&gt; monitor</h3><div class="command-container"><pre><code>show /ltm node 10.0.0.10 monitor</code></pre></div><p><strong>What it does:</strong> Shows the health monitors explicitly applied to the node (if any).</p></div>
             </section>
 
             <section class="command-category" data-category="config">
                 <h2>Configuration</h2>
-                <div class="command">
-                    <h3>create /ltm pool</h3>
-                    <div class="command-container">
-                        <pre><code>create /ltm pool my-pool members add { 10.0.0.1:80 10.0.0.2:80 } monitor http</code></pre>
-                    </div>
-                    <p><strong>What it does:</strong> Creates a new load balancing pool with two members and an HTTP health monitor.</p>
-                    <p><strong>When to use it:</strong> When setting up a new application or service.</p>
-                </div>
-                <div class="command">
-                    <h3>create /ltm virtual</h3>
-                    <div class="command-container">
-                        <pre><code>create /ltm virtual my-virtual-server destination 192.168.1.100:80 ip-protocol tcp pool my-pool</code></pre>
-                    </div>
-                    <p><strong>What it does:</strong> Creates a new virtual server that listens for traffic and sends it to the specified pool.</p>
-                    <p><strong>When to use it:</strong> The final step in exposing a new load-balanced service.</p>
-                </div>
+                <div class="command"><h3>create /ltm pool &lt;pool-name&gt; members add { &lt;ip:port&gt; } monitor &lt;monitor-type&gt;</h3><div class="command-container"><pre><code>create /ltm pool my-pool members add { 10.0.0.1:80 10.0.0.2:80 } monitor http</code></pre></div><p><strong>What it does:</strong> Creates a new load balancing pool with members and a health monitor.</p></div>
+                <div class="command"><h3>create /ltm virtual &lt;vs-name&gt; destination &lt;ip:port&gt; pool &lt;pool-name&gt;</h3><div class="command-container"><pre><code>create /ltm virtual my-virtual-server destination 192.168.1.100:80 ip-protocol tcp pool my-pool</code></pre></div><p><strong>What it does:</strong> Creates a new virtual server that listens for traffic and sends it to the specified pool.</p></div>
+                <div class="command"><h3>load sys config merge from-terminal</h3><div class="command-container"><pre><code>load sys config merge from-terminal</code></pre></div><p><strong>What it does:</strong> Loads configuration changes typed directly into the terminal, merging them with the running config.</p></div>
+                <div class="command"><h3>save sys config</h3><div class="command-container"><pre><code>save sys config</code></pre></div><p><strong>What it does:</strong> Saves the current running configuration to disk.</p></div>
+                <div class="command"><h3>tmsh create &lt;module&gt; &lt;object-type&gt; &lt;name&gt;</h3><div class="command-container"><pre><code>tmsh create /ltm node my_new_node address 10.0.0.150</code></pre></div><p><strong>What it does:</strong> General syntax for creating objects using TMSH.</p></div>
+                <div class="command"><h3>tmsh modify &lt;module&gt; &lt;object-type&gt; &lt;name&gt;</h3><div class="command-container"><pre><code>tmsh modify /ltm virtual my_vs profiles add { http { } }</code></pre></div><p><strong>What it does:</strong> General syntax for modifying existing objects.</p></div>
+                <div class="command"><h3>tmsh delete &lt;module&gt; &lt;object-type&gt; &lt;name&gt;</h3><div class="command-container"><pre><code>tmsh delete /ltm node my_old_node</code></pre></div><p><strong>What it does:</strong> General syntax for deleting objects.</p></div>
+                <div class="command"><h3>install sys software image &lt;image-name&gt; volume &lt;volume-name&gt;</h3><div class="command-container"><pre><code>install sys software image BIGIP-16.1.0-0.0.1.iso volume HD1.2</code></pre></div><p><strong>What it does:</strong> Installs a BIG-IP software image to a specified boot volume.</p></div>
+                <div class="command"><h3>create /sys management-ip &lt;ip/mask&gt;</h3><div class="command-container"><pre><code>create /sys management-ip 192.168.1.100/24</code></pre></div><p><strong>What it does:</strong> Configures the management IP address.</p></div>
+                <div class="command"><h3>create /sys global-settings hostname &lt;hostname&gt;</h3><div class="command-container"><pre><code>create /sys global-settings hostname my-f5-lb</code></pre></div><p><strong>What it does:</strong> Sets the hostname of the BIG-IP device.</p></div>
+                <div class="command"><h3>create /sys ntp servers add { &lt;ntp-ip&gt; }</h3><div class="command-container"><pre><code>create /sys ntp servers add { 1.pool.ntp.org }</code></pre></div><p><strong>What it does:</strong> Configures NTP servers for time synchronization.</p></div>
+                <div class="command"><h3>create /ltm monitor http &lt;monitor-name&gt; send "GET /" recv "HTTP/1.1 200 OK"</h3><div class="command-container"><pre><code>create /ltm monitor http my_http_monitor send "GET /" recv "HTTP/1.1 200 OK"</code></pre></div><p><strong>What it does:</strong> Creates a custom HTTP health monitor.</p></div>
+                <div class="command"><h3>create /ltm persistence source-addr &lt;profile-name&gt; defaults-from source_addr</h3><div class="command-container"><pre><code>create /ltm persistence source-addr my_source_addr_persist defaults-from source_addr</code></pre></div><p><strong>What it does:</strong> Creates a new source address affinity persistence profile.</p></div>
+                <div class="command"><h3>create /ltm rule &lt;rule-name&gt; definition { when HTTP_REQUEST { log local0. "HTTP Request from [IP::client_addr]" } }</h3><div class="command-container"><pre><code>create /ltm rule my_irule definition { when HTTP_REQUEST { log local0. "HTTP Request from [IP::client_addr]" } }</code></pre></div><p><strong>What it does:</strong> Creates a simple iRule.</p></div>
+                <div class="command"><h3>create /sys folder &lt;folder-name&gt;</h3><div class="command-container"><pre><code>create /sys folder my_application_folder</code></pre></div><p><strong>What it does:</strong> Creates a new administrative folder for organizing objects.</p></div>
+                <div class="command"><h3>create /sys crypto key generate &lt;key-type&gt; &lt;name&gt;</h3><div class="command-container"><pre><code>create /sys crypto key generate rsa my_new_key</code></pre></div><p><strong>What it does:</strong> Generates a new cryptographic key.</p></div>
+                <div class="command"><h3>create /sys crypto cert generate &lt;name&gt; country &lt;country&gt;</h3><div class="command-container"><pre><code>create /sys crypto cert generate my_new_cert country US</code></pre></div><p><strong>What it does:</strong> Generates a new self-signed certificate.</p></div>
+                <div class="command"><h3>create /ltm profile one-connect &lt;profile-name&gt; defaults-from oneconnect</h3><div class="command-container"><pre><code>create /ltm profile one-connect my_oneconnect_profile defaults-from oneconnect</code></pre></div><p><strong>What it does:</strong> Creates a OneConnect profile for connection reuse.</p></div>
+                <div class="command"><h3>create /ltm profile http &lt;profile-name&gt; defaults-from http</h3><div class="command-container"><pre><code>create /ltm profile http my_http_profile defaults-from http insert-xforwarded-for X-Forwarded-For</code></pre></div><p><strong>What it does:</strong> Creates a custom HTTP profile with X-Forwarded-For header insertion.</p></div>
+                <div class="command"><h3>create /ltm profile tcp &lt;profile-name&gt; defaults-from tcp</h3><div class="command-container"><pre><code>create /ltm profile tcp my_tcp_profile defaults-from tcp</code></pre></div><p><strong>What it does:</strong> Creates a custom TCP profile.</p></div>
             </section>
 
             <section class="command-category" data-category="troubleshooting">
                 <h2>Troubleshooting</h2>
-                <div class="command">
-                    <h3>show /sys connection</h3>
-                    <div class="command-container">
-                        <pre><code>show /sys connection cs-server-addr [virtual_server_ip]</code></pre>
-                    </div>
-                    <p><strong>What it does:</strong> Displays detailed information about current connections to a virtual server.</p>
-                    <p><strong>When to use it:</strong> To troubleshoot live traffic flows and inspect connection details.</p>
-                </div>
+                <div class="command"><h3>show /sys connection</h3><div class="command-container"><pre><code>show /sys connection cs-server-addr 192.168.1.100</code></pre></div><p><strong>What it does:</strong> Displays detailed information about current connections, filtered by virtual server IP.</p></div>
+                <div class="command"><h3>tail -f /var/log/ltm</h3><div class="command-container"><pre><code>tail -f /var/log/ltm</code></pre></div><p><strong>What it does:</strong> Displays BIG-IP Local Traffic Manager (LTM) logs in real-time.</p></div>
+                <div class="command"><h3>show /sys performance top</h3><div class="command-container"><pre><code>show /sys performance top</code></pre></div><p><strong>What it does:</strong> Shows top resource-consuming processes and statistics.</p></div>
+                <div class="command"><h3>run /util ping &lt;ip-address&gt;</h3><div class="command-container"><pre><code>run /util ping 8.8.8.8</code></pre></div><p><strong>What it does:</strong> Performs a basic ping test from the BIG-IP device.</p></div>
+                <div class="command"><h3>run /util traceroute &lt;ip-address&gt;</h3><div class="command-container"><pre><code>run /util traceroute 8.8.8.8</code></pre></div><p><strong>What it does:</strong> Performs a traceroute from the BIG-IP device to diagnose network path issues.</p></div>
+                <div class="command"><h3>run /util tcpdump -i &lt;interface&gt; host &lt;ip&gt;</h3><div class="command-container"><pre><code>run /util tcpdump -i 1.1 host 10.0.0.10</code></pre></div><p><strong>What it does:</strong> Captures network traffic on a specific interface, filtered by host.</p></div>
+                <div class="command"><h3>show /ltm persistence all</h3><div class="command-container"><pre><code>show /ltm persistence all</code></pre></div><p><strong>What it does:</strong> Displays all active persistence entries across all virtual servers.</p></div>
+                <div class="command"><h3>show /sys service &lt;service-name&gt;</h3><div class="command-container"><pre><code>show /sys service httpd</code></pre></div><p><strong>What it does:</strong> Shows status of system services (e.g., httpd, tomcat).</p></div>
+                <div class="command"><h3>show /sys crypto cert &lt;cert-name&gt;</h3><div class="command-container"><pre><code>show /sys crypto cert default.crt</code></pre></div><p><strong>What it does:</strong> Displays details of a specific SSL certificate.</p></div>
+                <div class="command"><h3>show /sys crypto key &lt;key-name&gt;</h3><div class="command-container"><pre><code>show /sys crypto key default.key</code></pre></div><p><strong>What it does:</strong> Displays details of a specific SSL key.</p></div>
+                <div class="command"><h3>show /ltm virtual &lt;vs-name&gt; connection</h3><div class="command-container"><pre><code>show /ltm virtual my_vs connection</code></pre></div><p><strong>What it does:</strong> Displays active connections for a specific virtual server.</p></div>
+                <div class="command"><h3>show /ltm pool &lt;pool-name&gt; member &lt;ip:port&gt; connection</h3><div class="command-container"><pre><code>show /ltm pool my_pool member 10.0.0.1:80 connection</code></pre></div><p><strong>What it does:</strong> Displays active connections for a specific pool member.</p></div>
+                <div class="command"><h3>show /ltm rule &lt;rule-name&gt;</h3><div class="command-container"><pre><code>show /ltm rule my_irule</code></pre></div><p><strong>What it does:</strong> Displays the content of an iRule.</p></div>
+                <div class="command"><h3>show /ltm policy &lt;policy-name&gt;</h3><div class="command-container"><pre><code>show /ltm policy my_ltm_policy</code></pre></div><p><strong>What it does:</strong> Displays the configuration of an LTM policy.</p></div>
+                <div class="command"><h3>show /sys log cs-auth.log</h3><div class="command-container"><pre><code>show /sys log cs-auth.log</code></pre></div><p><strong>What it does:</strong> Displays logs related to Client-Side Authentication.</p></div>
+                <div class="command"><h3>show /sys log apm</h3><div class="command-container"><pre><code>show /sys log apm</code></pre></div><p><strong>What it does:</strong> Displays Access Policy Manager (APM) logs.</p></div>
+                <div class="command"><h3>show /sys failover</h3><div class="command-container"><pre><code>show /sys failover</code></pre></div><p><strong>What it does:</strong> Displays failover status in an HA setup.</p></div>
+                <div class="command"><h3>show /sys application service</h3><div class="command-container"><pre><code>show /sys application service</code></pre></div><p><strong>What it does:</strong> Displays status of Application Services (if deployed via AS3/declarative onboarding).</p></div>
+                <div class="command"><h3>show /sys ip-address</h3><div class="command-container"><pre><code>show /sys ip-address</code></pre></div><p><strong>What it does:</strong> Displays all configured IP addresses on the system.</p></div>
+                <div class="command"><h3>show /sys cluster all</h3><div class="command-container"><pre><code>show /sys cluster all</code></pre></div><p><strong>What it does:</strong> Displays detailed information about the device cluster (for vCMP or multi-blade systems).</p></div>
             </section>
 
         </div>

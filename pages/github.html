@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GitHub - Technical Command Reference</title>
+    <title>Git Commands - Technical Command Reference</title>
     <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
@@ -32,110 +32,124 @@
 
             <section class="command-category" data-category="repo">
                 <h2>Repository</h2>
-                <div class="command">
-                    <h3>git init</h3>
-                    <div class="command-container">
-                        <pre><code>git init</code></pre>
-                    </div>
-                    <p><strong>What it does:</strong> Creates a new Git repository in the current directory.</p>
-                    <p><strong>When to use it:</strong> To start a new project with Git.</p>
-                </div>
-                <div class="command">
-                    <h3>git clone</h3>
-                    <div class="command-container">
-                        <pre><code>git clone [URL]</code></pre>
-                    </div>
-                    <p><strong>What it does:</strong> Clones a repository into a new directory.</p>
-                    <p><strong>When to use it:</strong> To get a local copy of a remote repository.</p>
-                </div>
-                <div class="command">
-                    <h3>git add</h3>
-                    <div class="command-container">
-                        <pre><code>git add .</code></pre>
-                    </div>
-                    <p><strong>What it does:</strong> Stages changes for the next commit. `.` stages all changes in the current directory.</p>
-                    <p><strong>When to use it:</strong> After modifying files and before committing them.</p>
-                </div>
-                 <div class="command">
-                    <h3>git commit</h3>
-                    <div class="command-container">
-                        <pre><code>git commit -m "Your commit message"</code></pre>
-                    </div>
-                    <p><strong>What it does:</strong> Records a snapshot of the staged changes to the project's history.</p>
-                    <p><strong>When to use it:</strong> After staging changes with `git add`.</p>
-                </div>
+                <div class="command"><h3>git init</h3><div class="command-container"><pre><code>git init</code></pre></div><p><strong>What it does:</strong> Creates a new Git repository in the current directory.</p></div>
+                <div class="command"><h3>git clone</h3><div class="command-container"><pre><code>git clone [URL]</code></pre></div><p><strong>What it does:</strong> Clones a repository into a new directory.</p></div>
+                <div class="command"><h3>git add</h3><div class="command-container"><pre><code>git add .</code></pre></div><p><strong>What it does:</strong> Stages changes for the next commit. `.` stages all changes in the current directory.</p></div>
+                <div class="command"><h3>git commit</h3><div class="command-container"><pre><code>git commit -m "Your commit message"</code></pre></div><p><strong>What it does:</strong> Records a snapshot of the staged changes to the project's history.</p></div>
+                <div class="command"><h3>git status</h3><div class="command-container"><pre><code>git status</code></pre></div><p><strong>What it does:</strong> Displays the state of the working directory and the staging area.</p></div>
+                <div class="command"><h3>git diff</h3><div class="command-container"><pre><code>git diff</code></pre></div><p><strong>What it does:</strong> Shows changes between the working directory and the staging area, or between commits.</p></div>
+                <div class="command"><h3>git log</h3><div class="command-container"><pre><code>git log --oneline --graph --decorate</code></pre></div><p><strong>What it does:</strong> Shows the commit history with various formatting options.</p></div>
+                <div class="command"><h3>git show</h3><div class="command-container"><pre><code>git show [COMMIT_HASH]</code></pre></div><p><strong>What it does:</strong> Displays various types of objects (commits, tags, trees, blobs).</p></div>
+                <div class="command"><h3>git reset</h3><div class="command-container"><pre><code>git reset --hard HEAD~1</code></pre></div><p><strong>What it does:</strong> Resets the current HEAD to a specified state, discarding changes.</p></div>
+                <div class="command"><h3>git revert</h3><div class="command-container"><pre><code>git revert [COMMIT_HASH]</code></pre></div><p><strong>What it does:</strong> Creates a new commit that undoes the changes from a previous commit.</p></div>
+                <div class="command"><h3>git clean</h3><div class="command-container"><pre><code>git clean -fd</code></pre></div><p><strong>What it does:</strong> Removes untracked files from the working directory.</p></div>
+                <div class="command"><h3>git mv</h3><div class="command-container"><pre><code>git mv oldname.txt newname.txt</code></pre></div><p><strong>What it does:</strong> Moves or renames a file within the Git repository.</p></div>
+                <div class="command"><h3>git rm</h3><div class="command-container"><pre><code>git rm filename.txt</code></pre></div><p><strong>What it does:</strong> Removes a file from the working directory and stages the deletion.</p></div>
+                <div class="command"><h3>git stash</h3><div class="command-container"><pre><code>git stash save "Work in progress"</code></pre></div><p><strong>What it does:</strong> Temporarily saves changes that are not ready to be committed.</p></div>
+                <div class="command"><h3>git restore</h3><div class="command-container"><pre><code>git restore file.txt</code></pre></div><p><strong>What it does:</strong> Discards changes in the working directory or unstages changes.</p></div>
+                <div class="command"><h3>git config --list</h3><div class="command-container"><pre><code>git config --list</code></pre></div><p><strong>What it does:</strong> Lists all Git configuration settings.</p></div>
+                <div class="command"><h3>git help</h3><div class="command-container"><pre><code>git help clone</code></pre></div><p><strong>What it does:</strong> Displays help information for a specific Git command.</p></div>
+                <div class="command"><h3>git reflog</h3><div class="command-container"><pre><code>git reflog</code></pre></div><p><strong>What it does:</strong> Shows a log of all actions that modified the HEAD of the repository.</p></div>
+                <div class="command"><h3>git remote show origin</h3><div class="command-container"><pre><code>git remote show origin</code></pre></div><p><strong>What it does:</strong> Displays detailed information about the 'origin' remote repository.</p></div>
+                <div class="command"><h3>git pull --rebase</h3><div class="command-container"><pre><code>git pull --rebase</code></pre></div><p><strong>What it does:</strong> Fetches and rebases changes from the remote, avoiding merge commits.</p></div>
             </section>
 
             <section class="command-category" data-category="branch">
                 <h2>Branching</h2>
-                <div class="command">
-                    <h3>git branch</h3>
-                    <div class="command-container">
-                        <pre><code>git branch</code></pre>
-                    </div>
-                    <p><strong>What it does:</strong> Lists all local branches. Use `git branch -a` to see remote branches too.</p>
-                    <p><strong>When to use it:</strong> To see the branches in your repository.</p>
-                </div>
-                <div class="command">
-                    <h3>git checkout -b</h3>
-                    <div class="command-container">
-                        <pre><code>git checkout -b [new-branch-name]</code></pre>
-                    </div>
-                    <p><strong>What it does:</strong> Creates a new branch and switches to it.</p>
-                    <p><strong>When to use it:</strong> To start working on a new feature or bug fix.</p>
-                </div>
+                <div class="command"><h3>git branch</h3><div class="command-container"><pre><code>git branch -a</code></pre></div><p><strong>What it does:</strong> Lists all local and remote branches.</p></div>
+                <div class="command"><h3>git checkout</h3><div class="command-container"><pre><code>git checkout feature/new-feature</code></pre></div><p><strong>What it does:</strong> Switches to a different branch or restores working tree files.</p></div>
+                <div class="command"><h3>git switch</h3><div class="command-container"><pre><code>git switch -c new-feature-branch</code></pre></div><p><strong>What it does:</strong> A more modern and safer way to switch branches, especially when creating new ones.</p></div>
+                <div class="command"><h3>git merge</h3><div class="command-container"><pre><code>git merge feature/new-feature</code></pre></div><p><strong>What it does:</strong> Integrates changes from one branch into another.</p></div>
+                <div class="command"><h3>git rebase</h3><div class="command-container"><pre><code>git rebase master</code></pre></div><p><strong>What it does:</strong> Reapplies commits on top of another base tip, often used to linearize history.</p></div>
+                <div class="command"><h3>git cherry-pick</h3><div class="command-container"><pre><code>git cherry-pick [COMMIT_HASH]</code></pre></div><p><strong>What it does:</strong> Applies a specific commit from one branch to another.</p></div>
+                <div class="command"><h3>git branch -d</h3><div class="command-container"><pre><code>git branch -d old-branch</code></pre></div><p><strong>What it does:</strong> Deletes a local branch (only if it's been merged).</p></div>
+                <div class="command"><h3>git branch -D</h3><div class="command-container"><pre><code>git branch -D stubborn-branch</code></pre></div><p><strong>What it does:</strong> Forcefully deletes a local branch, even if unmerged.</p></div>
+                <div class="command"><h3>git push origin --delete &lt;branch-name&gt;</h3><div class="command-container"><pre><code>git push origin --delete old-remote-branch</code></pre></div><p><strong>What it does:</strong> Deletes a remote branch.</p></div>
+                <div class="command"><h3>git tag</h3><div class="command-container"><pre><code>git tag -a v1.0 -m "Version 1.0 release"</code></pre></div><p><strong>What it does:</strong> Creates a tag to mark specific points in history as important.</p></div>
+                <div class="command"><h3>git push --tags</h3><div class="command-container"><pre><code>git push --tags</code></pre></div><p><strong>What it does:</strong> Pushes all local tags to the remote repository.</p></div>
+                <div class="command"><h3>git branch --set-upstream-to=origin/main</h3><div class="command-container"><pre><code>git branch --set-upstream-to=origin/main</code></pre></div><p><strong>What it does:</strong> Sets the upstream branch for the current local branch.</p></div>
+                <div class="command"><h3>git merge --abort</h3><div class="command-container"><pre><code>git merge --abort</code></pre></div><p><strong>What it does:</strong> Aborts the current merge operation if there are conflicts.</p></div>
+                <div class="command"><h3>git rebase --abort</h3><div class="command-container"><pre><code>git rebase --abort</code></pre></div><p><strong>What it does:</strong> Aborts the current rebase operation.</p></div>
+                <div class="command"><h3>git bisect start</h3><div class="command-container"><pre><code>git bisect start
+git bisect bad
+git bisect good [GOOD_COMMIT_HASH]</code></pre></div><p><strong>What it does:</strong> Helps find the commit that introduced a bug by performing a binary search.</p></div>
+                <div class="command"><h3>git log --graph</h3><div class="command-container"><pre><code>git log --graph --oneline --all</code></pre></div><p><strong>What it does:</strong> Visualizes the commit history as a graph.</p></div>
+                <div class="command"><h3>git shortlog</h3><div class="command-container"><pre><code>git shortlog -sn</code></pre></div><p><strong>What it does:</strong> Summarizes `git log` output, showing commits per author.</p></div>
+                <div class="command"><h3>git stash pop</h3><div class="command-container"><pre><code>git stash pop</code></pre></div><p><strong>What it does:</strong> Applies the most recently stashed changes and then deletes the stash entry.</p></div>
+                <div class="command"><h3>git stash apply</h3><div class="command-container"><pre><code>git stash apply</code></pre></div><p><strong>What it does:</strong> Applies the most recently stashed changes, but keeps the stash entry.</p></div>
+                <div class="command"><h3>git branch --merged</h3><div class="command-container"><pre><code>git branch --merged</code></pre></div><p><strong>What it does:</strong> Lists branches that have been merged into the current branch.</p></div>
             </section>
 
             <section class="command-category" data-category="remote">
                 <h2>Remote</h2>
-                <div class="command">
-                    <h3>git pull</h3>
-                    <div class="command-container">
-                        <pre><code>git pull</code></pre>
-                    </div>
-                    <p><strong>What it does:</strong> Fetches changes from the remote repository and merges them into the current branch.</p>
-                    <p><strong>When to use it:</strong> To update your local repository with the latest changes.</p>
-                </div>
-                <div class="command">
-                    <h3>git push</h3>
-                    <div class="command-container">
-                        <pre><code>git push origin [branch-name]</code></pre>
-                    </div>
-                    <p><strong>What it does:</strong> Pushes your committed changes to a remote repository.</p>
-                    <p><strong>When to use it:</strong> To share your work with others.</p>
-                </div>
+                <div class="command"><h3>git remote</h3><div class="command-container"><pre><code>git remote -v</code></pre></div><p><strong>What it does:</strong> Lists remote repositories and their URLs.</p></div>
+                <div class="command"><h3>git fetch</h3><div class="command-container"><pre><code>git fetch origin</code></pre></div><p><strong>What it does:</strong> Downloads objects and refs from another repository without merging.</p></div>
+                <div class="command"><h3>git pull</h3><div class="command-container"><pre><code>git pull</code></pre></div><p><strong>What it does:</strong> Fetches changes from the remote repository and merges them into the current branch.</p></div>
+                <div class="command"><h3>git push</h3><div class="command-container"><pre><code>git push origin [branch-name]</code></pre></div><p><strong>What it does:</strong> Pushes your committed changes to a remote repository.</p></div>
+                <div class="command"><h3>git remote add origin</h3><div class="command-container"><pre><code>git remote add origin [URL]</code></pre></div><p><strong>What it does:</strong> Adds a new remote repository to your Git project.</p></div>
+                <div class="command"><h3>git remote set-url origin</h3><div class="command-container"><pre><code>git remote set-url origin [NEW_URL]</code></pre></div><p><strong>What it does:</strong> Changes the URL for an existing remote repository.</p></div>
+                <div class="command"><h3>git remote rm origin</h3><div class="command-container"><pre><code>git remote rm origin</code></pre></div><p><strong>What it does:</strong> Removes a remote repository.</p></div>
+                <div class="command"><h3>git remote show origin</h3><div class="command-container"><pre><code>git remote show origin</code></pre></div><p><strong>What it does:</strong> Displays detailed information about the 'origin' remote, including branches and URLs.</p></div>
+                <div class="command"><h3>git remote prune origin</h3><div class="command-container"><pre><code>git remote prune origin</code></pre></div><p><strong>What it does:</strong> Deletes any remote-tracking branches that no longer exist on the remote.</p></div>
+                <div class="command"><h3>git push --force-with-lease</h3><div class="command-container"><pre><code>git push --force-with-lease origin feature/branch</code></pre></div><p><strong>What it does:</strong> Safely force pushes, ensuring you don't overwrite others' work.</p></div>
+                <div class="command"><h3>git push -u origin &lt;branch-name&gt;</h3><div class="command-container"><pre><code>git push -u origin feature/new-feature</code></pre></div><p><strong>What it does:</strong> Pushes the branch and sets it as the upstream tracking branch.</p></div>
+                <div class="command"><h3>git fetch --all</h3><div class="command-container"><pre><code>git fetch --all</code></pre></div><p><strong>What it does:</strong> Fetches from all configured remotes.</p></div>
+                <div class="command"><h3>git pull origin &lt;branch&gt;</h3><div class="command-container"><pre><code>git pull origin main</code></pre></div><p><strong>What it does:</strong> Pulls from a specific remote and branch.</p></div>
+                <div class="command"><h3>git config remote.origin.url</h3><div class="command-container"><pre><code>git config remote.origin.url</code></pre></div><p><strong>What it does:</strong> Displays the URL of the 'origin' remote.</p></div>
+                <div class="command"><h3>git remote rename &lt;old-name&gt; &lt;new-name&gt;</h3><div class="command-container"><pre><code>git remote rename origin upstream</code></pre></div><p><strong>What it does:</strong> Renames a remote.</p></div>
+                <div class="command"><h3>git config --global url."https://github.com/".insteadOf github:</h3><div class="command-container"><pre><code>git config --global url."https://github.com/".insteadOf github:</code></pre></div><p><strong>What it does:</strong> Configures Git to rewrite `github:` URLs to `https://github.com/`.</p></div>
+                <div class="command"><h3>git remote update</h3><div class="command-container"><pre><code>git remote update</code></pre></div><p><strong>What it does:</strong> Fetches updates from all tracked remote branches.</p></div>
+                <div class="command"><h3>git ls-remote</h3><div class="command-container"><pre><code>git ls-remote origin</code></pre></div><p><strong>What it does:</strong> Lists references (heads and tags) in a remote repository.</p></div>
+                <div class="command"><h3>git submodule add &lt;repo-url&gt; &lt;path&gt;</h3><div class="command-container"><pre><code>git submodule add https://github.com/user/project.git external/project</code></pre></div><p><strong>What it does:</strong> Adds a new submodule to the repository.</p></div>
+                <div class="command"><h3>git submodule update --init --recursive</h3><div class="command-container"><pre><code>git submodule update --init --recursive</code></pre></div><p><strong>What it does:</strong> Initializes and updates all submodules.</p></div>
             </section>
 
             <section class="command-category" data-category="config">
                 <h2>Configuration</h2>
-                <div class="command">
-                    <h3>git config --global user.name</h3>
-                    <div class="command-container">
-                        <pre><code>git config --global user.name "Your Name"</code></pre>
-                    </div>
-                    <p><strong>What it does:</strong> Sets the name that will be associated with your commits.</p>
-                    <p><strong>When to use it:</strong> When setting up Git for the first time.</p>
-                </div>
+                <div class="command"><h3>git config --global user.name</h3><div class="command-container"><pre><code>git config --global user.name "Your Name"</code></pre></div><p><strong>What it does:</strong> Sets the name that will be associated with your commits globally.</p></div>
+                <div class="command"><h3>git config --global user.email</h3><div class="command-container"><pre><code>git config --global user.email "your.email@example.com"</code></pre></div><p><strong>What it does:</strong> Sets the email that will be associated with your commits globally.</p></div>
+                <div class="command"><h3>git config --list</h3><div class="command-container"><pre><code>git config --list</code></pre></div><p><strong>What it does:</strong> Lists all Git configuration settings (global, system, and local).</p></div>
+                <div class="command"><h3>git config --global core.editor</h3><div class="command-container"><pre><code>git config --global core.editor "code --wait"</code></pre></div><p><strong>What it does:</strong> Sets the default text editor for Git to use (e.g., for commit messages).</p></div>
+                <div class="command"><h3>git config --global alias.co</h3><div class="command-container"><pre><code>git config --global alias.co checkout</code></pre></div><p><strong>What it does:</strong> Creates a shortcut alias for a Git command (e.g., `git co` instead of `git checkout`).</p></div>
+                <div class="command"><h3>git config --global init.defaultBranch</h3><div class="command-container"><pre><code>git config --global init.defaultBranch main</code></pre></div><p><strong>What it does:</strong> Sets the default branch name for new repositories (e.g., `main` instead of `master`).</p></div>
+                <div class="command"><h3>git config --global color.ui</h3><div class="command-container"><pre><code>git config --global color.ui auto</code></pre></div><p><strong>What it does:</strong> Enables colorful Git output in the terminal.</p></div>
+                <div class="command"><h3>git config --local user.name</h3><div class="command-container"><pre><code>git config --local user.name "Project Specific Name"</code></pre></div><p><strong>What it does:</strong> Sets a user name for the current repository only, overriding the global setting.</p></div>
+                <div class="command"><h3>git config --system core.pager</h3><div class="command-container"><pre><code>git config --system core.pager "less -FSRX"</code></pre></div><p><strong>What it does:</strong> Configures the pager for Git output at the system level.</p></div>
+                <div class="command"><h3>git config --global push.default</h3><div class="command-container"><pre><code>git config --global push.default simple</code></pre></div><p><strong>What it does:</strong> Sets the default behavior for `git push`.</p></div>
+                <div class="command"><h3>git config --global pull.rebase</h3><div class="command-container"><pre><code>git config --global pull.rebase true</code></pre></div><p><strong>What it does:</strong> Configures `git pull` to use rebase instead of merge by default.</p></div>
+                <div class="command"><h3>git config --global credential.helper</h3><div class="command-container"><pre><code>git config --global credential.helper store</code></pre></div><p><strong>What it does:</strong> Configures Git to store credentials, avoiding repeated password prompts.</p></div>
+                <div class="command"><h3>git config --global core.autocrlf</h3><div class="command-container"><pre><code>git config --global core.autocrlf input</code></pre></div><p><strong>What it does:</strong> Configures how Git handles line endings to prevent cross-platform issues.</p></div>
+                <div class="command"><h3>git config --global --edit</h3><div class="command-container"><pre><code>git config --global --edit</code></pre></div><p><strong>What it does:</strong> Opens the global Git configuration file in your default editor for direct editing.</p></div>
+                <div class="command"><h3>git config --local --unset-all alias.co</h3><div class="command-container"><pre><code>git config --local --unset-all alias.co</code></pre></div><p><strong>What it does:</strong> Removes a specific alias from the local configuration.</p></div>
+                <div class="command"><h3>git config --show-origin user.name</h3><div class="command-container"><pre><code>git config --show-origin user.name</code></pre></div><p><strong>What it does:</strong> Shows the value of a configuration and the file it was read from.</p></div>
+                <div class="command"><h3>git config --get-regexp "color.*"</h3><div class="command-container"><pre><code>git config --get-regexp "color.*"</code></pre></div><p><strong>What it does:</strong> Displays all configuration keys matching a regular expression.</p></div>
+                <div class="command"><h3>git config --global url."https://".insteadOf git://</h3><div class="command-container"><pre><code>git config --global url."https://".insteadOf git://</code></pre></div><p><strong>What it does:</strong> Configures Git to use HTTPS for all `git://` URLs.</p></div>
+                <div class="command"><h3>git config --global core.fsmonitor</h3><div class="command-container"><pre><code>git config --global core.fsmonitor true</code></pre></div><p><strong>What it does:</strong> Enables filesystem monitor for faster `git status` on large repositories.</p></div>
+                <div class="command"><h3>git config --global blame.ignoreRevsFile</h3><div class="command-container"><pre><code>git config --global blame.ignoreRevsFile .git-blame-ignore-revs</code></pre></div><p><strong>What it does:</strong> Configures Git to ignore specific revisions when using `git blame`.</p></div>
             </section>
 
             <section class="command-category" data-category="troubleshooting">
                 <h2>Troubleshooting</h2>
-                <div class="command">
-                    <h3>git status</h3>
-                    <div class="command-container">
-                        <pre><code>git status</code></pre>
-                    </div>
-                    <p><strong>What it does:</strong> Displays the state of the working directory and the staging area.</p>
-                    <p><strong>When to use it:</strong> A fundamental command to see which files are modified, staged, or untracked.</p>
-                </div>
-                 <div class="command">
-                    <h3>git log</h3>
-                    <div class="command-container">
-                        <pre><code>git log --oneline --graph --decorate</code></pre>
-                    </div>
-                    <p><strong>What it does:</strong> Shows the commit history.</p>
-                    <p><strong>When to use it:</strong> To review the history of commits for a branch.</p>
-                </div>
+                <div class="command"><h3>git status</h3><div class="command-container"><pre><code>git status</code></pre></div><p><strong>What it does:</strong> Displays the state of the working directory and the staging area.</p></div>
+                <div class="command"><h3>git log</h3><div class="command-container"><pre><code>git log --oneline --graph --decorate --all</code></pre></div><p><strong>What it does:</strong> Shows the commit history with various formatting, including all branches.</p></div>
+                <div class="command"><h3>git diff</h3><div class="command-container"><pre><code>git diff HEAD~1</code></pre></div><p><strong>What it does:</strong> Shows changes between the working directory and a previous commit.</p></div>
+                <div class="command"><h3>git reflog</h3><div class="command-container"><pre><code>git reflog</code></pre></div><p><strong>What it does:</strong> Shows a log of where HEAD has been, very useful for recovering lost commits.</p></div>
+                <div class="command"><h3>git blame</h3><div class="command-container"><pre><code>git blame file.txt</code></pre></div><p><strong>What it does:</strong> Shows who last modified each line of a file.</p></div>
+                <div class="command"><h3>git fsck</h3><div class="command-container"><pre><code>git fsck --full</code></pre></div><p><strong>What it does:</strong> Verifies the connectivity and validity of the objects in the database.</p></div>
+                <div class="command"><h3>git check-ref-format</h3><div class="command-container"><pre><code>git check-ref-format --normalize HEAD</code></pre></div><p><strong>What it does:</strong> Checks if a reference name (like a branch name) is valid.</p></div>
+                <div class="command"><h3>git remote show origin</h3><div class="command-container"><pre><code>git remote show origin</code></pre></div><p><strong>What it does:</strong> Displays detailed information about the 'origin' remote, including its URLs and branches.</p></div>
+                <div class="command"><h3>git branch -vv</h3><div class="command-container"><pre><code>git branch -vv</code></pre></div><p><strong>What it does:</strong> Lists local branches with their upstream information and last commit message.</p></div>
+                <div class="command"><h3>gitk</h3><div class="command-container"><pre><code>gitk --all</code></pre></div><p><strong>What it does:</strong> A graphical interface for viewing repository history.</p></div>
+                <div class="command"><h3>git reset --hard HEAD</h3><div class="command-container"><pre><code>git reset --hard HEAD</code></pre></div><p><strong>What it does:</strong> Discards all changes in the working directory and staging area, returning to the last commit.</p></div>
+                <div class="command"><h3>git clean -fdx</h3><div class="command-container"><pre><code>git clean -fdx</code></pre></div><p><strong>What it does:</strong> Removes untracked files and directories, including ignored ones (use with extreme caution).</p></div>
+                <div class="command"><h3>git stash list</h3><div class="command-container"><pre><code>git stash list</code></pre></div><p><strong>What it does:</strong> Lists all stashed changes.</p></div>
+                <div class="command"><h3>git diff --staged</h3><div class="command-container"><pre><code>git diff --staged</code></pre></div><p><strong>What it does:</strong> Shows changes that are currently in the staging area.</p></div>
+                <div class="command"><h3>git diff --name-only</h3><div class="command-container"><pre><code>git diff --name-only</code></pre></div><p><strong>What it does:</strong> Shows only the names of modified files.</p></div>
+                <div class="command"><h3>git log -S "keyword"</h3><div class="command-container"><pre><code>git log -S "my_function_name"</code></pre></div><p><strong>What it does:</strong> Finds commits that introduce or remove an instance of a string (pickaxe search).</p></div>
+                <div class="command"><h3>git log -p &lt;file&gt;</h3><div class="command-container"><pre><code>git log -p my_file.txt</code></pre></div><p><strong>What it does:</strong> Shows commit history with diffs for a specific file.</p></div>
+                <div class="command"><h3>git check-ignore -v &lt;file&gt;</h3><div class="command-container"><pre><code>git check-ignore -v .env</code></pre></div><p><strong>What it does:</strong> Debugs `.gitignore` rules by showing which rule ignored a file.</p></div>
+                <div class="command"><h3>git rev-parse HEAD</h3><div class="command-container"><pre><code>git rev-parse HEAD</code></pre></div><p><strong>What it does:</strong> Displays the full hash of the current commit.</p></div>
+                <div class="command"><h3>git config --show-origin &lt;key&gt;</h3><div class="command-container"><pre><code>git config --show-origin user.name</code></pre></div><p><strong>What it does:</strong> Shows the value of a configuration key and where it was defined (global, local, etc.).</p></div>
             </section>
 
         </div>
