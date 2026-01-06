@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cisco - Technical Command Reference</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Cisco IOS Commands</h1>
+            <div class="theme-switcher">
+                <button id="theme-toggle">Toggle Dark Mode</button>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <div class="page-header">
+                <a href="../index.html" class="back-link">&larr; Back to Home</a>
+            </div>
+
+             <div class="filter-container">
+                <button class="filter-btn active" data-category="all">All</button>
+                <button class="filter-btn" data-category="system">System</button>
+                <button class="filter-btn" data-category="interface">Interface</button>
+                <button class="filter-btn" data-category="config">Configuration</button>
+                <button class="filter-btn" data-category="vpn">VPN</button>
+                <button class="filter-btn" data-category="troubleshooting">Troubleshooting</button>
+            </div>
+
+            <section class="command-category" data-category="system">
+                <h2>System</h2>
+                <div class="command">
+                    <h3>show running-config</h3>
+                    <div class="command-container">
+                        <pre><code>show running-config</code></pre>
+                    </div>
+                    <p><strong>What it does:</strong> Displays active configuration.</p>
+                    <p><strong>When to use it:</strong> Essential for viewing the active configuration.</p>
+                </div>
+                 <div class="command">
+                    <h3>show version</h3>
+                    <div class="command-container">
+                        <pre><code>show version</code></pre>
+                    </div>
+                    <p><strong>What it does:</strong> Displays OS version and hardware info.</p>
+                    <p><strong>When to use it:</strong> To identify the device model and software version.</p>
+                </div>
+            </section>
+
+            <section class="command-category" data-category="interface">
+                <h2>Interface</h2>
+                <div class="command">
+                    <h3>show ip interface brief</h3>
+                    <div class="command-container">
+                        <pre><code>show ip interface brief</code></pre>
+                    </div>
+                    <p><strong>What it does:</strong> Quick overview of interface status and IPs.</p>
+                    <p><strong>When to use it:</strong> A primary command to check interface status and IP configuration.</p>
+                </div>
+                <div class="command">
+                    <h3>show interface</h3>
+                    <div class="command-container">
+                        <pre><code>show interface GigabitEthernet0/1</code></pre>
+                    </div>
+                    <p><strong>What it does:</strong> Displays detailed information about a specific interface.</p>
+                    <p><strong>When to use it:</strong> To troubleshoot interface errors, duplex, and speed issues.</p>
+                </div>
+            </section>
+
+            <section class="command-category" data-category="vpn">
+                <h2>VPN</h2>
+                <div class="command">
+                    <h3>show crypto isakmp sa</h3>
+                    <div class="command-container">
+                        <pre><code>show crypto isakmp sa</code></pre>
+                    </div>
+                    <p><strong>What it does:</strong> Verifies VPN IKE Phase 1 status.</p>
+                    <p><strong>When to use it:</strong> To check if the IKE security association (Phase 1) is established.</p>
+                </div>
+                 <div class="command">
+                    <h3>show crypto ipsec sa</h3>
+                    <div class="command-container">
+                        <pre><code>show crypto ipsec sa</code></pre>
+                    </div>
+                    <p><strong>What it does:</strong> Checks IPsec Phase 2 encryption counters.</p>
+                    <p><strong>When to use it:</strong> To verify if the IPsec security association (Phase 2) is established and actively passing traffic.</p>
+                </div>
+            </section>
+
+            <section class="command-category" data-category="config">
+                <h2>Configuration</h2>
+                <div class="command">
+                    <h3>configure terminal</h3>
+                    <div class="command-container">
+                        <pre><code>configure terminal</code></pre>
+                    </div>
+                    <p><strong>What it does:</strong> Enters global configuration mode.</p>
+                    <p><strong>When to use it:</strong> To make any changes to the device's configuration.</p>
+                </div>
+                <div class="command">
+                    <h3>interface GigabitEthernet0/1</h3>
+                    <div class="command-container">
+                        <pre><code>interface GigabitEthernet0/1
+ ip address 192.168.1.1 255.255.255.0
+ no shutdown</code></pre>
+                    </div>
+                    <p><strong>What it does:</strong> Enters interface configuration mode and sets an IP address.</p>
+                    <p><strong>When to use it:</strong> To configure a specific interface.</p>
+                </div>
+                 <div class="command">
+                    <h3>ip route</h3>
+                    <div class="command-container">
+                        <pre><code>ip route 0.0.0.0 0.0.0.0 192.168.1.254</code></pre>
+                    </div>
+                    <p><strong>What it does:</strong> Creates a static route. This example creates a default route.</p>
+                    <p><strong>When to use it:</strong> To manually define a path for traffic.</p>
+                </div>
+            </section>
+
+             <section class="command-category" data-category="troubleshooting">
+                <h2>Troubleshooting</h2>
+                <div class="command">
+                    <h3>show ip route</h3>
+                    <div class="command-container">
+                        <pre><code>show ip route</code></pre>
+                    </div>
+                    <p><strong>What it does:</strong> Shows routing table and protocol sources.</p>
+                    <p><strong>When to use it:</strong> A primary command to troubleshoot routing issues.</p>
+                </div>
+                 <div class="command">
+                    <h3>show logging</h3>
+                    <div class="command-container">
+                        <pre><code>show logging</code></pre>
+                    </div>
+                    <p><strong>What it does:</strong> Displays system logs and errors.</p>
+                    <p><strong>When to use it:</strong> To check for errors, status messages, and other events.</p>
+                </div>
+                <div class="command">
+                    <h3>ping &lt;ip&gt;</h3>
+                    <div class="command-container">
+                        <pre><code>ping 8.8.8.8</code></pre>
+                    </div>
+                    <p><strong>What it does:</strong> Basic reachability test.</p>
+                    <p><strong>When to use it:</strong> For basic connectivity testing.</p>
+                </div>
+                 <div class="command">
+                    <h3>traceroute &lt;ip&gt;</h3>
+                    <div class="command-container">
+                        <pre><code>traceroute 8.8.8.8</code></pre>
+                    </div>
+                    <p><strong>What it does:</strong> Path analysis for routing issues.</p>
+                    <p><strong>When to use it:</strong> To identify routing loops or points of failure in a network path.</p>
+                </div>
+                 <div class="command">
+                    <h3>debug ip packet detail</h3>
+                    <div class="command-container">
+                        <pre><code>debug ip packet detail</code></pre>
+                    </div>
+                    <p><strong>What it does:</strong> Deep packet-level troubleshooting.</p>
+                    <p><strong>When to use it:</strong> For real-time packet inspection to diagnose complex network issues (use with caution in production).</p>
+                </div>
+            </section>
+
+        </div>
+    </main>
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Technical Command Reference</p>
+        </div>
+    </footer>
+    <script src="../js/main.js"></script>
+</body>
+</html>

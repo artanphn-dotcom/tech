@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juniper - Technical Command Reference</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Juniper Junos Commands</h1>
+            <div class="theme-switcher">
+                <button id="theme-toggle">Toggle Dark Mode</button>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <div class="page-header">
+                <a href="../index.html" class="back-link">&larr; Back to Home</a>
+            </div>
+
+            <div class="filter-container">
+                <button class="filter-btn active" data-category="all">All</button>
+                <button class="filter-btn" data-category="system">System</button>
+                <button class="filter-btn" data-category="interface">Interface</button>
+                <button class="filter-btn" data-category="routing">Routing</button>
+                <button class="filter-btn" data-category="vpn">VPN</button>
+                <button class="filter-btn" data-category="config">Configuration</button>
+                <button class="filter-btn" data-category="troubleshooting">Troubleshooting</button>
+            </div>
+
+            <section class="command-category" data-category="system">
+                <h2>System</h2>
+                <div class="command">
+                    <h3>show system uptime</h3>
+                    <div class="command-container">
+                        <pre><code>show system uptime</code></pre>
+                    </div>
+                    <p><strong>What it does:</strong> Displays how long the system has been running.</p>
+                    <p><strong>When to use it:</strong> To check for recent reboots.</p>
+                </div>
+                 <div class="command">
+                    <h3>show version</h3>
+                    <div class="command-container">
+                        <pre><code>show version</code></pre>
+                    </div>
+                    <p><strong>What it does:</strong> Displays JunOS version and system info.</p>
+                    <p><strong>When to use it:</strong> To identify the software version and hardware.</p>
+                </div>
+            </section>
+
+            <section class="command-category" data-category="interface">
+                <h2>Interface</h2>
+                <div class="command">
+                    <h3>show interfaces terse</h3>
+                    <div class="command-container">
+                        <pre><code>show interfaces terse</code></pre>
+                    </div>
+                    <p><strong>What it does:</strong> Quick interface status overview.</p>
+                    <p><strong>When to use it:</strong> A primary command to check interface status and IP configuration.</p>
+                </div>
+            </section>
+
+            <section class="command-category" data-category="routing">
+                <h2>Routing</h2>
+                <div class="command">
+                    <h3>show route</h3>
+                    <div class="command-container">
+                        <pre><code>show route</code></pre>
+                    </div>
+                    <p><strong>What it does:</strong> Displays routing table entries.</p>
+                    <p><strong>When to use it:</strong> To inspect the device's routing table and verify route paths.</p>
+                </div>
+                <div class="command">
+                    <h3>show route protocol bgp</h3>
+                    <div class="command-container">
+                        <pre><code>show route protocol bgp</code></pre>
+                    </div>
+                    <p><strong>What it does:</strong> Verifies BGP learned routes.</p>
+                    <p><strong>When to use it:</strong> To see routes learned specifically via the BGP routing protocol.</p>
+                </div>
+            </section>
+
+            <section class="command-category" data-category="vpn">
+                <h2>VPN</h2>
+                <div class="command">
+                    <h3>show security ike security-associations</h3>
+                    <div class="command-container">
+                        <pre><code>show security ike security-associations</code></pre>
+                    </div>
+                    <p><strong>What it does:</strong> Checks IKE Phase 1 VPN status.</p>
+                    <p><strong>When to use it:</strong> To verify if the IKE security association (Phase 1) is established.</p>
+                </div>
+                 <div class="command">
+                    <h3>show security ipsec security-associations</h3>
+                    <div class="command-container">
+                        <pre><code>show security ipsec security-associations</code></pre>
+                    </div>
+                    <p><strong>What it does:</strong> Displays IPsec Phase 2 tunnels.</p>
+                    <p><strong>When to use it:</strong> To verify if the IPsec security association (Phase 2) is established and actively passing traffic.</p>
+                </div>
+            </section>
+
+            <section class="command-category" data-category="config">
+                <h2>Configuration</h2>
+                <div class="command">
+                    <h3>configure</h3>
+                    <div class="command-container">
+                        <pre><code>configure</code></pre>
+                    </div>
+                    <p><strong>What it does:</strong> Enters configuration mode.</p>
+                    <p><strong>When to use it:</strong> To make any changes to the device's configuration.</p>
+                </div>
+                <div class="command">
+                    <h3>set interface ge-0/0/0</h3>
+                    <div class="command-container">
+                        <pre><code>set interfaces ge-0/0/0 unit 0 family inet address 192.168.1.1/24</code></pre>
+                    </div>
+                    <p><strong>What it does:</strong> Sets an IP address on a logical interface.</p>
+                    <p><strong>When to use it:</strong> To configure an interface IP address.</p>
+                </div>
+                <div class="command">
+                    <h3>set routing-options static</h3>
+                    <div class="command-container">
+                        <pre><code>set routing-options static route 0.0.0.0/0 next-hop 192.168.1.254</code></pre>
+                    </div>
+                    <p><strong>What it does:</strong> Creates a static route. This example creates a default route.</p>
+                    <p><strong>When to use it:</strong> To manually define a path for traffic.</p>
+                </div>
+                 <div class="command">
+                    <h3>commit</h3>
+                    <div class="command-container">
+                        <pre><code>commit</code></pre>
+                    </div>
+                    <p><strong>What it does:</strong> Validates and applies the candidate configuration.</p>
+                    <p><strong>When to use it:</strong> After making configuration changes, you must commit them to make them active.</p>
+                </div>
+            </section>
+
+            <section class="command-category" data-category="troubleshooting">
+                <h2>Troubleshooting</h2>
+                <div class="command">
+                    <h3>show route</h3>
+                    <div class="command-container">
+                        <pre><code>show route</code></pre>
+                    </div>
+                    <p><strong>What it does:</strong> Displays the routing table.</p>
+                    <p><strong>When to use it:</strong> A primary command to troubleshoot routing issues.</p>
+                </div>
+                 <div class="command">
+                    <h3>show log messages</h3>
+                    <div class="command-container">
+                        <pre><code>show log messages</code></pre>
+                    </div>
+                    <p><strong>What it does:</strong> Reviews system logs for troubleshooting.</p>
+                    <p><strong>When to use it:</strong> To check for errors, events, and traffic logs.</p>
+                </div>
+                <div class="command">
+                    <h3>monitor traffic interface &lt;interface&gt;</h3>
+                    <div class="command-container">
+                        <pre><code>monitor traffic interface ge-0/0/0.0 detail</code></pre>
+                    </div>
+                    <p><strong>What it does:</strong> Live packet capture on interface.</p>
+                    <p><strong>When to use it:</strong> For real-time packet inspection on a specific interface to diagnose network issues.</p>
+                </div>
+                <div class="command">
+                    <h3>ping &lt;ip&gt; rapid count 5</h3>
+                    <div class="command-container">
+                        <pre><code>ping 8.8.8.8 rapid count 5</code></pre>
+                    </div>
+                    <p><strong>What it does:</strong> Fast connectivity testing.</p>
+                    <p><strong>When to use it:</strong> For basic connectivity testing with a quick burst of pings.</p>
+                </div>
+                 <div class="command">
+                    <h3>traceroute &lt;ip&gt;</h3>
+                    <div class="command-container">
+                        <pre><code>traceroute 8.8.8.8</code></pre>
+                    </div>
+                    <p><strong>What it does:</strong> Route path analysis.</p>
+                    <p><strong>When to use it:</strong> To identify routing loops or points of failure.</p>
+                </div>
+            </section>
+
+        </div>
+    </main>
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Technical Command Reference</p>
+        </div>
+    </footer>
+    <script src="../js/main.js"></script>
+</body>
+</html>

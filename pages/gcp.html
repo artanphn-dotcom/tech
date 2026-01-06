@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Cloud Platform - Technical Command Reference</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Google Cloud Platform Commands</h1>
+            <div class="theme-switcher">
+                <button id="theme-toggle">Toggle Dark Mode</button>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <div class="page-header">
+                <a href="../index.html" class="back-link">&larr; Back to Home</a>
+            </div>
+
+            <div class="filter-container">
+                <button class="filter-btn active" data-category="all">All</button>
+                <button class="filter-btn" data-category="compute">Compute Engine (List/Connect)</button>
+                <button class="filter-btn" data-category="network">Network (List/View)</button>
+                <button class="filter-btn" data-category="gke">Kubernetes Engine</button>
+                <button class="filter-btn" data-category="storage">Storage</button>
+                <button class="filter-btn" data-category="vpn">VPN</button>
+                <button class="filter-btn" data-category="config">Configuration</button>
+                <button class="filter-btn" data-category="troubleshooting">Troubleshooting</button>
+            </div>
+
+            <section class="command-category" data-category="compute">
+                <h2>Compute Engine (List/Connect)</h2>
+                <div class="command">
+                    <h3>gcloud compute instances list</h3>
+                    <div class="command-container">
+                        <pre><code>gcloud compute instances list</code></pre>
+                    </div>
+                    <p><strong>What it does:</strong> Confirms VM status and IP assignments.</p>
+                    <p><strong>When to use it:</strong> To get a quick overview of your virtual machines and their statuses.</p>
+                </div>
+                 <div class="command">
+                    <h3>gcloud compute ssh</h3>
+                    <div class="command-container">
+                        <pre><code>gcloud compute ssh [INSTANCE_NAME] --zone [ZONE]</code></pre>
+                    </div>
+                    <p><strong>What it does:</strong> Connects to a Compute Engine instance using SSH.</p>
+                    <p><strong>When to use it:</strong> To securely access the command line of a VM.</p>
+                </div>
+            </section>
+
+            <section class="command-category" data-category="network">
+                <h2>Network (List/View)</h2>
+                <div class="command">
+                    <h3>gcloud compute networks list</h3>
+                    <div class="command-container">
+                        <pre><code>gcloud compute networks list</code></pre>
+                    </div>
+                    <p><strong>What it does:</strong> Lists available VPC networks.</p>
+                    <p><strong>When to use it:</strong> To review configured Virtual Private Cloud networks.</p>
+                </div>
+                <div class="command">
+                    <h3>gcloud compute routes list</h3>
+                    <div class="command-container">
+                        <pre><code>gcloud compute routes list</code></pre>
+                    </div>
+                    <p><strong>What it does:</strong> Displays routing table for a VPC.</p>
+                    <p><strong>When to use it:</strong> To verify network routes and troubleshoot traffic flow issues.</p>
+                </div>
+                 <div class="command">
+                    <h3>gcloud compute firewall-rules list</h3>
+                    <div class="command-container">
+                        <pre><code>gcloud compute firewall-rules list</code></pre>
+                    </div>
+                    <p><strong>What it does:</strong> Shows firewall rules and priorities.</p>
+                    <p><strong>When to use it:</strong> To examine configured firewall policies and ensure desired traffic control.</p>
+                </div>
+                <div class="command">
+                    <h3>gcloud compute networks subnets list</h3>
+                    <div class="command-container">
+                        <pre><code>gcloud compute networks subnets list</code></pre>
+                    </div>
+                    <p><strong>What it does:</strong> Lists subnet ranges and regions.</p>
+                    <p><strong>When to use it:</strong> To review subnet configurations within your VPC networks.</p>
+                </div>
+            </section>
+
+            <section class="command-category" data-category="gke">
+                <h2>Kubernetes Engine</h2>
+                <div class="command">
+                    <h3>gcloud container clusters list</h3>
+                    <div class="command-container">
+                        <pre><code>gcloud container clusters list</code></pre>
+                    </div>
+                    <p><strong>What it does:</strong> Lists all GKE clusters in the project.</p>
+                    <p><strong>When to use it:</strong> To see your Kubernetes clusters and their locations.</p>
+                </div>
+                <div class="command">
+                    <h3>gcloud container clusters get-credentials</h3>
+                    <div class="command-container">
+                        <pre><code>gcloud container clusters get-credentials [CLUSTER_NAME] --zone [ZONE]</code></pre>
+                    </div>
+                    <p><strong>What it does:</strong> Configures `kubectl` with credentials to access your GKE cluster.</p>
+                    <p><strong>When to use it:</strong> The first step to interacting with your cluster using `kubectl`.</p>
+                </div>
+            </section>
+
+            <section class="command-category" data-category="storage">
+                <h2>Cloud Storage</h2>
+                <div class="command">
+                    <h3>gcloud storage ls</h3>
+                    <div class="command-container">
+                        <pre><code>gcloud storage ls gs://[BUCKET_NAME]</code></pre>
+                    </div>
+                    <p><strong>What it does:</strong> Lists the contents of a Cloud Storage bucket.</p>
+                    <p><strong>When to use it:</strong> To view the objects stored in a bucket.</p>
+                </div>
+                <div class="command">
+                    <h3>gcloud storage cp</h3>
+                    <div class="command-container">
+                        <pre><code>gcloud storage cp [LOCAL_FILE] gs://[BUCKET_NAME]/</code></pre>
+                    </div>
+                    <p><strong>What it does:</strong> Copies files between your local machine and Cloud Storage.</p>
+                    <p><strong>When to use it:</strong> To upload or download files from a storage bucket.</p>
+                </div>
+            </section>
+
+            <section class="command-category" data-category="vpn">
+                <h2>VPN</h2>
+                <div class="command">
+                    <h3>gcloud compute vpn-tunnels list</h3>
+                    <div class="command-container">
+                        <pre><code>gcloud compute vpn-tunnels list</code></pre>
+                    </div>
+                    <p><strong>What it does:</strong> Checks VPN tunnel status.</p>
+                    <p><strong>When to use it:</strong> To quickly ascertain the operational state of your Cloud VPN tunnels.</p>
+                </div>
+                 <div class="command">
+                    <h3>gcloud compute routers get-status &lt;router&gt;</h3>
+                    <div class="command-container">
+                        <pre><code>gcloud compute routers get-status my-cloud-router</code></pre>
+                    </div>
+                    <p><strong>What it does:</strong> Verifies Cloud Router and BGP state.</p>
+                    <p><strong>When to use it:</strong> To check the status of BGP sessions on a Cloud Router, particularly for HA VPNs.</p>
+                </div>
+                 <div class="command">
+                    <h3>gcloud compute routers describe &lt;router&gt;</h3>
+                    <div class="command-container">
+                        <pre><code>gcloud compute routers describe my-cloud-router</code></pre>
+                    </div>
+                    <p><strong>What it does:</strong> Displays BGP peers and ASN details.</p>
+                    <p><strong>When to use it:</strong> To get detailed configuration and status of a Cloud Router and its BGP peers.</p>
+                </div>
+                <div class="command">
+                    <h3>gcloud compute vpn-gateways describe &lt;name&gt;</h3>
+                    <div class="command-container">
+                        <pre><code>gcloud compute vpn-gateways describe my-ha-vpn-gateway</code></pre>
+                    </div>
+                    <p><strong>What it does:</strong> Displays HA VPN gateway details.</p>
+                    <p><strong>When to use it:</strong> To review the configuration and status of a Highly Available VPN gateway.</p>
+                </div>
+            </section>
+
+            <section class="command-category" data-category="config">
+                <h2>Configuration</h2>
+                <div class="command">
+                    <h3>gcloud compute instances create</h3>
+                    <div class="command-container">
+                        <pre><code>gcloud compute instances create my-vm --machine-type=e2-medium --image-family=ubuntu-2004-lts --image-project=ubuntu-os-cloud</code></pre>
+                    </div>
+                    <p><strong>What it does:</strong> Creates a new Google Compute Engine virtual machine.</p>
+                    <p><strong>When to use it:</strong> When you need to provision a new server in GCP.</p>
+                </div>
+            </section>
+
+            <section class="command-category" data-category="troubleshooting">
+                 <h2>Troubleshooting</h2>
+                <div class="command">
+                    <h3>gcloud logging read</h3>
+                    <div class="command-container">
+                        <pre><code>gcloud logging read "resource.type=gce_instance AND resource.labels.instance_id=[INSTANCE_ID]" --limit=50</code></pre>
+                    </div>
+                    <p><strong>What it does:</strong> Reads logs for firewall, VPN, or network issues.</p>
+                    <p><strong>When to use it:</strong> To view logs for a specific resource, such as a VM instance, to diagnose issues.</p>
+                </div>
+            </section>
+
+        </div>
+    </main>
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Technical Command Reference</p>
+        </div>
+    </footer>
+    <script src="../js/main.js"></script>
+</body>
+</html>

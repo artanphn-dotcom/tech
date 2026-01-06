@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitHub - Technical Command Reference</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Git Commands</h1>
+            <div class="theme-switcher">
+                <button id="theme-toggle">Toggle Dark Mode</button>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <div class="page-header">
+                <a href="../index.html" class="back-link">&larr; Back to Home</a>
+            </div>
+
+            <div class="filter-container">
+                <button class="filter-btn active" data-category="all">All</button>
+                <button class="filter-btn" data-category="repo">Repository</button>
+                <button class="filter-btn" data-category="branch">Branching</button>
+                <button class="filter-btn" data-category="remote">Remote</button>
+                <button class="filter-btn" data-category="config">Configuration</button>
+                <button class="filter-btn" data-category="troubleshooting">Troubleshooting</button>
+            </div>
+
+            <section class="command-category" data-category="repo">
+                <h2>Repository</h2>
+                <div class="command">
+                    <h3>git init</h3>
+                    <div class="command-container">
+                        <pre><code>git init</code></pre>
+                    </div>
+                    <p><strong>What it does:</strong> Creates a new Git repository in the current directory.</p>
+                    <p><strong>When to use it:</strong> To start a new project with Git.</p>
+                </div>
+                <div class="command">
+                    <h3>git clone</h3>
+                    <div class="command-container">
+                        <pre><code>git clone [URL]</code></pre>
+                    </div>
+                    <p><strong>What it does:</strong> Clones a repository into a new directory.</p>
+                    <p><strong>When to use it:</strong> To get a local copy of a remote repository.</p>
+                </div>
+                <div class="command">
+                    <h3>git add</h3>
+                    <div class="command-container">
+                        <pre><code>git add .</code></pre>
+                    </div>
+                    <p><strong>What it does:</strong> Stages changes for the next commit. `.` stages all changes in the current directory.</p>
+                    <p><strong>When to use it:</strong> After modifying files and before committing them.</p>
+                </div>
+                 <div class="command">
+                    <h3>git commit</h3>
+                    <div class="command-container">
+                        <pre><code>git commit -m "Your commit message"</code></pre>
+                    </div>
+                    <p><strong>What it does:</strong> Records a snapshot of the staged changes to the project's history.</p>
+                    <p><strong>When to use it:</strong> After staging changes with `git add`.</p>
+                </div>
+            </section>
+
+            <section class="command-category" data-category="branch">
+                <h2>Branching</h2>
+                <div class="command">
+                    <h3>git branch</h3>
+                    <div class="command-container">
+                        <pre><code>git branch</code></pre>
+                    </div>
+                    <p><strong>What it does:</strong> Lists all local branches. Use `git branch -a` to see remote branches too.</p>
+                    <p><strong>When to use it:</strong> To see the branches in your repository.</p>
+                </div>
+                <div class="command">
+                    <h3>git checkout -b</h3>
+                    <div class="command-container">
+                        <pre><code>git checkout -b [new-branch-name]</code></pre>
+                    </div>
+                    <p><strong>What it does:</strong> Creates a new branch and switches to it.</p>
+                    <p><strong>When to use it:</strong> To start working on a new feature or bug fix.</p>
+                </div>
+            </section>
+
+            <section class="command-category" data-category="remote">
+                <h2>Remote</h2>
+                <div class="command">
+                    <h3>git pull</h3>
+                    <div class="command-container">
+                        <pre><code>git pull</code></pre>
+                    </div>
+                    <p><strong>What it does:</strong> Fetches changes from the remote repository and merges them into the current branch.</p>
+                    <p><strong>When to use it:</strong> To update your local repository with the latest changes.</p>
+                </div>
+                <div class="command">
+                    <h3>git push</h3>
+                    <div class="command-container">
+                        <pre><code>git push origin [branch-name]</code></pre>
+                    </div>
+                    <p><strong>What it does:</strong> Pushes your committed changes to a remote repository.</p>
+                    <p><strong>When to use it:</strong> To share your work with others.</p>
+                </div>
+            </section>
+
+            <section class="command-category" data-category="config">
+                <h2>Configuration</h2>
+                <div class="command">
+                    <h3>git config --global user.name</h3>
+                    <div class="command-container">
+                        <pre><code>git config --global user.name "Your Name"</code></pre>
+                    </div>
+                    <p><strong>What it does:</strong> Sets the name that will be associated with your commits.</p>
+                    <p><strong>When to use it:</strong> When setting up Git for the first time.</p>
+                </div>
+            </section>
+
+            <section class="command-category" data-category="troubleshooting">
+                <h2>Troubleshooting</h2>
+                <div class="command">
+                    <h3>git status</h3>
+                    <div class="command-container">
+                        <pre><code>git status</code></pre>
+                    </div>
+                    <p><strong>What it does:</strong> Displays the state of the working directory and the staging area.</p>
+                    <p><strong>When to use it:</strong> A fundamental command to see which files are modified, staged, or untracked.</p>
+                </div>
+                 <div class="command">
+                    <h3>git log</h3>
+                    <div class="command-container">
+                        <pre><code>git log --oneline --graph --decorate</code></pre>
+                    </div>
+                    <p><strong>What it does:</strong> Shows the commit history.</p>
+                    <p><strong>When to use it:</strong> To review the history of commits for a branch.</p>
+                </div>
+            </section>
+
+        </div>
+    </main>
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Technical Command Reference</p>
+        </div>
+    </footer>
+    <script src="../js/main.js"></script>
+</body>
+</html>

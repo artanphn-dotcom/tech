@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>F5 Load Balancer - Technical Command Reference</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>F5 BIG-IP Commands (TMSH)</h1>
+            <div class="theme-switcher">
+                <button id="theme-toggle">Toggle Dark Mode</button>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <div class="page-header">
+                <a href="../index.html" class="back-link">&larr; Back to Home</a>
+            </div>
+
+            <div class="filter-container">
+                <button class="filter-btn active" data-category="all">All</button>
+                <button class="filter-btn" data-category="virtual-server">Virtual Server</button>
+                <button class="filter-btn" data-category="pool">Pool</button>
+                <button class="filter-btn" data-category="node">Node</button>
+                <button class="filter-btn" data-category="config">Configuration</button>
+                <button class="filter-btn" data-category="troubleshooting">Troubleshooting</button>
+            </div>
+
+            <section class="command-category" data-category="virtual-server">
+                <h2>Virtual Server</h2>
+                <div class="command">
+                    <h3>show /ltm virtual</h3>
+                    <div class="command-container">
+                        <pre><code>show /ltm virtual</code></pre>
+                    </div>
+                    <p><strong>What it does:</strong> Displays the status and configuration of all virtual servers.</p>
+                    <p><strong>When to use it:</strong> To get a quick overview of your virtual servers and their current state.</p>
+                </div>
+            </section>
+
+            <section class="command-category" data-category="pool">
+                <h2>Pool</h2>
+                <div class="command">
+                    <h3>show /ltm pool</h3>
+                    <div class="command-container">
+                        <pre><code>show /ltm pool</code></pre>
+                    </div>
+                    <p><strong>What it does:</strong> Displays the status of all pools of backend servers.</p>
+                    <p><strong>When to use it:</strong> To check the status of pools and their members.</p>
+                </div>
+            </section>
+
+            <section class="command-category" data-category="node">
+                <h2>Node</h2>
+                <div class="command">
+                    <h3>show /ltm node</h3>
+                    <div class="command-container">
+                        <pre><code>show /ltm node</code></pre>
+                    </div>
+                    <p><strong>What it does:</strong> Displays the status of all nodes (backend servers).</p>
+                    <p><strong>When to use it:</strong> To check the health and status of individual backend servers.</p>
+                </div>
+                <div class="command">
+                    <h3>modify /ltm node [node_ip] session user-disabled</h3>
+                    <div class="command-container">
+                        <pre><code>modify /ltm node 10.0.0.10 session user-disabled</code></pre>
+                    </div>
+                    <p><strong>What it does:</strong> Disables a node, preventing new connections from being sent to it.</p>
+                    <p><strong>When to use it:</strong> To gracefully take a server out of rotation for maintenance.</p>
+                </div>
+            </section>
+
+            <section class="command-category" data-category="config">
+                <h2>Configuration</h2>
+                <div class="command">
+                    <h3>create /ltm pool</h3>
+                    <div class="command-container">
+                        <pre><code>create /ltm pool my-pool members add { 10.0.0.1:80 10.0.0.2:80 } monitor http</code></pre>
+                    </div>
+                    <p><strong>What it does:</strong> Creates a new load balancing pool with two members and an HTTP health monitor.</p>
+                    <p><strong>When to use it:</strong> When setting up a new application or service.</p>
+                </div>
+                <div class="command">
+                    <h3>create /ltm virtual</h3>
+                    <div class="command-container">
+                        <pre><code>create /ltm virtual my-virtual-server destination 192.168.1.100:80 ip-protocol tcp pool my-pool</code></pre>
+                    </div>
+                    <p><strong>What it does:</strong> Creates a new virtual server that listens for traffic and sends it to the specified pool.</p>
+                    <p><strong>When to use it:</strong> The final step in exposing a new load-balanced service.</p>
+                </div>
+            </section>
+
+            <section class="command-category" data-category="troubleshooting">
+                <h2>Troubleshooting</h2>
+                <div class="command">
+                    <h3>show /sys connection</h3>
+                    <div class="command-container">
+                        <pre><code>show /sys connection cs-server-addr [virtual_server_ip]</code></pre>
+                    </div>
+                    <p><strong>What it does:</strong> Displays detailed information about current connections to a virtual server.</p>
+                    <p><strong>When to use it:</strong> To troubleshoot live traffic flows and inspect connection details.</p>
+                </div>
+            </section>
+
+        </div>
+    </main>
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Technical Command Reference</p>
+        </div>
+    </footer>
+    <script src="../js/main.js"></script>
+</body>
+</html>

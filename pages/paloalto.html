@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Palo Alto Networks - Technical Command Reference</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Palo Alto Networks Commands</h1>
+            <div class="theme-switcher">
+                <button id="theme-toggle">Toggle Dark Mode</button>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <div class="page-header">
+                <a href="../index.html" class="back-link">&larr; Back to Home</a>
+            </div>
+
+            <div class="filter-container">
+                <button class="filter-btn active" data-category="all">All</button>
+                <button class="filter-btn" data-category="system">System</button>
+                <button class="filter-btn" data-category="interface">Interface</button>
+                <button class="filter-btn" data-category="policy">Security Policy</button>
+                <button class="filter-btn" data-category="routing">Routing</button>
+                <button class="filter-btn" data-category="vpn">VPN</button>
+                <button class="filter-btn" data-category="config">Configuration</button>
+                <button class="filter-btn" data-category="troubleshooting">Troubleshooting</button>
+            </div>
+
+            <section class="command-category" data-category="system">
+                <h2>System</h2>
+                <div class="command">
+                    <h3>show system info</h3>
+                    <div class="command-container">
+                        <pre><code>show system info</code></pre>
+                    </div>
+                    <p><strong>What it does:</strong> Displays system version, uptime, serial, and hostname.</p>
+                    <p><strong>When to use it:</strong> For quickly identifying the device and its current software state.</p>
+                </div>
+                <div class="command">
+                    <h3>show clock</h3>
+                    <div class="command-container">
+                        <pre><code>show clock</code></pre>
+                    </div>
+                    <p><strong>What it does:</strong> Displays the current date and time of the firewall.</p>
+                    <p><strong>When to use it:</strong> To verify the system clock, which is important for logging and certificate validation.</p>
+                </div>
+            </section>
+
+            <section class="command-category" data-category="interface">
+                <h2>Interface</h2>
+                <div class="command">
+                    <h3>show interface all</h3>
+                    <div class="command-container">
+                        <pre><code>show interface all</code></pre>
+                    </div>
+                    <p><strong>What it does:</strong> Verifies interface status, speed, and link state.</p>
+                    <p><strong>When to use it:</strong> To check the link status, IP addresses, and counters for all interfaces.</p>
+                </div>
+                 <div class="command">
+                    <h3>show interface ethernet1/1</h3>
+                    <div class="command-container">
+                        <pre><code>show interface ethernet1/1</code></pre>
+                    </div>
+                    <p><strong>What it does:</strong> Displays detailed information for a specific interface.</p>
+                    <p><strong>When to use it:</strong> To troubleshoot issues on a single interface, such as errors or traffic counters.</p>
+                </div>
+            </section>
+
+            <section class="command-category" data-category="routing">
+                <h2>Routing</h2>
+                <div class="command">
+                    <h3>show routing route</h3>
+                    <div class="command-container">
+                        <pre><code>show routing route</code></pre>
+                    </div>
+                    <p><strong>What it does:</strong> Shows routing table and route selection.</p>
+                    <p><strong>When to use it:</strong> To inspect the firewall's routing table and verify route paths.</p>
+                </div>
+                 <div class="command">
+                    <h3>test routing fib-lookup ip &lt;destination&gt;</h3>
+                    <div class="command-container">
+                        <pre><code>test routing fib-lookup ip 8.8.8.8</code></pre>
+                    </div>
+                    <p><strong>What it does:</strong> Confirms which route/interface will be used for a specific destination IP.</p>
+                    <p><strong>When to use it:</strong> To troubleshoot routing decisions and verify next-hop reachability.</p>
+                </div>
+            </section>
+
+            <section class="command-category" data-category="vpn">
+                <h2>VPN</h2>
+                <div class="command">
+                    <h3>show vpn ike-sa</h3>
+                    <div class="command-container">
+                        <pre><code>show vpn ike-sa</code></pre>
+                    </div>
+                    <p><strong>What it does:</strong> Checks IKE Phase 1 status for VPNs.</p>
+                    <p><strong>When to use it:</strong> To verify if the IKE security association (Phase 1) is established.</p>
+                </div>
+                 <div class="command">
+                    <h3>show vpn ipsec-sa</h3>
+                    <div class="command-container">
+                        <pre><code>show vpn ipsec-sa</code></pre>
+                    </div>
+                    <p><strong>What it does:</strong> Verifies IPsec Phase 2 tunnel status and counters.</p>
+                    <p><strong>When to use it:</strong> To check if the IPsec security association (Phase 2) is established and actively passing traffic.</p>
+                </div>
+                 <div class="command">
+                    <h3>test vpn ike-sa gateway &lt;name&gt;</h3>
+                    <div class="command-container">
+                        <pre><code>test vpn ike-sa gateway my-vpn-gw</code></pre>
+                    </div>
+                    <p><strong>What it does:</strong> Initiates or tests an IKE VPN tunnel.</p>
+                    <p><strong>When to use it:</strong> To manually bring up a VPN tunnel or test its configuration.</p>
+                </div>
+            </section>
+
+            <section class="command-category" data-category="policy">
+                <h2>Security Policy</h2>
+                <div class="command">
+                    <h3>show running security-policy</h3>
+                    <div class="command-container">
+                        <pre><code>show running security-policy</code></pre>
+                    </div>
+                    <p><strong>What it does:</strong> Displays all configured security policy rules.</p>
+                    <p><strong>When to use it:</strong> To review and verify the firewall's security rulebase.</p>
+                </div>
+                <div class="command">
+                    <h3>test security-policy-match</h3>
+                    <div class="command-container">
+                        <pre><code>test security-policy-match from [zone] to [zone] source [ip] destination [ip] protocol [number]</code></pre>
+                    </div>
+                    <p><strong>What it does:</strong> Simulates a packet flow to see which security policy it would match.</p>
+                    <p><strong>When to use it:</strong> Extremely useful for troubleshooting why traffic is being allowed or denied.</p>
+                </div>
+            </section>
+
+            <section class="command-category" data-category="config">
+                <h2>Configuration Mode</h2>
+                 <div class="command">
+                    <h3>configure</h3>
+                    <div class="command-container">
+                        <pre><code>configure</code></pre>
+                    </div>
+                    <p><strong>What it does:</strong> Enters the device's configuration mode.</p>
+                    <p><strong>When to use it:</strong> All configuration changes must be made in this mode.</p>
+                </div>
+                <div class="command">
+                    <h3>set deviceconfig system hostname</h3>
+                    <div class="command-container">
+                        <pre><code>set deviceconfig system hostname my-firewall</code></pre>
+                    </div>
+                    <p><strong>What it does:</strong> Sets the hostname of the firewall.</p>
+                    <p><strong>When to use it:</strong> A basic configuration step to identify the device on the network.</p>
+                </div>
+                 <div class="command">
+                    <h3>commit</h3>
+                    <div class="command-container">
+                        <pre><code>commit</code></pre>
+                    </div>
+                    <p><strong>What it does:</strong> Validates and applies the candidate configuration to the running configuration.</p>
+                    <p><strong>When to use it:</strong> After making configuration changes, you must commit them to make them active.</p>
+                </div>
+            </section>
+
+            <section class="command-category" data-category="troubleshooting">
+                <h2>Troubleshooting</h2>
+                <div class="command">
+                    <h3>show session all filter source &lt;ip&gt;</h3>
+                    <div class="command-container">
+                        <pre><code>show session all filter source 10.1.1.1</code></pre>
+                    </div>
+                    <p><strong>What it does:</strong> Troubleshoots traffic sessions and policies by displaying active firewall sessions filtered by source IP.</p>
+                    <p><strong>When to use it:</strong> A primary tool for troubleshooting live traffic flows.</p>
+                </div>
+                <div class="command">
+                    <h3>ping</h3>
+                    <div class="command-container">
+                        <pre><code>ping source [ip] host [destination_ip]</code></pre>
+                    </div>
+                    <p><strong>What it does:</strong> Sends ICMP packets to test reachability.</p>
+                    <p><strong>When to use it:</strong> To test basic network connectivity from the firewall itself.</p>
+                </div>
+                <div class="command">
+                    <h3>debug dataplane packet-diag set filter match &lt;criteria&gt;</h3>
+                    <div class="command-container">
+                        <pre><code>debug dataplane packet-diag set filter match source 10.1.1.1 destination 8.8.8.8
+debug dataplane packet-diag set log feature flow basic
+debug dataplane packet-diag on</code></pre>
+                    </div>
+                    <p><strong>What it does:</strong> Captures traffic for deep packet troubleshooting. A powerful packet capture and debugging tool for the dataplane.</p>
+                    <p><strong>When to use it:</strong> For in-depth analysis of how a packet is being processed by the firewall.</p>
+                </div>
+                <div class="command">
+                    <h3>less mp-log system.log</h3>
+                    <div class="command-container">
+                        <pre><code>less mp-log system.log</code></pre>
+                    </div>
+                    <p><strong>What it does:</strong> Reads system logs for errors and events.</p>
+                    <p><strong>When to use it:</strong> To review system-level events and troubleshoot appliance issues.</p>
+                </div>
+            </section>
+
+        </div>
+    </main>
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Technical Command Reference</p>
+        </div>
+    </footer>
+    <script src="../js/main.js"></script>
+</body>
+</html>

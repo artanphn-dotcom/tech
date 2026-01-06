@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FortiGate - Technical Command Reference</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>FortiGate Commands</h1>
+            <div class="theme-switcher">
+                <button id="theme-toggle">Toggle Dark Mode</button>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <div class="page-header">
+                <a href="../index.html" class="back-link">&larr; Back to Home</a>
+            </div>
+
+            <div class="filter-container">
+                <button class="filter-btn active" data-category="all">All</button>
+                <button class="filter-btn" data-category="system">System</button>
+                <button class="filter-btn" data-category="interface">Interface</button>
+                <button class="filter-btn" data-category="policy">Policy</button>
+                <button class="filter-btn" data-category="routing">Routing</button>
+                <button class="filter-btn" data-category="vpn">VPN</button>
+                <button class="filter-btn" data-category="config">Configuration</button>
+                <button class="filter-btn" data-category="troubleshooting">Troubleshooting</button>
+            </div>
+
+            <section class="command-category" data-category="system">
+                <h2>System</h2>
+                <div class="command">
+                    <h3>get system status</h3>
+                    <div class="command-container">
+                        <pre><code>get system status</code></pre>
+                    </div>
+                    <p><strong>What it does:</strong> Displays firmware, uptime, and system health.</p>
+                    <p><strong>When to use it:</strong> A primary command for identifying the unit and its operational state.</p>
+                </div>
+            </section>
+
+             <section class="command-category" data-category="interface">
+                <h2>Interface</h2>
+                <div class="command">
+                    <h3>get system interface</h3>
+                    <div class="command-container">
+                        <pre><code>get system interface physical</code></pre>
+                    </div>
+                    <p><strong>What it does:</strong> Displays the configuration and status of physical interfaces.</p>
+                    <p><strong>When to use it:</strong> To check interface settings, IP addresses, and link status.</p>
+                </div>
+            </section>
+
+            <section class="command-category" data-category="routing">
+                <h2>Routing</h2>
+                <div class="command">
+                    <h3>get router info routing-table all</h3>
+                    <div class="command-container">
+                        <pre><code>get router info routing-table all</code></pre>
+                    </div>
+                    <p><strong>What it does:</strong> Shows the complete routing table, including static, connected, and dynamic routes.</p>
+                    <p><strong>When to use it:</strong> To verify route paths and troubleshoot routing issues.</p>
+                </div>
+            </section>
+
+            <section class="command-category" data-category="vpn">
+                <h2>VPN</h2>
+                <div class="command">
+                    <h3>diagnose vpn ike gateway list</h3>
+                    <div class="command-container">
+                        <pre><code>diagnose vpn ike gateway list</code></pre>
+                    </div>
+                    <p><strong>What it does:</strong> Checks IKE Phase 1 VPN status and details.</p>
+                    <p><strong>When to use it:</strong> To verify if the IKE security association (Phase 1) is established.</p>
+                </div>
+                 <div class="command">
+                    <h3>diagnose vpn tunnel list</h3>
+                    <div class="command-container">
+                        <pre><code>diagnose vpn tunnel list</code></pre>
+                    </div>
+                    <p><strong>What it does:</strong> Verifies IPsec tunnel Phase 2 state and traffic selectors.</p>
+                    <p><strong>When to use it:</strong> To check if the IPsec security association (Phase 2) is established and actively passing traffic.</p>
+                </div>
+            </section>
+
+            <section class="command-category" data-category="policy">
+                <h2>Policy</h2>
+                <div class="command">
+                    <h3>show firewall policy</h3>
+                    <div class="command-container">
+                        <pre><code>show firewall policy</code></pre>
+                    </div>
+                    <p><strong>What it does:</strong> Displays the configured firewall policies.</p>
+                    <p><strong>When to use it:</strong> To review the security rulebase.</p>
+                </div>
+            </section>
+
+            <section class="command-category" data-category="config">
+                <h2>Configuration Mode</h2>
+                <div class="command">
+                    <h3>config system interface</h3>
+                    <div class="command-container">
+                        <pre><code>config system interface
+    edit "port1"
+        set ip 192.168.1.99 255.255.255.0
+    next
+end</code></pre>
+                    </div>
+                    <p><strong>What it does:</strong> Enters the configuration context for a specific interface to set its IP address.</p>
+                    <p><strong>When to use it:</strong> For basic network interface configuration.</p>
+                </div>
+                 <div class="command">
+                    <h3>config router static</h3>
+                    <div class="command-container">
+                        <pre><code>config router static
+    edit 1
+        set gateway 192.168.1.1
+        set device "port1"
+    next
+end</code></pre>
+                    </div>
+                    <p><strong>What it does:</strong> Configures a static route.</p>
+                    <p><strong>When to use it:</strong> To direct traffic for a specific destination to a next-hop gateway.</p>
+                </div>
+            </section>
+
+            <section class="command-category" data-category="troubleshooting">
+                <h2>Troubleshooting</h2>
+                <div class="command">
+                    <h3>diagnose debug flow</h3>
+                    <div class="command-container">
+                        <pre><code>diagnose debug flow filter addr [ip]
+diagnose debug flow show function-name enable
+diagnose debug flow trace start 100
+diagnose debug enable</code></pre>
+                    </div>
+                    <p><strong>What it does:</strong> A powerful tool for tracing the path of a packet as it is processed by the FortiGate.</p>
+                    <p><strong>When to use it:</strong> Essential for in-depth troubleshooting of complex traffic issues.</p>
+                </div>
+                 <div class="command">
+                    <h3>execute ping &lt;ip&gt;</h3>
+                    <div class="command-container">
+                        <pre><code>execute ping 8.8.8.8</code></pre>
+                    </div>
+                    <p><strong>What it does:</strong> Basic connectivity testing from firewall.</p>
+                    <p><strong>When to use it:</strong> To test basic network connectivity from the FortiGate itself.</p>
+                </div>
+                <div class="command">
+                    <h3>execute traceroute &lt;ip&gt;</h3>
+                    <div class="command-container">
+                        <pre><code>execute traceroute 8.8.8.8</code></pre>
+                    </div>
+                    <p><strong>What it does:</strong> Traces packet path for routing issues.</p>
+                    <p><strong>When to use it:</strong> To identify routing loops or points of failure in a network path.</p>
+                </div>
+                <div class="command">
+                    <h3>diagnose debug application ike -1</h3>
+                    <div class="command-container">
+                        <pre><code>diagnose debug application ike -1</code></pre>
+                    </div>
+                    <p><strong>What it does:</strong> Enables IKE debug for VPN troubleshooting.</p>
+                    <p><strong>When to use it:</strong> For in-depth troubleshooting of IPsec VPN Phase 1 negotiations.</p>
+                </div>
+                 <div class="command">
+                    <h3>diagnose debug enable</h3>
+                    <div class="command-container">
+                        <pre><code>diagnose debug enable</code></pre>
+                    </div>
+                    <p><strong>What it does:</strong> Starts debug output (must be disabled after use).</p>
+                    <p><strong>When to use it:</strong> To start viewing debug output after enabling specific debug flags.</p>
+                </div>
+                <div class="command">
+                    <h3>diagnose sys session list</h3>
+                    <div class="command-container">
+                        <pre><code>diagnose sys session list</code></pre>
+                    </div>
+                    <p><strong>What it does:</strong> Displays active firewall sessions.</p>
+                    <p><strong>When to use it:</strong> To see live traffic flows and verify policy matching.</p>
+                </div>
+                <div class="command">
+                    <h3>diagnose sniffer packet any "host &lt;ip&gt;" 4</h3>
+                    <div class="command-container">
+                        <pre><code>diagnose sniffer packet any "host 10.0.0.1" 4</code></pre>
+                    </div>
+                    <p><strong>What it does:</strong> Packet capture directly on FortiGate.</p>
+                    <p><strong>When to use it:</strong> For deep packet-level troubleshooting to see actual traffic hitting the firewall.</p>
+                </div>
+            </section>
+
+        </div>
+    </main>
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Technical Command Reference</p>
+        </div>
+    </footer>
+    <script src="../js/main.js"></script>
+</body>
+</html>

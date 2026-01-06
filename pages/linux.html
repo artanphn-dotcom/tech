@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Linux Commands - Technical Command Reference</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Linux Commands</h1>
+            <div class="theme-switcher">
+                <button id="theme-toggle">Toggle Dark Mode</button>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <div class="page-header">
+                <a href="../index.html" class="back-link">&larr; Back to Home</a>
+            </div>
+
+            <div class="filter-container">
+                <button class="filter-btn active" data-category="all">All</button>
+                <button class="filter-btn" data-category="file">File Management</button>
+                <button class="filter-btn" data-category="system">System Info</button>
+                <button class="filter-btn" data-category="networking">Networking</button>
+                <button class="filter-btn" data-category="process">Process Management</button>
+                <button class="filter-btn" data-category="config">Configuration</button>
+                <button class="filter-btn" data-category="troubleshooting">Troubleshooting</button>
+            </div>
+
+            <section class="command-category" data-category="file">
+                <h2>File and Directory Management</h2>
+                <div class="command">
+                    <h3>ls - List directory contents</h3>
+                    <div class="command-container">
+                        <pre><code>ls -la</code></pre>
+                    </div>
+                    <p><strong>What it does:</strong> Lists files and directories with detailed information.</p>
+                    <p><strong>When to use it:</strong> For navigating the filesystem and inspecting file permissions and metadata.</p>
+                </div>
+                <div class="command">
+                    <h3>cd - Change directory</h3>
+                    <div class="command-container">
+                        <pre><code>cd /var/log</code></pre>
+                    </div>
+                    <p><strong>What it does:</strong> Navigates to the specified directory.</p>
+                    <p><strong>When to use it:</strong> To move between directories.</p>
+                </div>
+                <div class="command">
+                    <h3>pwd - Print working directory</h3>
+                    <div class="command-container">
+                        <pre><code>pwd</code></pre>
+                    </div>
+                    <p><strong>What it does:</strong> Displays the full path of the current directory.</p>
+                    <p><strong>When to use it:</strong> When you need to know the absolute path of your current location.</p>
+                </div>
+                <div class="command">
+                    <h3>cp - Copy files</h3>
+                    <div class="command-container">
+                        <pre><code>cp source.txt destination.txt</code></pre>
+                    </div>
+                    <p><strong>What it does:</strong> Copies files or directories.</p>
+                    <p><strong>When to use it:</strong> To duplicate files. Use `cp -r` for directories.</p>
+                </div>
+                 <div class="command">
+                    <h3>mv - Move or rename files</h3>
+                    <div class="command-container">
+                        <pre><code>mv old-name.txt new-name.txt</code></pre>
+                    </div>
+                    <p><strong>What it does:</strong> Moves or renames files and directories.</p>
+                    <p><strong>When to use it:</strong> To relocate files or change their names.</p>
+                </div>
+                 <div class="command">
+                    <h3>rm - Remove files</h3>
+                    <div class="command-container">
+                        <pre><code>rm file.txt</code></pre>
+                    </div>
+                    <p><strong>What it does:</strong> Deletes files. Use with caution.</p>
+                    <p><strong>When to use it:</strong> To permanently delete files. Use `rm -r` for directories.</p>
+                </div>
+                <div class="command">
+                    <h3>find - Search for files</h3>
+                    <div class="command-container">
+                        <pre><code>find . -name "*.txt"</code></pre>
+                    </div>
+                    <p><strong>What it does:</strong> Searches for files in a directory hierarchy.</p>
+                    <p><strong>When to use it:</strong> To locate files based on name, size, modification time, etc.</p>
+                </div>
+                <div class="command">
+                    <h3>grep - Search text</h3>
+                    <div class="command-container">
+                        <pre><code>grep "error" /var/log/syslog</code></pre>
+                    </div>
+                    <p><strong>What it does:</strong> Searches for a pattern of text within files.</p>
+                    <p><strong>When to use it:</strong> Essential for finding specific lines in log files or any text document.</p>
+                </div>
+            </section>
+
+            <section class="command-category" data-category="system">
+                <h2>System Information</h2>
+                <div class="command">
+                    <h3>uname - Kernel information</h3>
+                    <div class="command-container">
+                        <pre><code>uname -a</code></pre>
+                    </div>
+                    <p><strong>What it does:</strong> Prints detailed information about the Linux kernel and system architecture.</p>
+                    <p><strong>When to use it:</strong> To quickly identify the kernel version, hostname, and processor type.</p>
+                </div>
+                <div class="command">
+                    <h3>df - Disk space usage</h3>
+                    <div class="command-container">
+                        <pre><code>df -h</code></pre>
+                    </div>
+                    <p><strong>What it does:</strong> Reports the amount of available disk space on all mounted filesystems.</p>
+                    <p><strong>When to use it:</strong> To monitor disk capacity. The `-h` flag makes the output human-readable.</p>
+                </div>
+                <div class="command">
+                    <h3>free - Memory usage</h3>
+                    <div class="command-container">
+                        <pre><code>free -h</code></pre>
+                    </div>
+                    <p><strong>What it does:</strong> Shows the amount of free and used memory in the system.</p>
+                    <p><strong>When to use it:</strong> To check memory consumption and availability.</p>
+                </div>
+            </section>
+
+            <section class="command-category" data-category="networking">
+                <h2>Networking</h2>
+                <div class="command">
+                    <h3>ip addr show - Display IP addresses</h3>
+                    <div class="command-container">
+                        <pre><code>ip addr show</code></pre>
+                    </div>
+                    <p><strong>What it does:</strong> Shows all network interfaces and their assigned IP addresses.</p>
+                    <p><strong>When to use it:</strong> For network troubleshooting and verifying IP configurations.</p>
+                </div>
+                <div class="command">
+                    <h3>ping - Check network connectivity</h3>
+                    <div class="command-container">
+                        <pre><code>ping 8.8.8.8</code></pre>
+                    </div>
+                    <p><strong>What it does:</strong> Sends ICMP packets to a host to test connectivity.</p>
+                    <p><strong>When to use it:</strong> To check if a remote host is reachable.</p>
+                </div>
+                <div class="command">
+                    <h3>netstat - Network statistics</h3>
+                    <div class="command-container">
+                        <pre><code>netstat -tuln</code></pre>
+                    </div>
+                    <p><strong>What it does:</strong> Displays network connections, routing tables, and interface statistics.</p>
+                    <p><strong>When to use it:</strong> To see which ports are open and what connections are active.</p>
+                </div>
+                 <div class="command">
+                    <h3>ss - Socket statistics</h3>
+                    <div class="command-container">
+                        <pre><code>ss -tuln</code></pre>
+                    </div>
+                    <p><strong>What it does:</strong> A modern replacement for netstat, used to investigate sockets.</p>
+                    <p><strong>When to use it:</strong> Offers better performance than netstat for viewing network connections.</p>
+                </div>
+            </section>
+
+            <section class="command-category" data-category="process">
+                <h2>Process Management</h2>
+                <div class="command">
+                    <h3>ps - Process status</h3>
+                    <div class="command-container">
+                        <pre><code>ps aux</code></pre>
+                    </div>
+                    <p><strong>What it does:</strong> Provides a snapshot of all currently running processes.</p>
+                    <p><strong>When to use it:</strong> To see which processes are running and inspect their details.</p>
+                </div>
+                <div class="command">
+                    <h3>top - Display running processes</h3>
+                    <div class="command-container">
+                        <pre><code>top</code></pre>
+                    </div>
+                    <p><strong>What it does:</strong> Provides a real-time, dynamic view of the processes running on the system.</p>
+                    <p><strong>When to use it:</strong> To monitor system resource usage (CPU, memory) in real time.</p>
+                </div>
+                <div class="command">
+                    <h3>kill - Terminate a process</h3>
+                    <div class="command-container">
+                        <pre><code>kill 12345</code></pre>
+                    </div>
+                    <p><strong>What it does:</strong> Sends a signal to a process, typically to terminate it.</p>
+                    <p><strong>When to use it:</strong> To stop a misbehaving or unresponsive process. Use `kill -9` for a force kill.</p>
+                </div>
+            </section>
+
+            <section class="command-category" data-category="config">
+                <h2>Configuration</h2>
+                <div class="command">
+                    <h3>ip addr add - Set IP address</h3>
+                    <div class="command-container">
+                        <pre><code>sudo ip addr add 192.168.1.10/24 dev eth0</code></pre>
+                    </div>
+                    <p><strong>What it does:</strong> Assigns an IP address and subnet mask to a network interface.</p>
+                    <p><strong>When to use it:</strong> To manually configure a static IP address on a server.</p>
+                </div>
+                <div class="command">
+                    <h3>iptables - Firewall configuration</h3>
+                    <div class="command-container">
+                        <pre><code>sudo iptables -A INPUT -s 10.0.0.5 -j DROP</code></pre>
+                    </div>
+                    <p><strong>What it does:</strong> Configures the netfilter firewall. This example blocks all incoming traffic from a specific IP.</p>
+                    <p><strong>When to use it:</strong> To set up basic firewall rules. Note that `nftables` is replacing `iptables` on many modern systems.</p>
+                </div>
+            </section>
+
+            <section class="command-category" data-category="troubleshooting">
+                <h2>Troubleshooting</h2>
+                <div class="command">
+                    <h3>tcpdump - Packet sniffer</h3>
+                    <div class="command-container">
+                        <pre><code>sudo tcpdump -i eth0 -n 'port 80'</code></pre>
+                    </div>
+                    <p><strong>What it does:</strong> Captures and analyzes network packets in real time.</p>
+                    <p><strong>When to use it:</strong> Essential for deep network troubleshooting to see exactly what traffic is flowing.</p>
+                </div>
+                 <div class="command">
+                    <h3>lsof - List open files</h3>
+                    <div class="command-container">
+                        <pre><code>sudo lsof -i :443</code></pre>
+                    </div>
+                    <p><strong>What it does:</strong> Lists all open files and the processes that opened them. Can be used to see which process is using a specific port.</p>
+                    <p><strong>When to use it:</strong> To identify which process is listening on a certain network port.</p>
+                </div>
+                 <div class="command">
+                    <h3>journalctl - Query the systemd journal</h3>
+                    <div class="command-container">
+                        <pre><code>journalctl -u nginx.service -f</code></pre>
+                    </div>
+                    <p><strong>What it does:</strong> Displays logs from the systemd journal. This example follows the logs for the nginx service.</p>
+                    <p><strong>When to use it:</strong> The standard way to view system and service logs on modern Linux distributions.</p>
+                </div>
+            </section>
+
+        </div>
+    </main>
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Technical Command Reference</p>
+        </div>
+    </footer>
+    <script src="../js/main.js"></script>
+</body>
+</html>

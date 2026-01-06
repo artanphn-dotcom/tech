@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terraform - Technical Command Reference</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Terraform Commands</h1>
+            <div class="theme-switcher">
+                <button id="theme-toggle">Toggle Dark Mode</button>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <div class="page-header">
+                <a href="../index.html" class="back-link">&larr; Back to Home</a>
+            </div>
+
+            <div class="filter-container">
+                <button class="filter-btn active" data-category="all">All</button>
+                <button class="filter-btn" data-category="core">Core</button>
+                <button class="filter-btn" data-category="state">State Management</button>
+                <button class="filter-btn" data-category="troubleshooting">Troubleshooting</button>
+            </div>
+
+            <section class="command-category" data-category="core">
+                <h2>Core Commands</h2>
+                <div class="command">
+                    <h3>terraform init</h3>
+                    <div class="command-container">
+                        <pre><code>terraform init</code></pre>
+                    </div>
+                    <p><strong>What it does:</strong> Initializes a new or existing Terraform configuration, downloading provider plugins and modules.</p>
+                    <p><strong>When to use it:</strong> The first command to run after writing a new Terraform configuration or cloning an existing one.</p>
+                </div>
+                <div class="command">
+                    <h3>terraform validate</h3>
+                    <div class="command-container">
+                        <pre><code>terraform validate</code></pre>
+                    </div>
+                    <p><strong>What it does:</strong> Checks whether a configuration is syntactically valid and internally consistent.</p>
+                    <p><strong>When to use it:</strong> As a quick check for errors before running a plan or apply.</p>
+                </div>
+                 <div class="command">
+                    <h3>terraform fmt</h3>
+                    <div class="command-container">
+                        <pre><code>terraform fmt -recursive</code></pre>
+                    </div>
+                    <p><strong>What it does:</strong> Rewrites Terraform configuration files to a canonical format and style.</p>
+                    <p><strong>When to use it:</strong> To ensure consistent formatting across all your configuration files.</p>
+                </div>
+                <div class="command">
+                    <h3>terraform plan</h3>
+                    <div class="command-container">
+                        <pre><code>terraform plan</code></pre>
+                    </div>
+                    <p><strong>What it does:</strong> Creates an execution plan, which lets you preview the changes that Terraform plans to make.</p>
+                    <p><strong>When to use it:</strong> Before applying changes, to ensure they are what you expect.</p>
+                </div>
+                <div class="command">
+                    <h3>terraform apply</h3>
+                    <div class="command-container">
+                        <pre><code>terraform apply</code></pre>
+                    </div>
+                    <p><strong>What it does:</strong> Applies the changes required to reach the desired state of the configuration.</p>
+                    <p><strong>When to use it:</strong> To create, update, or delete infrastructure resources.</p>
+                </div>
+                <div class="command">
+                    <h3>terraform destroy</h3>
+                    <div class="command-container">
+                        <pre><code>terraform destroy</code></pre>
+                    </div>
+                    <p><strong>What it does:</strong> Destroys all the resources managed by the current Terraform configuration.</p>
+                    <p><strong>When to use it:</strong> To tear down infrastructure created by Terraform. Use with caution.</p>
+                </div>
+            </section>
+
+            <section class="command-category" data-category="state">
+                <h2>State Management</h2>
+                <div class="command">
+                    <h3>terraform state list</h3>
+                    <div class="command-container">
+                        <pre><code>terraform state list</code></pre>
+                    </div>
+                    <p><strong>What it does:</strong> Lists all the resources that are tracked in the current Terraform state file.</p>
+                    <p><strong>When to use it:</strong> To get a quick overview of what infrastructure Terraform is managing.</p>
+                </div>
+                <div class="command">
+                    <h3>terraform state show</h3>
+                    <div class="command-container">
+                        <pre><code>terraform state show 'module.vpc.aws_vpc.this'</code></pre>
+                    </div>
+                    <p><strong>What it does:</strong> Shows the attributes of a single resource in the state file.</p>
+                    <p><strong>When to use it:</strong> To inspect the details of a specific resource managed by Terraform.</p>
+                </div>
+                <div class="command">
+                    <h3>terraform state rm</h3>
+                    <div class="command-container">
+                        <pre><code>terraform state rm 'aws_instance.my_instance'</code></pre>
+                    </div>
+                    <p><strong>What it does:</strong> Removes a resource from the Terraform state, without destroying the actual infrastructure.</p>
+                    <p><strong>When to use it:</strong> To "unmanage" a resource that was previously managed by Terraform.</p>
+                </div>
+            </section>
+
+            <section class="command-category" data-category="troubleshooting">
+                <h2>Troubleshooting</h2>
+                <div class="command">
+                    <h3>TF_LOG=TRACE terraform plan</h3>
+                    <div class="command-container">
+                        <pre><code>export TF_LOG=TRACE
+terraform plan</code></pre>
+                    </div>
+                    <p><strong>What it does:</strong> Enables detailed logging for Terraform operations by setting the `TF_LOG` environment variable.</p>
+                    <p><strong>When to use it:</strong> When you need to debug issues with providers, state, or the Terraform core process. Other log levels include `DEBUG`, `INFO`, `WARN`, `ERROR`.</p>
+                </div>
+            </section>
+
+        </div>
+    </main>
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Technical Command Reference</p>
+        </div>
+    </footer>
+    <script src="../js/main.js"></script>
+</body>
+</html>
