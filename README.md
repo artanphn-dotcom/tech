@@ -1,34 +1,31 @@
 # Technical Command Reference
 
-## Project Description
-This is a modern, responsive HTML-based knowledge portal designed to serve as a centralized technical command reference for infrastructure and networking technologies. It's built to be a quick and easy-to-use resource for DevOps and Network Engineering professionals.
+A static, searchable command reference site for infrastructure, networking, security, cloud, and automation workflows.
 
-## Features
--   **Main (Home) Page**: A clean landing page with navigation cards for various technology categories.
--   **Technology Detail Pages**: Each category has a dedicated page with:
-    -   Categorized lists of commonly used commands.
-    -   Syntax-highlighted code blocks.
-    -   Clear descriptions explaining "What it does" and "When to use it".
-    -   Filter buttons to easily navigate between command categories (e.g., System, Interface, Configuration, Troubleshooting).
--   **User Interface / User Experience**:
-    -   Minimal, modern, documentation-style design.
-    -   Responsive layout for desktop, tablet, and mobile devices.
-    -   Consistent typography and spacing.
-    -   **Search Functionality**: Filter technology cards on the main page.
-    -   **Copy-to-Clipboard**: Buttons next to code blocks for easy copying.
-    -   **Dark Mode Toggle**: Switch between light and dark themes.
--   **Architecture**:
-    -   Modular structure for easy addition of new technologies and content.
-    -   Follows semantic HTML and accessibility best practices.
-    -   Static-first design, suitable for hosting on platforms like GitHub Pages.
+## Highlights
+- Responsive, documentation-style UI for desktop and mobile.
+- Home page technology search with real-time filtering.
+- Category filters on each technology page.
+- Copy-to-clipboard support for command blocks.
+- Persistent light/dark mode preference.
 
-## Usage
-To use this knowledge portal, simply open the `index.html` file in your web browser. Navigate through the technology categories using the cards on the home page, and use the filter buttons on detail pages to find specific command types.
+## Project Structure
+- `index.html` - home page and category navigation.
+- `pages/` - individual technology reference pages.
+- `css/style.css` - shared design system and page styling.
+- `js/main.js` - theme, search, filtering, and copy interactions.
 
-## Technologies Used
--   HTML5
--   CSS3
--   JavaScript
+## Run Locally
+1. Clone or download this repository.
+2. Open `index.html` in your browser.
 
-@copyright Artan.V
-# tech
+No build step or package installation is required.
+
+## Deployment
+Use GitHub Pages (or any static host). See [deployment_guide.md](deployment_guide.md) for step-by-step instructions.
+
+## Technology Stack
+- HTML5
+- CSS3
+- JavaScript (vanilla)
+# network
